@@ -1,0 +1,143 @@
+"""Produce the release font set for Dastkhat (publisher: Dastyar).
+Input: variable fonts for the 3 dot styles. Output: base / FaNum / NoEn x (variable + 9 statics) as TTF + WOFF2.
+Usage: python3 -I release_fonts.py <out_dir>
+"""
+import sys, os, copy
+from fontTools.ttLib import TTFont
+from fontTools.varLib import instancer
+from fontTools import subset
+from fontTools.ttLib import woff2
+
+OUT = sys.argv[1]
+VERSION = 1.200
+VSTR = '1.200'
+VENDOR = 'DSTY'
+SRC = {
+    'Dastkhat': '/home/claude/out2/square/variable/Dastkhat[wght].ttf',
+    'Dastkhat Diamond': '/home/claude/out2/diamond/variable/DastkhatDiamond[wght].ttf',
+    'Dastkhat Bar': '/home/claude/out2/bar/variable/DastkhatBar[wght].ttf',
+}
+WEIGHTS = [(100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regular'), (500, 'Medium'),
+           (600, 'SemiBold'), (700, 'Bold'), (800, 'ExtraBold'), (900, 'Black')]
+
+COPYRIGHT = ('Copyright 2015 The Vazirmatn Project Authors (https://github.com/rastikerdar/vazirmatn). '
+             'Copyright 2026 Dastyar (https://dastyar.io). All rights reserved.')
+DESC = ('Dastkhat is a Persian and Latin UI typeface published by Dastyar, derived from Vazirmatn by Saber Rastikerdar, used with permission. '
+        'It has a taller letter body, wider Persian letters and digits, a smaller Latin, and three dot styles: '
+        'square, diamond and bar. Latin glyphs derive from Roboto (Apache License 2.0).')
+LICENSE = ('Licensed under the Dastkhat End User License Agreement. Unauthorized copying, sharing or '
+           'redistribution is prohibited. Licenses and terms: https://dastyar.io')
+
+
+def nospace(s):
+    return s.replace(' ', '')
+
+
+def set_names(font, fam, style='Regular', variable=False):
+    ribbi = style in ('Regular', 'Bold')
+    ps = f'{nospace(fam)}-{style}'
+    recs = {
+        0: COPYRIGHT,
+        1: fam if ribbi else f'{fam} {style}',
+        2: style if ribbi else 'Regular',
+        3: f'{VSTR};{VENDOR};{ps}',
+        4: f'{fam} {style}',
+        5: f'Version {VSTR}',
+        6: ps,
+        7: 'Dastkhat is a trademark of Dastyar.',
+        8: 'Dastyar',
+        9: 'Saber Rastikerdar (Vazirmatn); Dastyar (Dastkhat)',
+        10: DESC,
+        11: 'https://dastyar.io',
+        12: 'https://dastyar.io',
+        13: LICENSE,
+        14: 'https://dastyar.io',
+        16: fam,
+        17: style,
+    }
+    if variable:
+        recs.update({1: fam, 2: 'Regular', 4: f'{fam} Regular', 6: f'{nospace(fam)}-Regular',
+                     3: f'{VSTR};{VENDOR};{nospace(fam)}-Regular', 17: 'Regular', 25: nospace(fam)})
+    name = font['name']
+    name.names = [n for n in name.names if n.nameID >= 256]
+    for nid, val in recs.items():
+        name.setName(val, nid, 3, 1, 0x409)
+    font['head'].fontRevision = VERSION
+    font['OS/2'].achVendID = VENDOR
+
+
+def make_fanum(font):
+    """Latin digits 0-9 (and their % , . separators untouched) display as Persian digits."""
+    for t in font['cmap'].tables:
+        if not t.isUnicode():
+            continue
+        for i in range(10):
+            fa = 0x06F0 + i
+            if fa in t.cmap:
+                t.cmap[0x30 + i] = t.cmap[fa]
+    return font
+
+
+LATIN_LETTERS = set(range(0x41, 0x5B)) | set(range(0x61, 0x7B)) | set(range(0xC0, 0x250)) - {0xD7, 0xF7} \
+    | set(range(0x1E00, 0x1F00)) | {0xAA, 0xBA, 0xDF}
+
+
+def make_noen(font):
+    keep = [u for u in font.getBestCmap() if u not in LATIN_LETTERS]
+    opts = subset.Options(layout_features=['*'], name_IDs=['*'], name_languages=['*'], glyph_names=True,
+                          notdef_outline=True, recalc_bounds=True, legacy_kern=True, hinting=True,
+                          layout_scripts=['*'], drop_tables=[])
+    opts.drop_tables = [t for t in opts.drop_tables if t not in ('STAT', 'avar')]
+    s = subset.Subsetter(opts)
+    s.populate(unicodes=keep)
+    s.subset(font)
+    return font
+
+
+def finish_static(inst, fam, w, st):
+    set_names(inst, fam, st)
+    os2 = inst['OS/2']
+    os2.usWeightClass = w
+    sel = os2.fsSelection & ~0b1100001
+    if st == 'Regular': sel |= 0x40
+    if st == 'Bold': sel |= 0x20
+    os2.fsSelection = sel
+    inst['head'].macStyle = 1 if st == 'Bold' else 0
+    if 'STAT' in inst:
+        del inst['STAT']
+
+
+def to_woff2(src, dst):
+    woff2.compress(src, dst)
+
+
+def main():
+    made = []
+    for base, path in SRC.items():
+        for suffix, fn in (('', None), (' FaNum', make_fanum), (' NoEn', make_noen)):
+            fam = base + suffix
+            vf = TTFont(path)
+            if fn:
+                fn(vf)
+            set_names(vf, fam, variable=True)
+            sub = {'': 'Main', ' FaNum': 'FaNum', ' NoEn': 'NoEn'}[suffix]
+            group = os.path.join(OUT, sub, nospace(fam))
+            os.makedirs(os.path.join(group, 'Variable'), exist_ok=True)
+            os.makedirs(os.path.join(group, 'TTF'), exist_ok=True)
+            os.makedirs(os.path.join(group, 'Webfonts'), exist_ok=True)
+            vpath = os.path.join(group, 'Variable', f'{nospace(fam)}[wght].ttf')
+            vf.save(vpath)
+            to_woff2(vpath, os.path.join(group, 'Webfonts', f'{nospace(fam)}-Variable.woff2'))
+            for w, st in WEIGHTS:
+                inst = instancer.instantiateVariableFont(TTFont(vpath), {'wght': w}, inplace=False)
+                finish_static(inst, fam, w, st)
+                p = os.path.join(group, 'TTF', f'{nospace(fam)}-{st}.ttf')
+                inst.save(p)
+                to_woff2(p, os.path.join(group, 'Webfonts', f'{nospace(fam)}-{st}.woff2'))
+            made.append((fam, sub, nospace(fam)))
+            print('built', fam)
+    return made
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>راهنمای دستخط</title>
+<link rel="stylesheet" href="../Webfonts/dastkhat.css"><link rel="stylesheet" href="../Demos/assets/site.css">
+<style>
+.doc{max-width:900px;margin:0 auto;padding:50px 40px}
+.doc h1{font-size:46px;font-weight:900}.doc h2{font-size:28px;margin:44px 0 10px;padding-top:20px;border-top:1px solid var(--line)}
+.doc ol li,.doc ul li{margin:8px 0}
+pre{background:#151312;color:#8AB4F8;padding:18px;border-radius:12px;font-size:14px;direction:ltr;text-align:left;overflow:auto}
+.en{direction:ltr;text-align:left;font-family:'Dastkhat',sans-serif}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid var(--line);padding:10px;text-align:start}
+</style></head><body>
+<div class="doc">
+<span class="pill">راهنما · Guide</span>
+<h1>نصب و استفاده از دستخط</h1>
+<p class="lead">این راهنما نصب فونت روی ویندوز، مک و لینوکس، استفاده در وب و نرم‌افزارهای طراحی و انتخاب نسخه مناسب را توضیح می‌دهد.</p>
+
+<h2>کدام نسخه را نصب کنم؟</h2>
+<table><tr><th>نیاز شما</th><th>نسخه پیشنهادی</th></tr>
+<tr><td>طراحی در فیگما، فتوشاپ، ایلاستریتور</td><td>Fonts/Main ← پوشه TTF (۹ وزن)</td></tr>
+<tr><td>طراحی با کنترل دقیق وزن</td><td>Fonts/Main ← پوشه Variable</td></tr>
+<tr><td>وب‌سایت و اپلیکیشن وب</td><td>پوشه Webfonts</td></tr>
+<tr><td>عدد فارسی بدون تغییر کد یا تنظیمات</td><td>Fonts/FaNum</td></tr>
+<tr><td>ترکیب با فونت لاتین دیگر (مثلاً Inter یا Geist)</td><td>Fonts/NoEn</td></tr></table>
+<p>روی یک سیستم، یا نسخه ثابت (TTF) را نصب کنید یا نسخه متغیر، نه هر دو؛ نام‌های یکسان باعث تداخل در نرم‌افزارها می‌شود.</p>
+
+<h2>ویندوز</h2><ol><li>پوشه Fonts/Main/Dastkhat/TTF را باز کنید.</li><li>همه فایل‌ها را انتخاب کنید (Ctrl+A).</li><li>راست‌کلیک کنید و گزینه Install for all users را بزنید.</li><li>نرم‌افزار طراحی را یک بار ببندید و دوباره باز کنید.</li></ol>
+<h2>مک</h2><ol><li>برنامه Font Book را باز کنید.</li><li>فایل‌های TTF را به داخل پنجره بکشید.</li><li>اگر هشدار تکراری بودن دیدید، نسخه قبلی دستخط را حذف کنید.</li></ol>
+<h2>لینوکس</h2><pre>mkdir -p ~/.local/share/fonts/Dastkhat
+cp Fonts/Main/Dastkhat/TTF/*.ttf ~/.local/share/fonts/Dastkhat/
+fc-cache -f</pre>
+
+<h2>وب</h2>
+<p>پوشه Webfonts را در پروژه کپی کنید و فایل CSS را اضافه کنید. نسخه متغیر کم‌حجم‌تر است و همه وزن‌ها را در یک فایل دارد.</p>
+<pre>&lt;link rel="stylesheet" href="/Webfonts/dastkhat.css"&gt;
+
+body      { font-family: var(--font-dastkhat); }          /* نقطه مربع */
+.price    { font-family: var(--font-dastkhat-fanum); }    /* اعداد فارسی */
+.logo     { font-family: var(--font-dastkhat-bar); font-weight: 900; }</pre>
+<p>برای Next.js با next/font/local:</p>
+<pre>import localFont from 'next/font/local'
+export const dastkhat = localFont({
+  src: './Dastkhat-Variable.woff2',
+  weight: '100 900',
+  variable: '--font-dastkhat',
+  display: 'swap',
+})</pre>
+<p>در Tailwind کافی است در تنظیمات، fontFamily.sans را برابر var(--font-dastkhat) قرار دهید.</p>
+
+<h2>نسخه FaNum</h2><p>در این نسخه، عددهای لاتین ۰ تا ۹ با شکل فارسی نمایش داده می‌شوند. داده‌ها و کد شما بدون تغییر می‌مانند و فقط ظاهر عوض می‌شود. برای قیمت، جدول و داشبورد مناسب است.</p>
+<h2>نسخه NoEn</h2><p>حروف لاتین در این نسخه حذف شده‌اند تا مرورگر برای متن انگلیسی از فونت بعدی در لیست استفاده کند:</p>
+<pre>font-family: 'Dastkhat NoEn', 'Inter', sans-serif;</pre>
+
+<h2>فاصله‌گذاری پیشنهادی</h2><ul><li>متن بدنه: اندازه ۱۵ تا ۱۸ پیکسل، فاصله خطوط ۱٫۸ تا ۲</li><li>تیتر: وزن ۷۰۰ تا ۹۰۰، فاصله خطوط ۱٫۲ تا ۱٫۳</li><li>از letter-spacing روی متن فارسی استفاده نکنید؛ اتصال حروف را می‌شکند.</li></ul>
+
+<div class="en">
+<h2>English quick guide</h2>
+<ul><li><b>Desktop:</b> install the TTF files from <code>Fonts/Main/&lt;Family&gt;/TTF</code>, or the variable font, not both.</li>
+<li><b>Web:</b> copy <code>Webfonts/</code>, link <code>dastkhat.css</code>, use <code>var(--font-dastkhat)</code>.</li>
+<li><b>FaNum:</b> Latin digits render as Persian digits. <b>NoEn:</b> Persian only, pair it with your own Latin font.</li>
+<li><b>License:</b> Commercial EULA. See <code>License/EULA.txt</code>.</li></ul></div>
+</div><div class="wrap"><div class="foot"><span>© ۱۴۰۵ دستیار · dastyar.io</span><span dir="ltr">Dastkhat EULA · Commercial license</span></div></div>
+<script></script>
+</body></html>

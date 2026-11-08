@@ -1,0 +1,74 @@
+FONTLOG for Dastkhat
+====================
+
+This file provides detailed information on the Dastkhat font software,
+for the Dastkhat release package.
+
+
+Basic Font Information
+----------------------
+
+Dastkhat (دستخط) is a Persian and Latin user-interface typeface published
+by Dastyar (https://dastyar.io). It is designed for product interfaces,
+e-commerce pages and dense Persian text on screens.
+
+- Scripts: Arabic script (Persian, Arabic, Urdu basic coverage), Latin
+- Weights: 9 (Thin 100 to Black 900) plus a variable font (wght 100-900)
+- Dot styles: three families
+    Dastkhat          square dots (default)
+    Dastkhat Diamond  square dots rotated 45 degrees
+    Dastkhat Bar      merged dots: two dots become a bar,
+                      three dots become a bar and a square
+- Builds per family:
+    Main   full Persian + Latin
+    FaNum  Latin digits 0-9 display as Persian digits ۰-۹
+    NoEn   Latin letters removed, so English text uses a fallback font
+- Formats: TTF (static + variable), WOFF2
+
+Dastkhat is a derivative of Vazirmatn by Saber Rastikerdar, used with his
+permission. Vazirmatn's Latin glyphs derive from Roboto
+(Apache License 2.0).
+
+
+License
+-------
+
+Dastkhat is commercial software, licensed under the Dastkhat End User
+License Agreement (License/EULA.txt). Licenses: https://dastyar.io
+Copies of v1.200 and earlier that were released under the SIL Open Font
+License 1.1 remain under that license for the people who received them.
+
+
+ChangeLog
+---------
+
+2026-11-08 (Dastyar) Dastkhat v1.200
+- Published by Dastyar
+- New FaNum and NoEn builds for every dot style
+- Release package: specimen, demos, web fonts, help guides
+
+2026-11-08 (Dastyar) Dastkhat v1.100
+- Dots redrawn as rigid geometric shapes, no longer stretched with the letter body
+- Square dots become the default
+- New families: Dastkhat Diamond (45 degree dots) and Dastkhat Bar (merged dots)
+- Minimum gap between neighbouring dots enforced at every weight
+
+2026-11-02 (Dastyar) Dastkhat v1.000
+- Forked from Vazirmatn v33.003 (variable, wght 100-900)
+- Persian letter body raised (teeth and bowls taller), baseline stroke kept
+- Persian letters 4% wider, Persian digits 7% wider
+- Latin set scaled to 93%
+- Kerning, mark attachment anchors and weight curve adjusted to match
+- Renamed throughout
+
+
+Acknowledgements
+----------------
+
+N: Saber Rastikerdar
+W: https://github.com/rastikerdar/vazirmatn
+D: Original designer of Vazirmatn, the base of Dastkhat
+
+N: Dastyar
+W: https://dastyar.io
+D: Dastkhat modifications, dot styles, release

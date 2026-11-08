@@ -1,0 +1,167 @@
+/*!
+ * Dastkhat v1.200 - Persian/Latin UI typeface by Dastyar (https://dastyar.io)
+ * Commercial license, see License/EULA.txt. Based on Vazirmatn, used with permission.
+ *
+ * Variable families (recommended): 'Dastkhat', 'Dastkhat Diamond', 'Dastkhat Bar' (+ ' FaNum' / ' NoEn')
+ * Static families: same names + ' Static'
+ */
+
+/* ---------- Dastkhat ---------- */
+@font-face {
+  font-family: 'Dastkhat';
+  src: url('fonts/Dastkhat-Variable.woff2') format('woff2-variations'),
+       url('fonts/Dastkhat-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Static'; src: url('fonts/Dastkhat-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* ---------- Dastkhat FaNum ---------- */
+@font-face {
+  font-family: 'Dastkhat FaNum';
+  src: url('fonts/DastkhatFaNum-Variable.woff2') format('woff2-variations'),
+       url('fonts/DastkhatFaNum-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat FaNum Static'; src: url('fonts/DastkhatFaNum-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* ---------- Dastkhat NoEn ---------- */
+@font-face {
+  font-family: 'Dastkhat NoEn';
+  src: url('fonts/DastkhatNoEn-Variable.woff2') format('woff2-variations'),
+       url('fonts/DastkhatNoEn-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat NoEn Static'; src: url('fonts/DastkhatNoEn-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* ---------- Dastkhat Diamond ---------- */
+@font-face {
+  font-family: 'Dastkhat Diamond';
+  src: url('fonts/DastkhatDiamond-Variable.woff2') format('woff2-variations'),
+       url('fonts/DastkhatDiamond-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond Static'; src: url('fonts/DastkhatDiamond-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* ---------- Dastkhat Diamond FaNum ---------- */
+@font-face {
+  font-family: 'Dastkhat Diamond FaNum';
+  src: url('fonts/DastkhatDiamondFaNum-Variable.woff2') format('woff2-variations'),
+       url('fonts/DastkhatDiamondFaNum-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond FaNum Static'; src: url('fonts/DastkhatDiamondFaNum-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* ---------- Dastkhat Diamond NoEn ---------- */
+@font-face {
+  font-family: 'Dastkhat Diamond NoEn';
+  src: url('fonts/DastkhatDiamondNoEn-Variable.woff2') format('woff2-variations'),
+       url('fonts/DastkhatDiamondNoEn-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Diamond NoEn Static'; src: url('fonts/DastkhatDiamondNoEn-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* ---------- Dastkhat Bar ---------- */
+@font-face {
+  font-family: 'Dastkhat Bar';
+  src: url('fonts/DastkhatBar-Variable.woff2') format('woff2-variations'),
+       url('fonts/DastkhatBar-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar Static'; src: url('fonts/DastkhatBar-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* ---------- Dastkhat Bar FaNum ---------- */
+@font-face {
+  font-family: 'Dastkhat Bar FaNum';
+  src: url('fonts/DastkhatBarFaNum-Variable.woff2') format('woff2-variations'),
+       url('fonts/DastkhatBarFaNum-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar FaNum Static'; src: url('fonts/DastkhatBarFaNum-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+/* ---------- Dastkhat Bar NoEn ---------- */
+@font-face {
+  font-family: 'Dastkhat Bar NoEn';
+  src: url('fonts/DastkhatBarNoEn-Variable.woff2') format('woff2-variations'),
+       url('fonts/DastkhatBarNoEn-Variable.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-Thin.woff2') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-ExtraLight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-ExtraBold.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Bar NoEn Static'; src: url('fonts/DastkhatBarNoEn-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
+:root {
+  --font-dastkhat: 'Dastkhat', 'Dastkhat Static', Tahoma, sans-serif;
+  --font-dastkhat-fanum: 'Dastkhat FaNum', 'Dastkhat FaNum Static', Tahoma, sans-serif;
+  --font-dastkhat-diamond: 'Dastkhat Diamond', 'Dastkhat Diamond Static', Tahoma, sans-serif;
+  --font-dastkhat-bar: 'Dastkhat Bar', 'Dastkhat Bar Static', Tahoma, sans-serif;
+}

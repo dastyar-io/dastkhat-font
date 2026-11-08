@@ -1,0 +1,102 @@
+DASTKHAT FONT SOFTWARE END USER LICENSE AGREEMENT (EULA)
+Dastkhat (دستخط) - Copyright 2026 Dastyar (https://dastyar.io)
+
+Please read this agreement before installing or using the Font Software.
+By installing, embedding or using it you accept these terms. If you do not
+accept them, do not use the Font Software.
+
+1. DEFINITIONS
+"Font Software"  All Dastkhat, Dastkhat Diamond and Dastkhat Bar files
+                 (Main, FaNum and NoEn builds; TTF, variable TTF and WOFF2),
+                 the Webfonts CSS and the related documentation.
+"Licensor"       Dastyar (https://dastyar.io).
+"Licensee"       The person or company that purchased a license, named on
+                 the license receipt.
+"Seat"           One computer on which the Font Software is installed.
+"Licensed Use"   The use type (Desktop, Web, App) and the limits stated on
+                 the Licensee's receipt.
+
+2. LICENSE GRANT
+The Licensor grants the Licensee a non-exclusive, non-transferable,
+non-sublicensable, perpetual license (unless the receipt says otherwise) to
+use the Font Software for the Licensed Use only, as follows.
+
+2.1 Desktop license
+    Install the Font Software on up to the number of Seats on the receipt and
+    use it to create artwork, print, packaging, video, images, PDFs and logos.
+    Outlined or rasterised output made with the font (logos, images, printed
+    material) may be used without limit. Documents may embed the font only in
+    the form that PDF and office software allow for viewing and printing.
+
+2.2 Web license
+    Self-host the supplied WOFF2 files on the website domains and up to the
+    monthly page views stated on the receipt.
+
+2.3 App / Software license
+    Embed the Font Software in one application or product named on the
+    receipt, for the number of installs or the term stated there. The font
+    files may be distributed only inside the application, in a form that
+    cannot be extracted for general use.
+
+A free trial or evaluation copy, if offered, may be used for testing only and
+never in published or commercial work.
+
+3. RESTRICTIONS
+The Licensee may not, and may not allow anyone else to:
+(a) copy, share, resell, rent, lend, sublicense or otherwise distribute the
+    Font Software, alone or in a package, font library, template or kit;
+(b) upload the Font Software to a public site, font-sharing site or
+    repository, or make it available for download in any other way;
+(c) modify, convert, subset for redistribution, or create derivative fonts
+    from the Font Software, except subsetting and format conversion needed
+    for the Licensee's own permitted web or app use;
+(d) use the Font Software beyond the Seats, domains, page views, products or
+    installs in the Licensed Use;
+(e) use the Font Software for a client without that client holding their own
+    license, unless the work is delivered only as outlined artwork or
+    images;
+(f) remove or alter copyright, license or trademark notices, including the
+    attribution to Vazirmatn in the font's name table;
+(g) use the name "Dastkhat", "دستخط" or "Dastyar" for any other font or
+    product.
+
+4. OWNERSHIP AND THIRD-PARTY COMPONENTS
+The Font Software is licensed, not sold. The Licensor keeps all rights not
+expressly granted. "Dastkhat" is a trademark of Dastyar.
+Dastkhat is derived from Vazirmatn, copyright 2015 The Vazirmatn Project
+Authors (Saber Rastikerdar), used by the Licensor with the permission of
+Saber Rastikerdar. The Latin glyphs derive from Roboto, copyright Google,
+licensed under the Apache License 2.0. See THIRD-PARTY-NOTICES.txt.
+
+5. EARLIER FREE RELEASES
+Copies of Dastkhat v1.200 and earlier that were published under the SIL Open
+Font License 1.1 remain under that license for the people who received them.
+This EULA applies to the releases and files that include it.
+
+6. TERM AND TERMINATION
+This license lasts until terminated. It ends immediately if the Licensee
+breaches it. After termination the Licensee must stop using the Font Software
+and delete all copies. Work already produced as outlined artwork or images is
+not affected.
+
+7. NO WARRANTY
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT.
+
+8. LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT ALLOWED BY LAW, THE LICENSOR IS NOT LIABLE FOR INDIRECT
+OR CONSEQUENTIAL DAMAGES, LOSS OF PROFIT OR DATA, ARISING FROM THE USE OF OR
+INABILITY TO USE THE FONT SOFTWARE. THE LICENSOR'S TOTAL LIABILITY IS LIMITED
+TO THE PRICE PAID FOR THE LICENSE.
+
+9. GENERAL
+This agreement is the whole agreement about the Font Software. If a provision
+is unenforceable, the rest stays in force. The Persian and English texts have
+the same meaning; if they differ, the English text prevails. The governing law
+and courts are those of the Licensor's place of business, unless local
+consumer law says otherwise.
+
+10. CONTACT AND PURCHASE
+Licenses, upgrades and questions: https://dastyar.io
+
+(c) 2026 Dastyar. All rights reserved.
