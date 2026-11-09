@@ -9,7 +9,7 @@ Everything Google asks for is prepared. Font Bakery (`check-googlefonts`) report
 | Editable sources | `Source/ufo/Dastkhat/` (3 UFO masters + designspace) |
 | Build recipe | `Source/config.yaml`, `Source/build_all.sh` |
 | Fonts | `Fonts/Main/Dastkhat/Variable/Dastkhat[wght].ttf` |
-| Metadata | `GoogleFonts/METADATA.pb`, `GoogleFonts/DESCRIPTION.en_us.html` |
+| Metadata | `GoogleFonts/<Family>/METADATA.pb` and `DESCRIPTION.en_us.html` |
 
 ## Steps
 1. Push this repo to **github.com/dastyar-io/dastkhat-font** (public) and tag a release: `git tag v1.201 && git push --tags`.

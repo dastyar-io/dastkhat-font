@@ -1,0 +1,11 @@
+# gftools-builder recipe for the Google Fonts release (variable font only).
+# The full release set (statics, WOFF2, FaNum and NoEn builds) comes from Source/build_all.sh.
+sources:
+  - ufo/DastkhatBar/DastkhatBar.designspace
+axisOrder:
+  - wght
+familyName: Dastkhat Bar
+buildStatic: false
+buildOTF: false
+buildWebfont: false
+buildSmallCap: false
