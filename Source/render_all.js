@@ -5,7 +5,7 @@ const [,,PKG,BUILD]=process.argv;
  const ctx=await b.newContext({deviceScaleFactor:1});
  const p=await ctx.newPage();
  // PDFs
- for (const [src,dst] of [[BUILD+'/license.html',PKG+'/License/Dastkhat-License-Summary.pdf'],[BUILD+'/specimen.html',PKG+'/Specimen/Dastkhat-Specimen.pdf']]){
+ for (const [src,dst] of [[BUILD+'/specimen.html',PKG+'/Specimen/Dastkhat-Specimen.pdf']]){
    await p.goto('file://'+src); await p.evaluate(()=>document.fonts.ready); await p.waitForTimeout(500);
    await p.pdf({path:dst,preferCSSPageSize:true,printBackground:true});
  }

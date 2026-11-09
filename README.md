@@ -7,7 +7,7 @@
 **A Persian and Latin UI typeface with geometric dots.**
 
 [![Version](https://img.shields.io/badge/version-1.200-blue)](FONTLOG.txt)
-[![License: Commercial](https://img.shields.io/badge/license-Commercial-red)](License/EULA.txt)
+[![License: OFL 1.1](https://img.shields.io/badge/license-SIL%20OFL%201.1-green)](OFL.txt)
 [![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#whats-in-the-package)
 
 **English** · [فارسی](README.fa.md)
@@ -86,7 +86,8 @@ Dastkhat-v1.200/
 ├── Specimen/      Dastkhat-Specimen.pdf
 ├── Demos/         Font page, type tester, glyph map, UI demos, images
 ├── Helps/         Installation and usage guide (Persian and English)
-├── License/       EULA, third-party notices and a license summary (PDF)
+├── OFL.txt        SIL Open Font License 1.1
+├── License/       Third-party notices
 ├── Source/        Build scripts
 ├── FONTLOG.txt    Change history
 ├── README.md      This file
@@ -204,19 +205,17 @@ Persian needs more line height than Latin because of its tall ascenders and stac
 Explore more in `Demos/index.html`, the type tester (`Demos/type-tester.html`) and the glyph map (`Demos/glyph-map.html`). The full specimen is in `Specimen/Dastkhat-Specimen.pdf`.
 
 ## License
-Dastkhat is **commercial software**, sold under the Dastkhat End User License Agreement (see `License/EULA.txt`). Buy a license at https://dastyar.io.
+Dastkhat is **free and open source**, licensed under the [SIL Open Font License 1.1](OFL.txt).
 
-| License | What it covers |
-|---|---|
-| **Desktop** | Install on the number of computers on your receipt. Print, packaging, video, images, PDFs, logos |
-| **Web** | Self-host the WOFF2 files on your listed domains, up to the monthly page views on your receipt |
-| **App / Software** | Embed in one named application or product |
+- ✅ Use it for anything: websites, apps, print, packaging, video, logos, client work, commercial products
+- ✅ Self-host, embed or bundle it with your software
+- ✅ Modify it and share your modified version, under the same license
+- ❌ Don't sell the font files by themselves
+- ❌ Don't relicense it under different terms
 
-- ❌ Don't copy, share, resell or redistribute the font files, or upload them to public sites or repositories
-- ❌ Don't modify the font or make derivative fonts
-- ✅ Logos and artwork converted to outlines or images can be used without limit
-- ✅ Client work needs the client's own license, or delivery as outlines/images only
+Dastkhat is a derivative of [Vazirmatn](https://github.com/rastikerdar/vazirmatn) by Saber Rastikerdar (SIL OFL 1.1). The Latin glyphs derive from Roboto (Apache 2.0). See `License/THIRD-PARTY-NOTICES.txt`.
 
-Dastkhat is a derivative of [Vazirmatn](https://github.com/rastikerdar/vazirmatn) by Saber Rastikerdar, used with his permission. The Latin glyphs derive from Roboto (Apache 2.0). See `License/THIRD-PARTY-NOTICES.txt`. Copies of v1.200 and earlier that were published under the SIL OFL 1.1 stay under that license for the people who received them.
+## Contributing and support
+Bug reports, glyph fixes and new-script proposals are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). If Dastkhat is useful to you, you can support it through [GitHub Sponsors](https://github.com/sponsors/dastyar-io).
 
-© 2026 Dastyar · https://dastyar.io
+© 2026 The Dastkhat Project Authors · published by Dastyar · https://dastyar.io

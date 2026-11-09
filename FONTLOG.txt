@@ -25,22 +25,25 @@ e-commerce pages and dense Persian text on screens.
     NoEn   Latin letters removed, so English text uses a fallback font
 - Formats: TTF (static + variable), WOFF2
 
-Dastkhat is a derivative of Vazirmatn by Saber Rastikerdar, used with his
-permission. Vazirmatn's Latin glyphs derive from Roboto
+Dastkhat is a derivative of Vazirmatn by Saber Rastikerdar (SIL OFL 1.1). Vazirmatn's Latin glyphs derive from Roboto
 (Apache License 2.0).
 
 
 License
 -------
 
-Dastkhat is commercial software, licensed under the Dastkhat End User
-License Agreement (License/EULA.txt). Licenses: https://dastyar.io
-Copies of v1.200 and earlier that were released under the SIL Open Font
-License 1.1 remain under that license for the people who received them.
+Dastkhat is free and open source, licensed under the SIL Open Font License,
+Version 1.1 (OFL.txt). Free for personal and commercial use. The font may
+be modified and redistributed under the same license, but not sold by itself.
 
 
 ChangeLog
 ---------
+
+2026-11-10 (Dastyar) Dastkhat v1.200 (relicensed)
+- Relicensed under the SIL Open Font License 1.1 (previously a commercial EULA;
+  no paid licenses were ever sold). Copyright line, license and license-URL
+  name fields updated in every font file. No outline or metric changes.
 
 2026-11-08 (Dastyar) Dastkhat v1.200
 - Published by Dastyar

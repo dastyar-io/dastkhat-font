@@ -389,8 +389,8 @@ def rename(font, style=None, variable=False):
             3: f'1.000;ESKD;{ps}', 4: f'{fam} {style}' if style != 'Regular' else f'{fam} Regular',
             5: 'Version 1.000', 6: ps, 7: 'Dastkhat is a trademark of Alireza Eskandari.',
             8: 'Alireza Eskandari', 9: 'Saber Rastikerdar (Vazirmatn); Alireza Eskandari (Dastkhat)',
-            10: desc, 11: '', 13: 'Licensed under the Dastkhat End User License Agreement. Licenses and terms: https://dastyar.io',
-            14: 'https://dastyar.io', 16: fam, 17: style}
+            10: desc, 11: '', 13: 'This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org',
+            14: 'https://openfontlicense.org', 16: fam, 17: style}
     if variable:
         recs[1] = fam; recs[2] = 'Regular'; recs[4] = f'{fam} Regular'; recs[6] = f'{fam}-Regular'.replace(' ', '')
         recs[3] = f'1.000;ESKD;{fam}-Regular'.replace(' ', ''); recs[25] = fam.replace(' ', '')

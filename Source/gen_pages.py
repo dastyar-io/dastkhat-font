@@ -67,7 +67,7 @@ def nav(active=''):
 
 
 FOOT = ('<div class="wrap"><div class="foot"><span>© ۱۴۰۵ دستیار · dastyar.io</span>'
-        '<span dir="ltr">Dastkhat EULA · Commercial license</span></div></div>')
+        '<span dir="ltr">Dastkhat · SIL OFL 1.1</span></div></div>')
 
 
 def write(rel, content):
@@ -112,10 +112,10 @@ def index_page():
     body = nav('index.html') + f'''
 <div class="wrap">
  <div class="hero">
-  <div><span class="pill">نسخه ۱٫۲۰۰ · مجوز تجاری</span>
+  <div><span class="pill">نسخه ۱٫۲۰۰ · متن‌باز (OFL)</span>
    <h1>دستخط</h1>
    <p class="lead">فونتی فارسی و لاتین برای رابط‌های کاربری امروز؛ با بدنه بلندتر، نقطه‌های هندسی و سه سبک نقطه، از طرف دستیار.</p>
-   <div style="display:flex;gap:12px;margin-top:24px"><a class="btn" href="#download">خرید مجوز</a><a class="btn alt" href="type-tester.html">تست متن</a></div>
+   <div style="display:flex;gap:12px;margin-top:24px"><a class="btn" href="#download">دانلود رایگان</a><a class="btn alt" href="type-tester.html">تست متن</a></div>
   </div>
   <div class="meta">
    <div><b>۹</b><span>وزن، از نازک تا سیاه</span></div>
@@ -150,12 +150,12 @@ def index_page():
  <div class="gl">{glyphs}</div></div></div>
 <div class="sec"><div class="wrap"><h2>مجوز استفاده</h2>
  <div class="grid lic" style="margin-top:20px">
-  <div class="card"><h3>انواع مجوز</h3><ul>
-   <li>دسکتاپ: چاپ، ویدیو، لوگو و طراحی</li><li>وب: میزبانی WOFF2 روی دامنه شما</li>
-   <li>اپ و نرم‌افزار: تعبیه در محصول</li></ul></div>
+  <div class="card"><h3>آزادی‌ها</h3><ul>
+   <li>استفاده رایگان در وب، اپ، چاپ، ویدیو و لوگو</li><li>مناسب کار شخصی، مشتری و محصول تجاری</li>
+   <li>تغییر و انتشار نسخه تغییریافته با همین مجوز</li></ul></div>
   <div class="card"><h3>شرط‌ها</h3><ul>
-   <li>بازنشر، فروش یا اشتراک فایل‌های فونت مجاز نیست</li><li>تغییر و ساخت نسخه مشتق مجاز نیست</li>
-   <li>هر پروژه یا مشتری مجوز خودش را نیاز دارد</li></ul></div>
+   <li>فروش خود فایل‌های فونت به‌تنهایی مجاز نیست</li><li>مجوز SIL OFL 1.1 باید همراه فونت بماند</li>
+   <li>متن کامل در فایل OFL.txt</li></ul></div>
  </div></div></div>
 <div class="sec" id="download" style="border:0"><div class="wrap"><div class="dl">
  <div><h2>دستخط را دانلود کنید</h2><p style="color:var(--on-secondary);margin:6px 0 0">TTF · Variable · WOFF2 · FaNum · NoEn</p></div>
@@ -323,7 +323,7 @@ POSTER_BODY = '''<div class="poster">
  <div class="sq"></div>
  <div class="big">دستخط</div>
  <div class="big2">دستخط</div>
- <div class="meta"><div><b>۹ وزن · ۳ سبک نقطه</b>فونت فارسی برای رابط‌های امروز</div><div class="ltr" style="text-align:left">Commercial license<br>dastyar.io</div></div>
+ <div class="meta"><div><b>۹ وزن · ۳ سبک نقطه</b>فونت فارسی برای رابط‌های امروز</div><div class="ltr" style="text-align:left">SIL OFL 1.1<br>dastyar.io</div></div>
 </div>'''
 
 
@@ -407,63 +407,10 @@ export const dastkhat = localFont({{
 <ul><li><b>Desktop:</b> install the TTF files from <code>Fonts/Main/&lt;Family&gt;/TTF</code>, or the variable font, not both.</li>
 <li><b>Web:</b> copy <code>Webfonts/</code>, link <code>dastkhat.css</code>, use <code>var(--font-dastkhat)</code>.</li>
 <li><b>FaNum:</b> Latin digits render as Persian digits. <b>NoEn:</b> Persian only, pair it with your own Latin font.</li>
-<li><b>License:</b> Commercial EULA. See <code>License/EULA.txt</code>.</li></ul></div>
+<li><b>License:</b> SIL Open Font License 1.1, free for personal and commercial use. See <code>OFL.txt</code>.</li></ul></div>
 </div>''' + FOOT
     write('Helps/guide.html', page('راهنمای دستخط', body, extra_css=css))
 
-
-# =========================================================== license summary (PDF source, in build dir)
-def license_doc():
-    css = '''
-@page{size:A4;margin:0}
-.pg{width:210mm;height:297mm;padding:22mm 20mm;position:relative;page-break-after:always;background:#fff}
-.pg h1{font-size:34px;font-weight:900;margin:14px 0 6px}
-.pg h2{font-size:19px;margin:22px 0 6px;color:var(--primary)}
-.pg p,.pg li{font-size:13.5px;line-height:2}
-.pg .box{border:1.5px solid var(--ink);border-radius:12px;padding:14px 18px;margin-top:12px}
-.yes li::marker{content:"✓  ";color:#2D7A3E}.no li::marker{content:"✕  ";color:var(--primary)}
-.ft{position:absolute;bottom:14mm;right:20mm;left:20mm;font-size:11px;color:var(--mute);display:flex;justify-content:space-between}
-.en{direction:ltr;text-align:left}
-.en .ft{direction:ltr}
-'''
-    fa = '''<div class="pg">
-<span class="pill">شرایط استفاده</span>
-<h1>مجوز فونت دستخط</h1>
-<p>فونت دستخط (Dastkhat) نسخه ۱٫۲۰۰، منتشرشده توسط دستیار، تحت <b>قرارداد مجوز تجاری (EULA)</b> ارائه می‌شود. این صفحه خلاصه‌ای از قرارداد است و متن کامل و معتبر آن در فایل EULA.txt قرار دارد.</p>
-<h2>انواع مجوز</h2><ul class="yes">
-<li><b>دسکتاپ:</b> نصب روی تعداد رایانه‌های رسید؛ چاپ، ویدیو، تصویر، لوگو و طراحی</li>
-<li><b>وب:</b> میزبانی فایل‌های WOFF2 روی دامنه‌ها و تا سقف بازدید ماهانه رسید</li>
-<li><b>اپ و نرم‌افزار:</b> تعبیه در یک محصول مشخص برای تعداد نصب یا مدت رسید</li>
-<li>خروجی تبدیل‌شده به منحنی یا تصویر (لوگو، چاپ) بدون محدودیت قابل استفاده است</li></ul>
-<h2>محدودیت‌ها</h2><ul class="no">
-<li>کپی، اشتراک، فروش، اجاره یا بازنشر فایل‌های فونت مجاز نیست</li>
-<li>بارگذاری فونت در سایت عمومی یا مخزن کد مجاز نیست</li>
-<li>تغییر فونت یا ساخت نسخه مشتق مجاز نیست</li>
-<li>استفاده برای مشتری، فقط با مجوز خود او یا تحویل به‌صورت منحنی و تصویر</li>
-<li>اطلاعات حق نشر و نام وزیرمتن در فونت نباید حذف شود</li></ul>
-<div class="box"><b>منشأ:</b> دستخط بر پایه فونت وزیرمتن، اثر صابر راستی‌کردار و با اجازه ایشان ساخته شده است. حروف لاتین از Roboto (مجوز Apache 2.0) گرفته شده‌اند. نسخه‌های ۱٫۲۰۰ و قبل‌تر که با مجوز OFL منتشر شده‌اند، برای دریافت‌کنندگانشان همچنان تحت آن مجوز می‌مانند.</div>
-<div class="box"><b>سلب مسئولیت:</b> این فونت «همان‌طور که هست» ارائه می‌شود. این خلاصه جایگزین متن رسمی قرارداد نیست و مشاوره حقوقی محسوب نمی‌شود. خرید مجوز: dastyar.io</div>
-<div class="ft"><span>© ۱۴۰۵ دستیار · dastyar.io</span><span>Dastkhat v1.200 · License summary</span></div></div>'''
-    en = '''<div class="pg en" dir="ltr">
-<span class="pill">Terms of use</span>
-<h1>Dastkhat Font License</h1>
-<p>Dastkhat v1.200, published by Dastyar, is licensed under a <b>commercial End User License Agreement (EULA)</b>. This page summarises it; the full, binding text is in EULA.txt.</p>
-<h2>License types</h2><ul class="yes">
-<li><b>Desktop:</b> install on the number of Seats on your receipt; print, video, images, logos and design work</li>
-<li><b>Web:</b> self-host the WOFF2 files on your listed domains, up to the monthly page views on your receipt</li>
-<li><b>App / Software:</b> embed in one named product, for the installs or term on your receipt</li>
-<li>Outlined or rasterised output (logos, print) may be used without limit</li></ul>
-<h2>Restrictions</h2><ul class="no">
-<li>No copying, sharing, reselling, renting or redistributing the font files</li>
-<li>No uploading the font to public sites or code repositories</li>
-<li>No modifying the font or creating derivative fonts</li>
-<li>Client work needs the client's own license, or delivery as outlines or images only</li>
-<li>Keep copyright notices, including the Vazirmatn attribution in the font</li></ul>
-<div class="box"><b>Origin:</b> Dastkhat is derived from Vazirmatn by Saber Rastikerdar, used with his permission. Its Latin glyphs derive from Roboto (Apache License 2.0). Copies of v1.200 and earlier released under the SIL OFL stay under that license for those who received them.</div>
-<div class="box"><b>Disclaimer:</b> The font is provided “as is”, without warranty of any kind. This summary does not replace the official EULA and is not legal advice. Buy a license: dastyar.io</div>
-<div class="ft"><span>© 2026 Dastyar · dastyar.io</span><span>Dastkhat v1.200 · License summary</span></div></div>'''
-    open(os.path.join(BUILD, 'license.html'), 'w').write(
-        page('Dastkhat License', fa + en, rel_css='file://' + CSS_FONTS, rel_site='file://' + CSS_SITE, extra_css=css))
 
 
 # =========================================================== specimen (PDF source)
@@ -521,7 +468,7 @@ body{background:#fff}
     pages.append(W('cover') + hd('اطلاعات') + '''<div class="ttl" style="margin-top:14mm">دستخط</div>
 <div class="cols" style="grid-template-columns:1fr 1fr;font-size:15px;line-height:2.1">
 <div>ناشر: دستیار<br>نسخه: ۱٫۲۰۰<br>وزن‌ها: ۹ + متغیر<br>خانواده‌ها: Dastkhat · Dastkhat Diamond · Dastkhat Bar<br>نسخه‌ها: اصلی · FaNum · NoEn<br>فرمت‌ها: TTF · WOFF2</div>
-<div>مجوز: تجاری (EULA)<br>بر پایه: وزیرمتن، با اجازه صابر راستی‌کردار<br>خرید و استعلام:<br><span class="ltr">dastyar.io</span></div></div>''' + ft('08') + '</div>')
+<div>مجوز: OFL 1.1 (متن‌باز)<br>بر پایه: وزیرمتن، اثر صابر راستی‌کردار<br>وب‌سایت:<br><span class="ltr">dastyar.io</span></div></div>''' + ft('08') + '</div>')
     open(os.path.join(BUILD, 'specimen.html'), 'w').write(
         page('Dastkhat Specimen', ''.join(pages), rel_css='file://' + CSS_FONTS, rel_site='file://' + CSS_SITE, extra_css=css))
 
@@ -556,7 +503,7 @@ body{background:#fff}
     fr.append(f'''<div class="f sq1080" id="social-1" style="background:var(--secondary);color:var(--on-secondary)"><div class="c">
 <div style="font-size:30px;font-weight:700">فونت تازه دستیار</div>
 <div style="font-family:'Dastkhat Bar';font-size:300px;font-weight:900;line-height:1.1;margin-top:120px">دستخط</div>
-<div style="font-size:40px;font-weight:500;margin-top:40px">مجوز تجاری برای وب، اپ و چاپ</div>
+<div style="font-size:40px;font-weight:500;margin-top:40px">رایگان و متن‌باز برای وب، اپ و چاپ</div>
 <div style="position:absolute;bottom:0;right:0;font-size:26px">dastyar.io</div></div></div>''')
     fr.append(f'''<div class="f sq1080" id="social-2" style="background:var(--ink);color:#fff"><div class="c">
 <div style="font-size:30px;color:var(--secondary)">FaNum</div>
@@ -573,5 +520,5 @@ body{background:#fff}
 
 if __name__ == '__main__':
     index_page(); tester_page(); glyph_page(); ui_page(); poster_page(); webfont_test(); help_page()
-    license_doc(); specimen_doc(); frames_doc()
+    specimen_doc(); frames_doc()
     print('pages written')

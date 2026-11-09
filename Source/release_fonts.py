@@ -21,12 +21,12 @@ WEIGHTS = [(100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regular'),
            (600, 'SemiBold'), (700, 'Bold'), (800, 'ExtraBold'), (900, 'Black')]
 
 COPYRIGHT = ('Copyright 2015 The Vazirmatn Project Authors (https://github.com/rastikerdar/vazirmatn). '
-             'Copyright 2026 Dastyar (https://dastyar.io). All rights reserved.')
-DESC = ('Dastkhat is a Persian and Latin UI typeface published by Dastyar, derived from Vazirmatn by Saber Rastikerdar, used with permission. '
+             'Copyright 2026 The Dastkhat Project Authors (https://github.com/dastyar-io/dastkhat-font).')
+DESC = ('Dastkhat is a Persian and Latin UI typeface published by Dastyar, derived from Vazirmatn by Saber Rastikerdar. '
         'It has a taller letter body, wider Persian letters and digits, a smaller Latin, and three dot styles: '
         'square, diamond and bar. Latin glyphs derive from Roboto (Apache License 2.0).')
-LICENSE = ('Licensed under the Dastkhat End User License Agreement. Unauthorized copying, sharing or '
-           'redistribution is prohibited. Licenses and terms: https://dastyar.io')
+LICENSE = ('This Font Software is licensed under the SIL Open Font License, Version 1.1. '
+           'This license is available with a FAQ at: https://openfontlicense.org')
 
 
 def nospace(s):
@@ -51,7 +51,7 @@ def set_names(font, fam, style='Regular', variable=False):
         11: 'https://dastyar.io',
         12: 'https://dastyar.io',
         13: LICENSE,
-        14: 'https://dastyar.io',
+        14: 'https://openfontlicense.org',
         16: fam,
         17: style,
     }
