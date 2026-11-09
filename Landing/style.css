@@ -34,6 +34,8 @@ button{cursor:pointer;border:0;background:none;padding:0}
 .d{display:inline-block;width:.5em;height:.5em;background:currentColor;flex:none;transition:transform .7s var(--spring)}
 html[data-dots=diamond] .d{transform:rotate(45deg) scale(.86)}
 html[data-dots=bar] .d{transform:scaleX(2.1) scaleY(.5)}
+html[data-dots=bar] .hero-side .d{transform-origin:0 50%}
+.ride .tot{flex-wrap:wrap}
 .d.red{background:var(--red)}.d.blue{background:var(--blue)}
 
 /* ---------- nav ---------- */
@@ -431,6 +433,7 @@ footer li{margin:2px 0}
   .final .big-d{top:6%}
   .otp span{width:40px;height:48px}
 }
+@media (hover:none){#whint{display:none}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}

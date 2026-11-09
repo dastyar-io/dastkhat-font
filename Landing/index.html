@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-dots="square">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>فونت دستخط | فونت فارسی رابط کاربری با نقطه‌های هندسی</title>
+<meta name="description" content="دستخط فونت فارسی و لاتین برای رابط کاربری است: ۹ وزن و نسخه متغیر، سه سبک نقطه (مربع، لوزی و خط) و نسخه‌های FaNum و NoEn. همین‌جا متن خودتان را با آن امتحان کنید.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="دستخط، فونت فارسی با نقطه‌های هندسی">
+<meta property="og:description" content="۹ وزن، نسخه متغیر و سه سبک نقطه برای رابط کاربری فارسی.">
+<meta property="og:image" content="../Demos/images/dastkhat-cover.png">
+<meta property="og:locale" content="fa_IR">
+<meta name="theme-color" content="#4285F4">
+<link rel="preload" href="../Webfonts/fonts/Dastkhat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../Webfonts/dastkhat.css">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');try{var s=localStorage.getItem('dk-dots');if(s==='diamond'||s==='bar')document.documentElement.dataset.dots=s}catch(e){}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"دستخط با وزیرمتن چه فرقی دارد؟","acceptedAnswer":{"@type":"Answer","text":"دستخط بر پایه وزیرمتن ساخته شده است. بدنه حروف فارسی بلندتر و ۴٪ پهن‌تر شده، ارقام فارسی ۷٪ پهن‌تر شده‌اند، حروف لاتین به ۹۳٪ کوچک شده‌اند و نقطه‌ها از نو به شکل هندسی طراحی شده‌اند. دو خانواده لوزی و خط هم اضافه شده است."}},
+{"@type":"Question","name":"کدام نسخه را انتخاب کنم؟","acceptedAnswer":{"@type":"Answer","text":"برای بیشتر پروژه‌ها نسخه اصلی کافی است. اگر قیمت، جدول یا داشبورد دارید FaNum را بردارید. اگر می‌خواهید لاتین را با فونت دیگری مثل Inter نمایش دهید NoEn مناسب است."}},
+{"@type":"Question","name":"نسخه ثابت نصب کنم یا متغیر؟","acceptedAnswer":{"@type":"Answer","text":"روی هر سیستم فقط یکی را نصب کنید. نام‌های یکسان در بسیاری از نرم‌افزارها تداخل ایجاد می‌کند."}},
+{"@type":"Question","name":"می‌توانم با دستخط لوگو طراحی کنم؟","acceptedAnswer":{"@type":"Answer","text":"بله، با مجوز دسکتاپ. لوگو و طرح‌هایی که به منحنی یا تصویر تبدیل شده‌اند بدون محدودیت قابل استفاده‌اند."}},
+{"@type":"Question","name":"برای پروژه مشتری چه کنم؟","acceptedAnswer":{"@type":"Answer","text":"یا مشتری خودش مجوز می‌خرد، یا خروجی را فقط به‌صورت منحنی و تصویر تحویل می‌دهید."}},
+{"@type":"Question","name":"چرا نباید به متن فارسی letter-spacing بدهم؟","acceptedAnswer":{"@type":"Answer","text":"چون اتصال حروف را می‌شکند. اگر متن فشرده به نظر می‌رسد، فاصله خطوط را زیاد کنید."}}
+]}
+</script>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="ناوبری اصلی">
+  <div class="wrap">
+    <a class="brand" href="#top">دستخط <span class="d" aria-hidden="true"></span></a>
+    <ul>
+      <li><a href="#dots">سبک نقطه</a></li>
+      <li><a href="#weights">وزن‌ها</a></li>
+      <li><a href="#tester">آزمایش متن</a></li>
+      <li><a href="#use">کاربرد</a></li>
+      <li><a href="#glyphs">حروف</a></li>
+      <li><a href="#license">مجوز</a></li>
+    </ul>
+    <div class="switch" role="group" aria-label="سبک نقطه در کل صفحه">
+      <button data-set-dots="square" aria-pressed="true" aria-label="نقطه مربع" title="مربع"><i></i></button>
+      <button data-set-dots="diamond" aria-pressed="false" aria-label="نقطه لوزی" title="لوزی"><i></i></button>
+      <button data-set-dots="bar" aria-pressed="false" aria-label="نقطه خطی" title="خط"><i></i></button>
+    </div>
+    <a class="btn sm" href="https://dastyar.io" target="_blank" rel="noopener">خرید مجوز</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="grid" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="eyebrow"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.200</span></p>
+    <h1 id="word">دستخط</h1>
+    <div class="hero-row">
+      <div>
+        <p class="lead">فونت فارسی برای رابط‌های امروز. با بدنه بلندتر، نقطه‌های هندسی و سه سبک نقطه که با یک کلیک عوض می‌شوند.</p>
+        <div class="cta">
+          <a class="btn white" href="#tester">متن خودتان را امتحان کنید</a>
+          <a class="btn ghost" href="https://dastyar.io" target="_blank" rel="noopener">خرید مجوز</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <span class="d" aria-hidden="true"></span>
+        <div class="wread" aria-hidden="true"><span>وزن</span><b id="wread">۹۰۰</b><span id="whint">نشانگر را حرکت دهید</span></div>
+      </div>
+    </div>
+    <dl class="stats">
+      <div><dt>وزن، از نازک تا سیاه</dt><dd data-count="9">۹</dd></div>
+      <div><dt>سبک نقطه</dt><dd data-count="3">۳</dd></div>
+      <div><dt>خانواده فونت</dt><dd data-count="9">۹</dd></div>
+      <div><dt>محور وزن در نسخه متغیر</dt><dd>۱۰۰ تا ۹۰۰</dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div class="mq-track">
+  <span style="font-weight:900">نقطه، سر خط</span><span style="font-weight:200">دستیار هوشمند</span><span style="font-weight:700" class="f-ba">شب یلدا</span><span style="font-weight:400">چای تازه‌دم</span><span style="font-weight:800" class="f-di">شیراز</span><span style="font-weight:300">۱۲۵٬۰۰۰ تومان</span><span style="font-weight:900" class="f-ba">پیشنهاد ویژه</span><span style="font-weight:500">سلام</span>
+</div></div>
+<div class="mq rev" aria-hidden="true"><div class="mq-track">
+  <span style="font-weight:300" class="f-di">افزودن به سبد خرید</span><span style="font-weight:900">تهران</span><span style="font-weight:500" class="f-ba">پنجشنبه ۲۲ آبان</span><span style="font-weight:800">ثبت سفارش</span><span style="font-weight:100">نازک</span><span style="font-weight:900" class="f-di">سیاه</span><span style="font-weight:600">ژرف‌نگری</span><span style="font-weight:400" class="f-ba">گفت‌وگو</span>
+</div></div>
+
+<main>
+
+<!-- ============ dot styles ============ -->
+<section class="sec" id="dots">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۰۱ · سبک نقطه</p>
+      <h2 class="h2">یک فونت، سه جور نقطه.</h2>
+      <p class="sub">هر سه خانواده وزن‌ها و فاصله‌گذاری یکسان دارند. سبک را عوض کنید و متن سر جایش می‌ماند. یکی را انتخاب کنید تا همین صفحه با آن نوشته شود.</p>
+    </div>
+    <div class="morph rv" aria-hidden="true"><i></i><i></i></div>
+    <div class="fams">
+      <button class="fam sq rv" data-set-dots="square" aria-pressed="true">
+        <span class="tag">Dastkhat</span>
+        <span class="big f-sq">تث شق</span>
+        <span class="word f-sq">پیشنهاد شگفت‌انگیز</span>
+        <h3><i></i>مربع</h3>
+        <p>پیش‌فرض برای رابط کاربری و متن.</p>
+        <span class="state" data-on="این صفحه الان با همین سبک است" data-off="کل صفحه را با این سبک ببینید"></span>
+      </button>
+      <button class="fam di rv" style="--dl:.08s" data-set-dots="diamond" aria-pressed="false">
+        <span class="tag">Dastkhat Diamond</span>
+        <span class="big f-di">تث شق</span>
+        <span class="word f-di">پیشنهاد شگفت‌انگیز</span>
+        <h3><i></i>لوزی</h3>
+        <p>مربع چرخیده ۴۵ درجه، با ظاهری نرم‌تر و کلاسیک.</p>
+        <span class="state" data-on="این صفحه الان با همین سبک است" data-off="کل صفحه را با این سبک ببینید"></span>
+      </button>
+      <button class="fam ba rv" style="--dl:.16s" data-set-dots="bar" aria-pressed="false">
+        <span class="tag">Dastkhat Bar</span>
+        <span class="big f-ba">تث شق</span>
+        <span class="word f-ba">پیشنهاد شگفت‌انگیز</span>
+        <h3><i></i>خط</h3>
+        <p>دو نقطه یک خط می‌شود و سه نقطه یک خط و یک مربع. برای لوگو، تیتر و هویت بصری.</p>
+        <span class="state" data-on="این صفحه الان با همین سبک است" data-off="کل صفحه را با این سبک ببینید"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ one dot ============ -->
+<section class="sec dark" id="one-dot">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d red" aria-hidden="true"></span>۰۲ · چرا نقطه؟</p>
+      <h2 class="h2">در فارسی، یک نقطه معنا را عوض می‌کند.</h2>
+      <p class="sub">رود با یک نقطه زود می‌شود. برای همین نقطه‌های دستخط شکل ثابت هندسی دارند، با بدنه حرف کش نمی‌آیند و در هر وزن فاصله‌شان از هم حفظ می‌شود.</p>
+    </div>
+    <div class="pairs rv">
+      <button class="pair" aria-pressed="false"><i class="drop"></i><span class="w"><span class="a">رود</span><span class="b">زود</span></span><span class="m"><span class="a">رودخانه</span><span class="b">خیلی سریع</span></span></button>
+      <button class="pair" aria-pressed="false"><i class="drop"></i><span class="w"><span class="a">بار</span><span class="b">باز</span></span><span class="m"><span class="a">محموله</span><span class="b">دوباره</span></span></button>
+      <button class="pair" aria-pressed="false"><i class="drop"></i><span class="w"><span class="a">مرد</span><span class="b">مزد</span></span><span class="m"><span class="a">آدم</span><span class="b">دستمزد</span></span></button>
+      <button class="pair" aria-pressed="false"><i class="drop"></i><span class="w"><span class="a">حال</span><span class="b">خال</span></span><span class="m"><span class="a">احوال</span><span class="b">نشان روی پوست</span></span></button>
+      <button class="pair" aria-pressed="false"><i class="drop"></i><span class="w"><span class="a">رحمت</span><span class="b">زحمت</span></span><span class="m"><span class="a">مهربانی</span><span class="b">دردسر</span></span></button>
+    </div>
+    <p class="hint rv"><span class="d red" aria-hidden="true"></span>روی هر واژه بزنید تا یک نقطه رویش بیفتد.</p>
+  </div>
+</section>
+
+<!-- ============ scroll weight ============ -->
+<section class="sw" id="weights" aria-label="وزن متغیر">
+  <div class="sw-in">
+    <div class="wrap">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۰۳ · وزن متغیر</p>
+      <p class="sw-line" id="sw-line">هرچه پایین‌تر بروید، پررنگ‌تر می‌شود.</p>
+      <div class="sw-meta">
+        <div><div class="sw-num" id="sw-num">۱۰۰</div><div class="sw-name" id="sw-name">نازک</div></div>
+        <div class="sw-stops" id="sw-stops" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="nine">
+  <div class="wrap">
+    <div class="head rv">
+      <h2 class="h2">۹ وزن آماده، و هر عددی بین آن‌ها.</h2>
+      <p class="sub">از نازک برای تیترهای ظریف تا سیاه برای بنر. نسخه متغیر همه را در یک فایل دارد، با حجمی حدود ۱۵۰ کیلوبایت برای وب.</p>
+    </div>
+    <div class="rv">
+      <div class="wrow"><span class="fa">نازک</span><span class="en">100 Thin</span><p style="font-weight:100">دستیار هوشمند خلاق · Dastkhat</p></div>
+      <div class="wrow"><span class="fa">خیلی سبک</span><span class="en">200 ExtraLight</span><p style="font-weight:200">دستیار هوشمند خلاق · Dastkhat</p></div>
+      <div class="wrow"><span class="fa">سبک</span><span class="en">300 Light</span><p style="font-weight:300">دستیار هوشمند خلاق · Dastkhat</p></div>
+      <div class="wrow"><span class="fa">معمولی</span><span class="en">400 Regular</span><p style="font-weight:400">دستیار هوشمند خلاق · Dastkhat</p></div>
+      <div class="wrow"><span class="fa">متوسط</span><span class="en">500 Medium</span><p style="font-weight:500">دستیار هوشمند خلاق · Dastkhat</p></div>
+      <div class="wrow"><span class="fa">نیمه‌ضخیم</span><span class="en">600 SemiBold</span><p style="font-weight:600">دستیار هوشمند خلاق · Dastkhat</p></div>
+      <div class="wrow"><span class="fa">ضخیم</span><span class="en">700 Bold</span><p style="font-weight:700">دستیار هوشمند خلاق · Dastkhat</p></div>
+      <div class="wrow"><span class="fa">خیلی ضخیم</span><span class="en">800 ExtraBold</span><p style="font-weight:800">دستیار هوشمند خلاق · Dastkhat</p></div>
+      <div class="wrow"><span class="fa">سیاه</span><span class="en">900 Black</span><p style="font-weight:900">دستیار هوشمند خلاق · Dastkhat</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ tester ============ -->
+<section class="sec" id="tester">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۰۴ · آزمایش متن</p>
+      <h2 class="h2">حرف خودتان را با آن بنویسید.</h2>
+      <p class="sub">اسم برندتان، تیتر کمپین یا یک جمله از محصولتان را تایپ کنید و با سبک، وزن و اندازه بازی کنید.</p>
+    </div>
+    <div class="tester rv" id="t-box" data-theme="paper">
+      <div class="t-bar">
+        <div class="seg" id="t-fam" role="group" aria-label="سبک نقطه">
+          <button data-f="Dastkhat" aria-pressed="true">مربع</button>
+          <button data-f="Dastkhat Diamond" aria-pressed="false">لوزی</button>
+          <button data-f="Dastkhat Bar" aria-pressed="false">خط</button>
+        </div>
+        <label>وزن <input type="range" id="t-w" min="100" max="900" value="700"><output id="t-wv">۷۰۰</output></label>
+        <label>اندازه <input type="range" id="t-s" min="16" max="180" value="72"><output id="t-sv">۷۲</output></label>
+        <label>فاصله خطوط <input type="range" id="t-l" min="12" max="24" value="16"><output id="t-lv">۱٫۶</output></label>
+        <div class="swatches" role="group" aria-label="رنگ زمینه">
+          <button data-t="paper" aria-pressed="true" aria-label="زمینه روشن" style="background:#fff"></button>
+          <button data-t="ink" aria-pressed="false" aria-label="زمینه تیره" style="background:#151312"></button>
+          <button data-t="blue" aria-pressed="false" aria-label="زمینه آبی" style="background:#4285F4"></button>
+        </div>
+      </div>
+      <div id="t-live" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" aria-label="متن آزمایشی">اینجا بنویسید، مثلاً اسم برندتان</div>
+      <div class="chips" id="t-presets">
+        <button class="chip" data-p="title">تیتر</button>
+        <button class="chip" data-p="poem">شعر</button>
+        <button class="chip" data-p="price">قیمت</button>
+        <button class="chip" data-p="ui">متن رابط</button>
+        <button class="chip" data-p="para">پاراگراف</button>
+        <button class="chip" data-p="mix">فارسی و لاتین</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ design facts ============ -->
+<section class="sec" id="design">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۰۵ · طراحی</p>
+      <h2 class="h2">برای صفحه‌هایی که هر روز خوانده می‌شوند.</h2>
+      <p class="sub">دستخط بر پایه وزیرمتن ساخته شده و چند چیز در آن برای رابط کاربری تغییر کرده است.</p>
+    </div>
+    <div class="facts">
+      <div class="fact w8 rv">
+        <h3>بدنه بلندتر، خوانا در اندازه کوچک</h3>
+        <p>دندانه‌ها و کاسه‌های حروف فارسی بلندتر شده‌اند و خط کرسی دست‌نخورده مانده است. نتیجه را در برچسب‌ها و متن‌های ریز می‌بینید.</p>
+        <div class="sizes">
+          <div><b>11px</b><span style="font-size:11px">سفارش شما ثبت شد و تا ساعت ۱۸ امروز ارسال می‌شود.</span></div>
+          <div><b>12px</b><span style="font-size:12px">سفارش شما ثبت شد و تا ساعت ۱۸ امروز ارسال می‌شود.</span></div>
+          <div><b>14px</b><span style="font-size:14px">سفارش شما ثبت شد و تا ساعت ۱۸ امروز ارسال می‌شود.</span></div>
+          <div><b>16px</b><span style="font-size:16px">سفارش شما ثبت شد و تا ساعت ۱۸ امروز ارسال می‌شود.</span></div>
+          <div><b>20px</b><span style="font-size:20px">سفارش شما ثبت شد و تا ساعت ۱۸ امروز ارسال می‌شود.</span></div>
+        </div>
+      </div>
+      <div class="fact rv" style="--dl:.08s">
+        <div class="n">۴٪</div>
+        <h3>حروف فارسی پهن‌تر</h3>
+        <p>کمی جای نفس بیشتر برای هر حرف.</p>
+        <div class="spec">گفت‌وگو</div>
+      </div>
+      <div class="fact rv">
+        <div class="n">۷٪</div>
+        <h3>ارقام فارسی پهن‌تر</h3>
+        <p>قیمت و عدد با یک نگاه خوانده می‌شود.</p>
+        <div class="spec">۰۱۲۳۴۵۶۷۸۹</div>
+      </div>
+      <div class="fact rv" style="--dl:.08s">
+        <div class="n">۹۳٪</div>
+        <h3>لاتین هم‌قد فارسی</h3>
+        <p>حروف لاتین کوچک‌تر شده‌اند تا کنار فارسی بیرون نزنند.</p>
+        <div class="spec">نسخه Pro فعال شد</div>
+      </div>
+      <div class="fact rv" style="--dl:.16s">
+        <div class="n" aria-hidden="true"><span class="d red"></span></div>
+        <h3>نقطه‌هایی که کش نمی‌آیند</h3>
+        <p>نقطه در هر وزن شکل خودش را نگه می‌دارد و به نقطه کناری نمی‌چسبد.</p>
+        <div class="spec"><span style="font-weight:100">پیچ</span> <span style="font-weight:500">پیچ</span> <span style="font-weight:900">پیچ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ in use ============ -->
+<section class="sec" id="use">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۰۶ · کاربرد</p>
+      <h2 class="h2">همان جاهایی که هر روز فارسی می‌خوانیم.</h2>
+      <p class="sub">هیچ‌کدام از این‌ها تصویر نیست. همه با خود فونت و در مرورگر شما ساخته شده‌اند، پس با عوض‌کردن سبک نقطه عوض می‌شوند.</p>
+    </div>
+    <div class="bento">
+
+      <article class="tile c4 shop rv">
+        <p class="cap"><span class="d"></span>فروشگاه اینترنتی</p>
+        <div class="ph"><span class="off num">۱۵٪ تخفیف</span></div>
+        <h3>زعفران سرگل قائنات، بسته ۴٫۶ گرمی</h3>
+        <p class="rate">امتیاز ۴٫۷ از ۵ · ۱٬۲۴۸ نظر</p>
+        <p class="price"><b>۱٬۰۹۲٬۰۰۰</b><small>تومان</small><s>۱٬۲۸۵٬۰۰۰</s></p>
+        <span class="btn blue">افزودن به سبد خرید</span>
+      </article>
+
+      <article class="tile c4 chat rv" style="--dl:.08s">
+        <p class="cap"><span class="d"></span>دستیار هوشمند</p>
+        <div class="msgs">
+          <p class="msg u">یک برنامه سه‌روزه برای سفر شیراز می‌خواهم.</p>
+          <p class="msg a"><b>روز اول:</b> حافظیه و باغ ارم<br><b>روز دوم:</b> تخت جمشید و نقش رستم<br><b>روز سوم:</b> بازار وکیل و نارنجستان قوام</p>
+          <p class="msg u">برای ناهار روز دوم کجا بروم؟</p>
+          <p class="msg a"><span class="typing" aria-label="در حال نوشتن"><i></i><i></i><i></i></span></p>
+        </div>
+        <div class="inp"><span>پیام خود را بنویسید</span><i></i></div>
+      </article>
+
+      <article class="tile c4 rv" style="--dl:.16s">
+        <p class="cap"><span class="d"></span>تقویم شمسی، همین امروز</p>
+        <div class="cal-h"><b id="cal-m">آبان</b><span id="cal-y">۱۴۰۵</span></div>
+        <div class="cal" id="cal"></div>
+        <div class="cal-f"><span id="cal-today"></span><span id="cal-clock" class="ltr"></span></div>
+      </article>
+
+      <article class="tile c3 ride rv">
+        <p class="cap"><span class="d"></span>رسید سفر</p>
+        <div class="route">
+          <div>میدان ونک<small>مبدأ · ۱۸:۴۰</small></div>
+          <div>میدان تجریش<small>مقصد · ۱۹:۰۲</small></div>
+        </div>
+        <p style="font-size:15px;color:var(--mute)">۲۲ دقیقه · ۷٫۴ کیلومتر</p>
+        <p class="tot"><span>مبلغ سفر</span><b>۹۲٬۰۰۰ <small style="font-size:14px;font-weight:500">تومان</small></b></p>
+      </article>
+
+      <article class="tile c5 rv" style="--dl:.08s">
+        <p class="cap"><span class="d"></span>داشبورد فروش</p>
+        <div class="kpi">
+          <div><b>۴۸٫۶ <small style="font-size:15px;font-weight:500">میلیون تومان</small></b><span>فروش این هفته</span> <span class="up">۱۲٪ بیشتر</span></div>
+          <div><b>۳۱۷</b><span>سفارش</span></div>
+        </div>
+        <div class="bars" aria-hidden="true">
+          <div style="--h:42;--i:0"><i></i>ش</div><div style="--h:55;--i:1"><i></i>ی</div><div style="--h:38;--i:2"><i></i>د</div><div style="--h:64;--i:3"><i></i>س</div><div style="--h:58;--i:4"><i></i>چ</div><div class="hi" style="--h:96;--i:5"><i></i>پ</div><div style="--h:74;--i:6"><i></i>ج</div>
+        </div>
+      </article>
+
+      <article class="tile c4 rv" style="--dl:.16s">
+        <p class="cap"><span class="d"></span>ورود با کد تأیید</p>
+        <p class="note">کد ۵ رقمی به ۰۹۱۲ ••• ۴۲ ۱۸ پیامک شد.</p>
+        <div class="otp" aria-hidden="true"><span>۴</span><span>۸</span><span>۲</span><span class="on"></span><span></span></div>
+        <p class="note">ارسال دوباره کد تا ۰۱:۴۶</p>
+        <div class="kit" aria-hidden="true">
+          <span class="btn sm">تأیید</span><span class="btn sm ghost">انصراف</span><span class="chip">رایگان</span><span class="chip">ارسال امروز</span><span class="tog"></span>
+        </div>
+      </article>
+
+      <article class="tile c7 yalda rv">
+        <p class="cap"><span class="d"></span>پوستر · سبک خط، وزن سیاه</p>
+        <div class="seeds" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i></div>
+        <h3>شب یلدا</h3>
+        <p>یک دقیقه بیشتر کنار هم. انار، هندوانه، فال حافظ و چای تازه‌دم.</p>
+      </article>
+
+      <article class="tile c5 art rv" style="--dl:.08s">
+        <p class="cap"><span class="d"></span>مقاله و متن بلند</p>
+        <h3>چرا فاصله خطوط در متن فارسی مهم‌تر است؟</h3>
+        <p class="by">زمان مطالعه: ۲ دقیقه</p>
+        <p>حروف فارسی کشیدگی بالا و پایین زیادی دارند و نقطه‌ها هم فضای خودشان را می‌خواهند. اگر متن فشرده به نظر می‌رسد، به‌جای کوچک‌کردن اندازه اول فاصله خطوط را بیشتر کنید. برای متن بدنه اندازه ۱۵ تا ۱۸ پیکسل و فاصله خطوط ۱٫۸ تا ۲ نقطه شروع خوبی است.</p>
+      </article>
+
+      <article class="tile c8 rv">
+        <p class="cap"><span class="d"></span>نشانه‌نوشته با سبک خط (نام‌ها فرضی‌اند)</p>
+        <div class="logos" style="grid-template-columns:repeat(4,1fr)">
+          <div class="l1">کافه نقطه</div><div class="l2">پیک شتاب</div><div class="l3">نشر تیرگان</div><div class="l4">بوم‌گشت</div>
+        </div>
+      </article>
+
+      <article class="tile c4 rv" style="--dl:.08s">
+        <p class="cap"><span class="d"></span>اعلان</p>
+        <p style="font-weight:800;font-size:19px">بسته شما در راه است</p>
+        <p style="color:var(--mute);font-size:15.5px">مأمور پست تا ۲۰ دقیقه دیگر می‌رسد. کد تحویل: <b class="num" style="color:var(--ink)">7391</b></p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ poetry ============ -->
+<section class="sec blue" id="poem-sec">
+  <div class="wrap">
+    <p class="kicker"><span class="d" aria-hidden="true"></span>۰۷ · شعر</p>
+    <div class="poem" id="poem" role="button" tabindex="0" aria-label="بیت بعدی">
+      <p class="v" id="pv1"></p>
+      <p class="v" id="pv2"></p>
+      <p class="poet"><span class="d" aria-hidden="true"></span><span id="pp"></span></p>
+      <div class="pdots" id="pdots" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ variants ============ -->
+<section class="sec" id="variants">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۰۸ · نسخه‌ها</p>
+      <h2 class="h2">سه نسخه برای سه نیاز رایج.</h2>
+      <p class="sub">هر سبک نقطه در سه نسخه منتشر می‌شود. در مجموع ۹ خانواده، هر کدام با ۹ وزن ثابت و یک فایل متغیر.</p>
+    </div>
+    <div class="vars">
+      <div class="var rv">
+        <span class="tag">Main</span>
+        <h3>اصلی</h3>
+        <p>فارسی و لاتین کامل. انتخاب بیشتر پروژه‌ها.</p>
+        <div class="demo"><div class="out">دستخط Dastkhat 2026</div></div>
+      </div>
+      <div class="var rv" style="--dl:.08s">
+        <span class="tag">FaNum</span>
+        <h3>اعداد فارسی</h3>
+        <p>عددهای لاتین با شکل فارسی نمایش داده می‌شوند. داده و کد شما دست نمی‌خورد. عدد را عوض کنید:</p>
+        <div class="demo">
+          <input type="text" id="fn-in" value="1,285,000" inputmode="numeric" aria-label="عدد با ارقام لاتین">
+          <div class="out num" id="fn-out">1,285,000</div>
+          <p class="lab">ورودی با ارقام لاتین است، نمایش با ارقام فارسی.</p>
+        </div>
+      </div>
+      <div class="var rv" style="--dl:.16s">
+        <span class="tag">NoEn</span>
+        <h3>بدون لاتین</h3>
+        <p>حروف لاتین حذف شده‌اند تا فونت لاتین دلخواه خودتان کنار دستخط بنشیند.</p>
+        <div class="demo">
+          <div class="out" style="font-family:'Dastkhat NoEn',Georgia,serif">دستخط با Georgia</div>
+          <p class="lab">در این نمونه لاتین با Georgia نمایش داده شده است.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ glyphs ============ -->
+<section class="sec dark" id="glyphs">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d red" aria-hidden="true"></span>۰۹ · حروف</p>
+      <h2 class="h2">هر حرف، چهار شکل.</h2>
+      <p class="sub">روی هر نویسه بزنید تا شکل تنها، آغازی، میانی و پایانی‌اش را ببینید. پوشش خط عربی برای فارسی و عربی کامل است و اردو در حد پایه پشتیبانی می‌شود.</p>
+    </div>
+    <div class="gx rv">
+      <div class="gview">
+        <div class="gbig" id="g-big">ش</div>
+        <div class="gmeta"><span id="g-code">U+0634</span><span>Dastkhat</span></div>
+        <div class="gforms" id="g-forms"></div>
+      </div>
+      <div class="ggrid" id="g-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ developers ============ -->
+<section class="sec" id="dev">
+  <div class="wrap dev">
+    <div class="rv">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۱۰ · برای توسعه‌دهنده</p>
+      <h2 class="h2">دو خط، و فونت روی سایت است.</h2>
+      <ul class="tips">
+        <li><span class="d"></span><span><b>یک فایل متغیر.</b> اگر سه وزن یا بیشتر لازم دارید، WOFF2 متغیر را بردارید.</span></li>
+        <li><span class="d"></span><span><b>بدون letter-spacing.</b> فاصله حروف اتصال فارسی را می‌شکند.</span></li>
+        <li><span class="d"></span><span><b>میزبانی روی سرور خودتان.</b> برای فونت به CDN دیگران تکیه نکنید.</span></li>
+        <li><span class="d"></span><span><b>فاصله خطوط ۱٫۸ تا ۲</b> برای متن بدنه و ۱٫۲ تا ۱٫۳ برای تیتر.</span></li>
+      </ul>
+    </div>
+    <div class="code rv" style="--dl:.1s">
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-tab="0">CSS</button>
+        <button role="tab" aria-selected="false" data-tab="1">Next.js</button>
+        <button role="tab" aria-selected="false" data-tab="2">Tailwind</button>
+        <button role="tab" aria-selected="false" data-tab="3">NoEn + Inter</button>
+      </div>
+      <div class="pane">
+        <button class="copy" id="copy">کپی</button>
+<pre data-pane="0"><span class="c">&lt;!-- HTML --&gt;</span>
+&lt;<span class="k">html</span> lang=<span class="s">"fa"</span> dir=<span class="s">"rtl"</span>&gt;
+&lt;<span class="k">link</span> rel=<span class="s">"stylesheet"</span> href=<span class="s">"/Webfonts/dastkhat.css"</span>&gt;
+
+<span class="c">/* CSS */</span>
+body   { <span class="k">font-family</span>: var(--font-dastkhat); }
+.price { <span class="k">font-family</span>: var(--font-dastkhat-fanum); }
+.logo  { <span class="k">font-family</span>: var(--font-dastkhat-bar); <span class="k">font-weight</span>: 900; }</pre>
+<pre data-pane="1" hidden><span class="k">import</span> localFont <span class="k">from</span> <span class="s">'next/font/local'</span>
+
+<span class="k">export const</span> dastkhat = localFont({
+  src: <span class="s">'./Dastkhat-Variable.woff2'</span>,
+  weight: <span class="s">'100 900'</span>,
+  variable: <span class="s">'--font-dastkhat'</span>,
+  display: <span class="s">'swap'</span>,
+})</pre>
+<pre data-pane="2" hidden><span class="c">// tailwind.config.js</span>
+<span class="k">module</span>.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: [<span class="s">'var(--font-dastkhat)'</span>],
+      },
+    },
+  },
+}</pre>
+<pre data-pane="3" hidden><span class="c">/* Persian in Dastkhat, Latin in Inter */</span>
+body {
+  <span class="k">font-family</span>: <span class="s">'Dastkhat NoEn'</span>, <span class="s">'Inter'</span>, sans-serif;
+}</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ license ============ -->
+<section class="sec" id="license">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۱۱ · مجوز</p>
+      <h2 class="h2">مجوز روشن، برای هر نوع استفاده.</h2>
+      <p class="sub">دستخط نرم‌افزار تجاری است. مجوزی را بخرید که به کارتان می‌خورد. قیمت‌ها و خرید در <a href="https://dastyar.io" target="_blank" rel="noopener">dastyar.io</a>.</p>
+    </div>
+    <div class="lic">
+      <div class="lcard rv"><div class="ico"><i></i></div><h3>دسکتاپ</h3><p>نصب روی تعداد رایانه‌های رسید. برای چاپ، بسته‌بندی، ویدیو، تصویر، PDF و لوگو.</p></div>
+      <div class="lcard rv" style="--dl:.08s"><div class="ico"><i></i></div><h3>وب</h3><p>میزبانی فایل‌های WOFF2 روی دامنه‌های رسید، تا سقف بازدید ماهانه.</p></div>
+      <div class="lcard rv" style="--dl:.16s"><div class="ico"><i></i></div><h3>اپ و نرم‌افزار</h3><p>تعبیه فونت در یک اپلیکیشن یا محصول مشخص.</p></div>
+    </div>
+    <div class="rules rv">
+      <ul>
+        <li>لوگو و طرحی که به منحنی یا تصویر تبدیل شده، بدون محدودیت قابل استفاده است.</li>
+        <li>برای کار مشتری، یا خود او مجوز می‌خرد یا خروجی را به‌صورت منحنی و تصویر تحویل می‌دهید.</li>
+      </ul>
+      <ul class="no">
+        <li>کپی، اشتراک، فروش یا بازنشر فایل‌های فونت مجاز نیست.</li>
+        <li>تغییر فونت و ساخت نسخه مشتق مجاز نیست.</li>
+      </ul>
+    </div>
+    <p class="fine rv">این بخش فقط خلاصه است و متن کامل <a href="../License/EULA.fa.md">قرارداد مجوز دستخط</a> ملاک است.</p>
+  </div>
+</section>
+
+<!-- ============ faq ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker"><span class="d" aria-hidden="true"></span>۱۲ · پرسش‌های پرتکرار</p>
+      <h2 class="h2">چند سؤال، قبل از خرید.</h2>
+    </div>
+    <div class="faq rv">
+      <details open><summary>دستخط با وزیرمتن چه فرقی دارد؟</summary><p>دستخط بر پایه وزیرمتن و با اجازه طراح آن ساخته شده است. بدنه حروف فارسی بلندتر و ۴٪ پهن‌تر شده، ارقام فارسی ۷٪ پهن‌تر شده‌اند و حروف لاتین به ۹۳٪ کوچک شده‌اند. نقطه‌ها هم از نو به شکل هندسی طراحی شده‌اند و دو خانواده لوزی و خط اضافه شده است.</p></details>
+      <details><summary>کدام نسخه را انتخاب کنم؟</summary><p>برای بیشتر پروژه‌ها نسخه اصلی کافی است. اگر قیمت، جدول یا داشبورد دارید FaNum را بردارید. اگر می‌خواهید لاتین را با فونت دیگری مثل Inter نمایش دهید، NoEn مناسب است.</p></details>
+      <details><summary>نسخه ثابت نصب کنم یا متغیر؟</summary><p>روی هر سیستم فقط یکی را نصب کنید، نه هر دو را. نام‌های یکسان در بسیاری از نرم‌افزارها تداخل ایجاد می‌کند. برای کنترل دقیق هر وزن در نرم‌افزار طراحی، فایل‌های TTF ثابت انتخاب بهتری است.</p></details>
+      <details><summary>می‌توانم با دستخط لوگو طراحی کنم؟</summary><p>بله، با مجوز دسکتاپ. لوگو و طرح‌هایی که به منحنی یا تصویر تبدیل شده‌اند بدون محدودیت قابل استفاده‌اند. سبک خط برای همین کار ساخته شده است.</p></details>
+      <details><summary>برای پروژه مشتری چه کنم؟</summary><p>دو راه دارید: یا مشتری خودش مجوز می‌خرد، یا خروجی را فقط به‌صورت منحنی و تصویر تحویل می‌دهید.</p></details>
+      <details><summary>چرا نباید به متن فارسی letter-spacing بدهم؟</summary><p>چون اتصال حروف را می‌شکند. اگر متن فشرده به نظر می‌رسد، فاصله خطوط را زیاد کنید.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="final">
+  <span class="d big-d" aria-hidden="true"></span>
+  <div class="wrap">
+    <h2>نقطه، سر خط.</h2>
+    <div class="row">
+      <p>بسته کامل شامل فایل‌های TTF، نسخه متغیر، وب‌فونت WOFF2، نمونه‌نامه و راهنمای نصب است.</p>
+      <div class="cta">
+        <a class="btn white" href="https://dastyar.io" target="_blank" rel="noopener">خرید مجوز دستخط</a>
+        <a class="btn ghost" href="../Specimen/Dastkhat-Specimen.pdf">نمونه‌نامه PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>دستخط</b>
+      <p>فونت فارسی و لاتین برای رابط کاربری، منتشرشده از طرف <a href="https://dastyar.io" target="_blank" rel="noopener">دستیار</a>.</p>
+    </div>
+    <div>
+      <b>سازندگان</b>
+      <ul>
+        <li>دستیار: سبک‌های نقطه، تغییرات و انتشار</li>
+        <li>صابر راستی‌کردار: طراح <a href="https://github.com/rastikerdar/vazirmatn" target="_blank" rel="noopener">وزیرمتن</a>، پایه دستخط</li>
+        <li>حروف لاتین برگرفته از Roboto</li>
+      </ul>
+    </div>
+    <div>
+      <b>بیشتر</b>
+      <ul>
+        <li><a href="../Demos/glyph-map.html">نقشه کامل حروف</a></li>
+        <li><a href="../Helps/guide.html">راهنمای نصب و استفاده</a></li>
+        <li><a href="../Specimen/Dastkhat-Specimen.pdf">نمونه‌نامه</a></li>
+      </ul>
+    </div>
+    <div class="copyr"><span>© ۱۴۰۵ دستیار</span><span class="ltr">Dastkhat v1.200 · Commercial license</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
