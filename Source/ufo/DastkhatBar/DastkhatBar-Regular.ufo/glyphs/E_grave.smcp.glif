@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Egrave.smcp" format="2">
+  <advance width="928"/>
+  <anchor x="499" y="1228" name="Anchor-0"/>
+  <anchor x="499" y="7" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="877" y="141" type="line"/>
+      <point x="877" y="0" type="line"/>
+      <point x="259" y="0" type="line"/>
+      <point x="259" y="141" type="line"/>
+    </contour>
+    <contour>
+      <point x="301" y="1083" type="line"/>
+      <point x="301" y="0" type="line"/>
+      <point x="129" y="0" type="line"/>
+      <point x="129" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="796" y="631" type="line"/>
+      <point x="796" y="490" type="line"/>
+      <point x="259" y="490" type="line"/>
+      <point x="259" y="631" type="line"/>
+    </contour>
+    <contour>
+      <point x="871" y="1083" type="line"/>
+      <point x="871" y="941" type="line"/>
+      <point x="259" y="941" type="line"/>
+      <point x="259" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="418" y="1456" type="line"/>
+      <point x="597" y="1183" type="line"/>
+      <point x="449" y="1183" type="line"/>
+      <point x="209" y="1456" type="line"/>
+    </contour>
+  </outline>
+</glyph>

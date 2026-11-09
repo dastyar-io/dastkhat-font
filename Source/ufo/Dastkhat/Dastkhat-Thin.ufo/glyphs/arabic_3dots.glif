@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arabic_3dots" format="2">
+  <advance width="549"/>
+  <outline>
+    <contour>
+      <point x="310" y="236" type="line"/>
+      <point x="310" y="326" type="line"/>
+      <point x="220" y="326" type="line"/>
+      <point x="220" y="236" type="line"/>
+    </contour>
+    <contour>
+      <point x="436" y="20" type="line"/>
+      <point x="436" y="112" type="line"/>
+      <point x="345" y="112" type="line"/>
+      <point x="345" y="20" type="line"/>
+    </contour>
+    <contour>
+      <point x="185" y="20" type="line"/>
+      <point x="185" y="112" type="line"/>
+      <point x="94" y="112" type="line"/>
+      <point x="94" y="20" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Eth.smcp" format="2">
+  <advance width="1071"/>
+  <anchor x="465" y="1228" name="Anchor-0"/>
+  <anchor x="465" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="453" y="0" type="qcurve"/>
+      <point x="207" y="0" type="line"/>
+      <point x="208" y="141" type="line"/>
+      <point x="453" y="141" type="line"/>
+      <point x="573" y="141"/>
+      <point x="732" y="231"/>
+      <point x="810" y="397"/>
+      <point x="810" y="512" type="qcurve"/>
+      <point x="810" y="573" type="line"/>
+      <point x="810" y="691"/>
+      <point x="731" y="856"/>
+      <point x="578" y="941"/>
+      <point x="464" y="941" type="qcurve"/>
+      <point x="202" y="941" type="line"/>
+      <point x="202" y="1083" type="line"/>
+      <point x="464" y="1083" type="line"/>
+      <point x="618" y="1083"/>
+      <point x="851" y="957"/>
+      <point x="982" y="727"/>
+      <point x="982" y="571" type="qcurve"/>
+      <point x="982" y="512" type="line"/>
+      <point x="982" y="356"/>
+      <point x="851" y="126"/>
+      <point x="614" y="0"/>
+    </contour>
+    <contour>
+      <point x="301" y="1083" type="line"/>
+      <point x="301" y="0" type="line"/>
+      <point x="129" y="0" type="line"/>
+      <point x="129" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="530" y="618" type="line"/>
+      <point x="530" y="477" type="line"/>
+      <point x="-62" y="477" type="line"/>
+      <point x="-62" y="618" type="line"/>
+    </contour>
+  </outline>
+</glyph>

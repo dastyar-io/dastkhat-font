@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2116.smcp" format="2">
+  <advance width="1965"/>
+  <outline>
+    <contour>
+      <point x="1828" y="363" type="line"/>
+      <point x="1828" y="226" type="line"/>
+      <point x="1278" y="226" type="line"/>
+      <point x="1278" y="363" type="line"/>
+    </contour>
+    <contour>
+      <point x="1235" y="737" type="qcurve"/>
+      <point x="1235" y="790" type="line"/>
+      <point x="1235" y="926"/>
+      <point x="1409" y="1102"/>
+      <point x="1557" y="1102" type="qcurve"/>
+      <point x="1707" y="1102"/>
+      <point x="1880" y="926"/>
+      <point x="1880" y="790" type="qcurve"/>
+      <point x="1880" y="737" type="line"/>
+      <point x="1880" y="602"/>
+      <point x="1708" y="427"/>
+      <point x="1559" y="427" type="qcurve"/>
+      <point x="1410" y="427"/>
+      <point x="1235" y="602"/>
+    </contour>
+    <contour>
+      <point x="1398" y="790" type="qcurve"/>
+      <point x="1398" y="737" type="line"/>
+      <point x="1398" y="663"/>
+      <point x="1477" y="563"/>
+      <point x="1559" y="563" type="qcurve"/>
+      <point x="1639" y="563"/>
+      <point x="1717" y="663"/>
+      <point x="1717" y="737" type="qcurve"/>
+      <point x="1717" y="790" type="line"/>
+      <point x="1717" y="865"/>
+      <point x="1638" y="964"/>
+      <point x="1557" y="964" type="qcurve"/>
+      <point x="1477" y="964"/>
+      <point x="1398" y="865"/>
+    </contour>
+    <contour>
+      <point x="1070" y="1083" type="line"/>
+      <point x="1070" y="0" type="line"/>
+      <point x="755" y="0" type="line"/>
+      <point x="390" y="631" type="line"/>
+      <point x="390" y="0" type="line"/>
+      <point x="75" y="0" type="line"/>
+      <point x="75" y="1083" type="line"/>
+      <point x="390" y="1083" type="line"/>
+      <point x="755" y="453" type="line"/>
+      <point x="755" y="1083" type="line"/>
+    </contour>
+  </outline>
+</glyph>

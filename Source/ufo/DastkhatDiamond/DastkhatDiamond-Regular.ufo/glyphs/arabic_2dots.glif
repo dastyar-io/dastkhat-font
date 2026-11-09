@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arabic_2dots" format="2">
+  <advance width="538"/>
+  <outline>
+    <contour>
+      <point x="441" y="240" type="line"/>
+      <point x="301" y="101" type="line"/>
+      <point x="441" y="-38" type="line"/>
+      <point x="580" y="101" type="line"/>
+    </contour>
+    <contour>
+      <point x="96" y="240" type="line"/>
+      <point x="-44" y="101" type="line"/>
+      <point x="96" y="-38" type="line"/>
+      <point x="235" y="101" type="line"/>
+    </contour>
+  </outline>
+</glyph>

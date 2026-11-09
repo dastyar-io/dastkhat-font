@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="one.smcp" format="2">
+  <advance width="939"/>
+  <outline>
+    <contour>
+      <point x="554" y="1086" type="line"/>
+      <point x="554" y="0" type="line"/>
+      <point x="504" y="0" type="line"/>
+      <point x="504" y="1016" type="line"/>
+      <point x="155" y="902" type="line"/>
+      <point x="155" y="957" type="line"/>
+      <point x="544" y="1086" type="line"/>
+    </contour>
+  </outline>
+</glyph>

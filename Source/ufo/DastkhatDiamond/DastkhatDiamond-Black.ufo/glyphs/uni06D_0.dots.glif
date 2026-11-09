@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni06D0.dots" format="2">
+  <advance width="549"/>
+  <outline>
+    <contour>
+      <point x="266" y="164" type="line"/>
+      <point x="88" y="-14" type="line"/>
+      <point x="266" y="-192" type="line"/>
+      <point x="445" y="-14" type="line"/>
+    </contour>
+    <contour>
+      <point x="266" y="450" type="line"/>
+      <point x="88" y="272" type="line"/>
+      <point x="266" y="94" type="line"/>
+      <point x="445" y="272" type="line"/>
+    </contour>
+  </outline>
+</glyph>

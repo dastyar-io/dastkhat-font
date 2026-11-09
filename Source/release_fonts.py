@@ -1,6 +1,7 @@
 """Produce the release font set for Dastkhat (publisher: Dastyar).
-Input: variable fonts for the 3 dot styles. Output: base / FaNum / NoEn x (variable + 9 statics) as TTF + WOFF2.
-Usage: python3 -I release_fonts.py <out_dir>
+Input: variable fonts for the 3 dot styles, compiled from Source/ufo by build_all.sh.
+Output: base / FaNum / NoEn x (variable + 9 statics) as TTF + WOFF2.
+Usage: python3 -I release_fonts.py <out_dir> <dir_with_compiled_variable_fonts>
 """
 import sys, os, copy
 from fontTools.ttLib import TTFont
@@ -9,13 +10,14 @@ from fontTools import subset
 from fontTools.ttLib import woff2
 
 OUT = sys.argv[1]
-VERSION = 1.200
-VSTR = '1.200'
+VERSION = 1.201
+VSTR = '1.201'
 VENDOR = 'DSTY'
+VFDIR = sys.argv[2]
 SRC = {
-    'Dastkhat': '/home/claude/out2/square/variable/Dastkhat[wght].ttf',
-    'Dastkhat Diamond': '/home/claude/out2/diamond/variable/DastkhatDiamond[wght].ttf',
-    'Dastkhat Bar': '/home/claude/out2/bar/variable/DastkhatBar[wght].ttf',
+    'Dastkhat': os.path.join(VFDIR, 'Dastkhat-VF.ttf'),
+    'Dastkhat Diamond': os.path.join(VFDIR, 'DastkhatDiamond-VF.ttf'),
+    'Dastkhat Bar': os.path.join(VFDIR, 'DastkhatBar-VF.ttf'),
 }
 WEIGHTS = [(100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regular'), (500, 'Medium'),
            (600, 'SemiBold'), (700, 'Bold'), (800, 'ExtraBold'), (900, 'Black')]
@@ -57,13 +59,23 @@ def set_names(font, fam, style='Regular', variable=False):
     }
     if variable:
         recs.update({1: fam, 2: 'Regular', 4: f'{fam} Regular', 6: f'{nospace(fam)}-Regular',
-                     3: f'{VSTR};{VENDOR};{nospace(fam)}-Regular', 17: 'Regular', 25: nospace(fam)})
+                     3: f'{VSTR};{VENDOR};{nospace(fam)}-Regular', 25: nospace(fam)})
+        recs.pop(16, None); recs.pop(17, None)      # typographic names must be absent when equal to nameID 1/2
+    if ribbi:
+        recs.pop(16, None); recs.pop(17, None)                # typographic names only when they differ from nameID 1/2
     name = font['name']
     name.names = [n for n in name.names if n.nameID >= 256]
     for nid, val in recs.items():
         name.setName(val, nid, 3, 1, 0x409)
     font['head'].fontRevision = VERSION
     font['OS/2'].achVendID = VENDOR
+    font['OS/2'].fsSelection |= 1 << 7            # USE_TYPO_METRICS
+    # unhinted: smart dropout-control program (what gftools fix-nonhinting writes) and smooth gasp
+    from fontTools.ttLib import newTable
+    from fontTools.ttLib.tables import ttProgram
+    prep = newTable('prep'); prep.program = ttProgram.Program()
+    prep.program.fromBytecode(bytes([0xB8, 0x01, 0xFF, 0x85, 0xB0, 0x04, 0x8D]))
+    font['prep'] = prep
 
 
 def make_fanum(font):
@@ -94,13 +106,18 @@ def make_noen(font):
     return font
 
 
+def add_stat(vf):
+    from fontTools.otlLib.builder import buildStatTable
+    buildStatTable(vf, [dict(tag='wght', name='Weight', values=[
+        dict(value=w, name=st, **({'flags': 2, 'linkedValue': 700} if w == 400 else {})) for w, st in WEIGHTS])])
+
+
 def finish_static(inst, fam, w, st):
     set_names(inst, fam, st)
     os2 = inst['OS/2']
     os2.usWeightClass = w
     sel = os2.fsSelection & ~0b1100001
-    if st == 'Regular': sel |= 0x40
-    if st == 'Bold': sel |= 0x20
+    sel |= 0x20 if st == 'Bold' else 0x40          # Bold, otherwise Regular (as nameID 2 says)
     os2.fsSelection = sel
     inst['head'].macStyle = 1 if st == 'Bold' else 0
     if 'STAT' in inst:
@@ -120,6 +137,8 @@ def main():
             if fn:
                 fn(vf)
             set_names(vf, fam, variable=True)
+            if 'STAT' in vf: del vf['STAT']
+            add_stat(vf)
             sub = {'': 'Main', ' FaNum': 'FaNum', ' NoEn': 'NoEn'}[suffix]
             group = os.path.join(OUT, sub, nospace(fam))
             os.makedirs(os.path.join(group, 'Variable'), exist_ok=True)

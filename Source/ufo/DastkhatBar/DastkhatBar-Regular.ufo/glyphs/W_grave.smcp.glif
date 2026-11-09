@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Wgrave.smcp" format="2">
+  <advance width="1448"/>
+  <anchor x="731" y="1228" name="Anchor-0"/>
+  <anchor x="731" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="425" y="259" type="line"/>
+      <point x="656" y="1083" type="line"/>
+      <point x="776" y="1083" type="line"/>
+      <point x="733" y="854" type="line"/>
+      <point x="484" y="0" type="line"/>
+      <point x="366" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="217" y="1083" type="line"/>
+      <point x="402" y="274" type="line"/>
+      <point x="441" y="0" type="line"/>
+      <point x="323" y="0" type="line"/>
+      <point x="46" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="1060" y="276" type="line"/>
+      <point x="1243" y="1083" type="line"/>
+      <point x="1415" y="1083" type="line"/>
+      <point x="1137" y="0" type="line"/>
+      <point x="1019" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="809" y="1083" type="line"/>
+      <point x="1036" y="256" type="line"/>
+      <point x="1094" y="0" type="line"/>
+      <point x="976" y="0" type="line"/>
+      <point x="735" y="854" type="line"/>
+      <point x="691" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="649" y="1456" type="line"/>
+      <point x="829" y="1183" type="line"/>
+      <point x="681" y="1183" type="line"/>
+      <point x="441" y="1456" type="line"/>
+    </contour>
+  </outline>
+</glyph>

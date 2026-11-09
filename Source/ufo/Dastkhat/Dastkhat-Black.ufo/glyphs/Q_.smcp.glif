@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Q.smcp" format="2">
+  <advance width="1131"/>
+  <anchor x="557" y="1228" name="Anchor-0"/>
+  <anchor x="557" y="-9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="739" y="204" type="line"/>
+      <point x="1070" y="-46" type="line"/>
+      <point x="878" y="-206" type="line"/>
+      <point x="551" y="46" type="line"/>
+    </contour>
+    <contour>
+      <point x="1089" y="560" type="qcurve"/>
+      <point x="1089" y="523" type="line"/>
+      <point x="1089" y="357"/>
+      <point x="955" y="116"/>
+      <point x="721" y="-15"/>
+      <point x="570" y="-15" type="qcurve"/>
+      <point x="418" y="-15"/>
+      <point x="182" y="116"/>
+      <point x="50" y="357"/>
+      <point x="50" y="523" type="qcurve"/>
+      <point x="50" y="560" type="line"/>
+      <point x="50" y="725"/>
+      <point x="181" y="967"/>
+      <point x="416" y="1098"/>
+      <point x="569" y="1098" type="qcurve"/>
+      <point x="720" y="1098"/>
+      <point x="954" y="967"/>
+      <point x="1089" y="725"/>
+    </contour>
+    <contour>
+      <point x="776" y="523" type="qcurve"/>
+      <point x="776" y="561" type="line"/>
+      <point x="776" y="656"/>
+      <point x="726" y="790"/>
+      <point x="634" y="859"/>
+      <point x="569" y="859" type="qcurve"/>
+      <point x="500" y="859"/>
+      <point x="409" y="790"/>
+      <point x="365" y="656"/>
+      <point x="365" y="561" type="qcurve"/>
+      <point x="365" y="523" type="line"/>
+      <point x="365" y="383"/>
+      <point x="467" y="223"/>
+      <point x="570" y="223" type="qcurve"/>
+      <point x="667" y="223"/>
+      <point x="776" y="383"/>
+    </contour>
+  </outline>
+</glyph>

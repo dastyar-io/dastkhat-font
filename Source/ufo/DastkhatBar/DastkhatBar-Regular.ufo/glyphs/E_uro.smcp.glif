@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Euro.smcp" format="2">
+  <advance width="926"/>
+  <outline>
+    <contour>
+      <point x="649" y="126" type="qcurve"/>
+      <point x="704" y="126"/>
+      <point x="789" y="140"/>
+      <point x="837" y="153" type="qcurve"/>
+      <point x="862" y="14" type="line"/>
+      <point x="811" y="0"/>
+      <point x="707" y="-15"/>
+      <point x="649" y="-15" type="qcurve"/>
+      <point x="509" y="-15"/>
+      <point x="309" y="91"/>
+      <point x="203" y="299"/>
+      <point x="203" y="452" type="qcurve"/>
+      <point x="203" y="627" type="line"/>
+      <point x="203" y="857"/>
+      <point x="437" y="1098"/>
+      <point x="647" y="1098" type="qcurve"/>
+      <point x="706" y="1098"/>
+      <point x="805" y="1083"/>
+      <point x="862" y="1070" type="qcurve"/>
+      <point x="843" y="932" type="line"/>
+      <point x="795" y="947"/>
+      <point x="702" y="957"/>
+      <point x="647" y="957" type="qcurve"/>
+      <point x="508" y="957"/>
+      <point x="375" y="790"/>
+      <point x="375" y="629" type="qcurve"/>
+      <point x="375" y="452" type="line"/>
+      <point x="375" y="290"/>
+      <point x="510" y="126"/>
+    </contour>
+    <contour>
+      <point x="759" y="704" type="line"/>
+      <point x="759" y="591" type="line"/>
+      <point x="62" y="591" type="line"/>
+      <point x="62" y="704" type="line"/>
+    </contour>
+    <contour>
+      <point x="759" y="490" type="line"/>
+      <point x="759" y="378" type="line"/>
+      <point x="62" y="378" type="line"/>
+      <point x="62" y="490" type="line"/>
+    </contour>
+  </outline>
+</glyph>

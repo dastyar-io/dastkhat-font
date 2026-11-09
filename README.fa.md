@@ -8,7 +8,7 @@
 
 **فونت فارسی و لاتین برای رابط کاربری، با نقطه‌های هندسی.**
 
-[![Version](https://img.shields.io/badge/version-1.200-blue)](FONTLOG.txt)
+[![Version](https://img.shields.io/badge/version-1.201-blue)](FONTLOG.txt)
 [![License: OFL 1.1](https://img.shields.io/badge/license-SIL%20OFL%201.1-green)](OFL.txt)
 [![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#محتویات-بسته)
 
@@ -79,7 +79,7 @@
 ## محتویات بسته
 
 ```
-Dastkhat-v1.200/
+Dastkhat-v1.201/
 ├── Fonts/
 │   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar   (۹ وزن TTF + Variable)
 │   ├── FaNum/     همان خانواده‌ها، با عددهای فارسی
@@ -205,6 +205,14 @@ export const dastkhat = localFont({
 | نه وزن | نمونه رابط کاربری |
 
 نمونه‌های بیشتر را در `Demos/index.html`، تست‌کننده متن (`Demos/type-tester.html`) و نقشه حروف (`Demos/glyph-map.html`) ببینید. نمونه‌نامه کامل در `Specimen/Dastkhat-Specimen.pdf` قرار دارد.
+
+## ساخت از روی سورس
+سورس قابل ویرایش (سه مستر UFO و یک designspace برای هر سبک نقطه) در `Source/ufo/` است. برای ساخت دوباره همه فونت‌ها:
+
+```bash
+pip install fontmake fonttools brotli
+sh Source/build_all.sh build
+```
 
 ## مجوز استفاده
 

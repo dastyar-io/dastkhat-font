@@ -1,1 +1,5 @@
 .DS_Store
+build/
+master_ttf/
+instance_ufo/
+/fonts/

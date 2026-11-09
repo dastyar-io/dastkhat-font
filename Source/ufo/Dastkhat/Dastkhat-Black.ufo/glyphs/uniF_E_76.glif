@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFE76" format="2">
+  <advance width="616"/>
+  <unicode hex="FE76"/>
+  <anchor x="296" y="-204" name="Anchor-2"/>
+  <anchor x="314" y="1383" name="Anchor-3"/>
+  <outline>
+    <contour>
+      <point x="78" y="1117" type="line"/>
+      <point x="542" y="1276" type="line"/>
+      <point x="542" y="1371" type="line"/>
+      <point x="78" y="1221" type="line"/>
+    </contour>
+  </outline>
+</glyph>

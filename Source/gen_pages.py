@@ -112,7 +112,7 @@ def index_page():
     body = nav('index.html') + f'''
 <div class="wrap">
  <div class="hero">
-  <div><span class="pill">نسخه ۱٫۲۰۰ · متن‌باز (OFL)</span>
+  <div><span class="pill">نسخه ۱٫۲۰۱ · متن‌باز (OFL)</span>
    <h1>دستخط</h1>
    <p class="lead">فونتی فارسی و لاتین برای رابط‌های کاربری امروز؛ با بدنه بلندتر، نقطه‌های هندسی و سه سبک نقطه، از طرف دستیار.</p>
    <div style="display:flex;gap:12px;margin-top:24px"><a class="btn" href="#download">دانلود رایگان</a><a class="btn alt" href="type-tester.html">تست متن</a></div>
@@ -319,7 +319,7 @@ POSTER_CSS = '''
 .poster .sq{width:110px;height:110px;background:var(--secondary);position:absolute;left:60px;top:930px}
 '''
 POSTER_BODY = '''<div class="poster">
- <div class="ptag"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.200</span></div>
+ <div class="ptag"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.201</span></div>
  <div class="sq"></div>
  <div class="big">دستخط</div>
  <div class="big2">دستخط</div>
@@ -432,7 +432,7 @@ body{background:#fff}
 '''
     W = lambda s: f'<div class="s{" " + s if s else ""}">'
     hd = lambda t: f'<div class="hd"><span>دستخط · نمونه‌نامه</span><span>{t}</span></div>'
-    ft = lambda n: f'<div class="ft"><span>Dastkhat v1.200 · Dastyar</span><span class="ltr">{len(pages) + 1:02d}</span></div>'
+    ft = lambda n: f'<div class="ft"><span>Dastkhat v1.201 · Dastyar</span><span class="ltr">{len(pages) + 1:02d}</span></div>'
     pages = []
     pages.append(W('cover') + hd('۱۴۰۵') + '''<div style="font-family:'Dastkhat Bar';font-weight:900;font-size:230px;line-height:1;margin-top:18mm">دستخط</div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10mm">
@@ -467,7 +467,7 @@ body{background:#fff}
 <div class="card"><div class="lbl">Variable · wght 100-900</div><p style="font-size:34px;margin:3mm 0"><span style="font-weight:150">دستخط</span> <span style="font-weight:450">دستخط</span> <span style="font-weight:850">دستخط</span></p><p style="color:var(--mute);font-size:14px">هر وزن دلخواه بین ۱۰۰ تا ۹۰۰ در یک فایل.</p></div></div>''' + ft('07') + '</div>')
     pages.append(W('cover') + hd('اطلاعات') + '''<div class="ttl" style="margin-top:14mm">دستخط</div>
 <div class="cols" style="grid-template-columns:1fr 1fr;font-size:15px;line-height:2.1">
-<div>ناشر: دستیار<br>نسخه: ۱٫۲۰۰<br>وزن‌ها: ۹ + متغیر<br>خانواده‌ها: Dastkhat · Dastkhat Diamond · Dastkhat Bar<br>نسخه‌ها: اصلی · FaNum · NoEn<br>فرمت‌ها: TTF · WOFF2</div>
+<div>ناشر: دستیار<br>نسخه: ۱٫۲۰۱<br>وزن‌ها: ۹ + متغیر<br>خانواده‌ها: Dastkhat · Dastkhat Diamond · Dastkhat Bar<br>نسخه‌ها: اصلی · FaNum · NoEn<br>فرمت‌ها: TTF · WOFF2</div>
 <div>مجوز: OFL 1.1 (متن‌باز)<br>بر پایه: وزیرمتن، اثر صابر راستی‌کردار<br>وب‌سایت:<br><span class="ltr">dastyar.io</span></div></div>''' + ft('08') + '</div>')
     open(os.path.join(BUILD, 'specimen.html'), 'w').write(
         page('Dastkhat Specimen', ''.join(pages), rel_css='file://' + CSS_FONTS, rel_site='file://' + CSS_SITE, extra_css=css))
@@ -483,7 +483,7 @@ body{background:#fff}
 '''
     fr = []
     fr.append('''<div class="f wide" id="cover" style="background:var(--primary);color:#fff"><div class="c">
-<div style="display:flex;justify-content:space-between;font-size:26px;opacity:.8"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.200</span></div>
+<div style="display:flex;justify-content:space-between;font-size:26px;opacity:.8"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.201</span></div>
 <div style="font-family:'Dastkhat Bar';font-weight:900;font-size:400px;line-height:1.05;margin-top:60px">دستخط</div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end;font-size:34px;margin-top:30px"><span>فونت فارسی برای رابط‌های امروز · ۹ وزن · ۳ سبک نقطه</span><span style="width:120px;height:120px;background:var(--secondary);display:block"></span></div>
 </div></div>''')

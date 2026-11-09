@@ -6,7 +6,7 @@
 
 **A Persian and Latin UI typeface with geometric dots.**
 
-[![Version](https://img.shields.io/badge/version-1.200-blue)](FONTLOG.txt)
+[![Version](https://img.shields.io/badge/version-1.201-blue)](FONTLOG.txt)
 [![License: OFL 1.1](https://img.shields.io/badge/license-SIL%20OFL%201.1-green)](OFL.txt)
 [![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#whats-in-the-package)
 
@@ -77,7 +77,7 @@ Every family is available in three builds.
 ## What's in the package
 
 ```
-Dastkhat-v1.200/
+Dastkhat-v1.201/
 ├── Fonts/
 │   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar   (TTF ×9 + Variable)
 │   ├── FaNum/     Same families, Latin digits shown as Persian digits
@@ -88,7 +88,9 @@ Dastkhat-v1.200/
 ├── Helps/         Installation and usage guide (Persian and English)
 ├── OFL.txt        SIL Open Font License 1.1
 ├── License/       Third-party notices
-├── Source/        Build scripts
+├── Source/        UFO + designspace sources (ufo/), build scripts
+├── GoogleFonts/   Metadata for the Google Fonts submission
+├── docs/          Publishing and Google Fonts guides
 ├── FONTLOG.txt    Change history
 ├── README.md      This file
 └── README.fa.md   Persian version of this file
@@ -203,6 +205,16 @@ Persian needs more line height than Latin because of its tall ascenders and stac
 | Nine weights | Interface example |
 
 Explore more in `Demos/index.html`, the type tester (`Demos/type-tester.html`) and the glyph map (`Demos/glyph-map.html`). The full specimen is in `Specimen/Dastkhat-Specimen.pdf`.
+
+## Building from source
+Editable sources are in `Source/ufo/` (three UFO masters and a designspace per dot style). To rebuild every font, statics, WOFF2 and the FaNum and NoEn builds:
+
+```bash
+pip install fontmake fonttools brotli
+sh Source/build_all.sh build
+```
+
+For just the variable font, `fontmake -m Source/ufo/Dastkhat/Dastkhat.designspace -o variable` or `gftools builder Source/config.yaml`.
 
 ## License
 Dastkhat is **free and open source**, licensed under the [SIL Open Font License 1.1](OFL.txt).

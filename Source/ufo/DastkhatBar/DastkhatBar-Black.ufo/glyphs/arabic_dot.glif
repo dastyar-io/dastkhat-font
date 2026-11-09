@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arabic_dot" format="2">
+  <advance width="205"/>
+  <outline>
+    <contour>
+      <point x="235" y="-32" type="line"/>
+      <point x="235" y="237" type="line"/>
+      <point x="-34" y="237" type="line"/>
+      <point x="-34" y="-32" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Yacute.smcp" format="2">
+  <advance width="992"/>
+  <anchor x="496" y="1228" name="Anchor-0"/>
+  <anchor x="496" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="444" y="451" type="line"/>
+      <point x="785" y="1083" type="line"/>
+      <point x="978" y="1083" type="line"/>
+      <point x="574" y="369" type="line"/>
+      <point x="469" y="369" type="line"/>
+    </contour>
+    <contour>
+      <point x="206" y="1083" type="line"/>
+      <point x="550" y="446" type="line"/>
+      <point x="522" y="369" type="line"/>
+      <point x="418" y="369" type="line"/>
+      <point x="13" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="578" y="505" type="line"/>
+      <point x="578" y="0" type="line"/>
+      <point x="407" y="0" type="line"/>
+      <point x="407" y="505" type="line"/>
+    </contour>
+    <contour>
+      <point x="401" y="1183" type="line"/>
+      <point x="581" y="1456" type="line"/>
+      <point x="789" y="1456" type="line"/>
+      <point x="539" y="1183" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="f_l" format="2">
+  <advance width="992"/>
+  <unicode hex="FB02"/>
+  <outline>
+    <contour>
+      <point x="286" y="0" type="line"/>
+      <point x="236" y="0" type="line"/>
+      <point x="236" y="1149" type="line"/>
+      <point x="236" y="1294"/>
+      <point x="377" y="1448"/>
+      <point x="499" y="1448" type="qcurve"/>
+      <point x="544" y="1448"/>
+      <point x="653" y="1432"/>
+      <point x="768" y="1407"/>
+      <point x="822" y="1391" type="qcurve"/>
+      <point x="787" y="1355" type="line"/>
+      <point x="714" y="1371"/>
+      <point x="573" y="1398"/>
+      <point x="500" y="1398" type="qcurve"/>
+      <point x="402" y="1398"/>
+      <point x="286" y="1268"/>
+      <point x="286" y="1149" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="772" y="0" type="line"/>
+      <point x="772" y="1391" type="line"/>
+      <point x="822" y="1391" type="line"/>
+      <point x="822" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="552" y="1006" type="line"/>
+      <point x="552" y="955" type="line"/>
+      <point x="61" y="955" type="line"/>
+      <point x="61" y="1006" type="line"/>
+    </contour>
+  </outline>
+</glyph>

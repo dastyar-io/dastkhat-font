@@ -40,10 +40,18 @@ be modified and redistributed under the same license, but not sold by itself.
 ChangeLog
 ---------
 
-2026-11-10 (Dastyar) Dastkhat v1.200 (relicensed)
+2026-11-10 (Dastyar) Dastkhat v1.201
 - Relicensed under the SIL Open Font License 1.1 (previously a commercial EULA;
-  no paid licenses were ever sold). Copyright line, license and license-URL
-  name fields updated in every font file. No outline or metric changes.
+  no paid licenses were ever sold)
+- Editable UFO + designspace sources added in Source/ufo, and a full rebuild
+  script (Source/build_all.sh)
+- Added Latin combining marks U+0302 0304 0306 0307 0308 030A 030B 030C 0326
+  0327 0328, codepoints for U+1E80-1E85 and U+1EF2-1EF3, and a first-draft
+  capital sharp S (U+1E9E)
+- Drawn .notdef, Latin anchors on the dotted circle (U+25CC)
+- Tabular figures now keep one width in every weight
+- Variable fonts: named instances, STAT table, smart-dropout prep program,
+  USE_TYPO_METRICS set; static fonts: corrected fsSelection and name table
 
 2026-11-08 (Dastyar) Dastkhat v1.200
 - Published by Dastyar

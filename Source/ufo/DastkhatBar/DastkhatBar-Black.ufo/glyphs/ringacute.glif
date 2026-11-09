@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ringacute" format="2">
+  <advance width="628"/>
+  <outline>
+    <contour>
+      <point x="249" y="1436" type="line"/>
+      <point x="446" y="1637" type="line"/>
+      <point x="719" y="1637" type="line"/>
+      <point x="446" y="1436" type="line"/>
+    </contour>
+    <contour>
+      <point x="129" y="1222" type="qcurve"/>
+      <point x="129" y="1298"/>
+      <point x="246" y="1402"/>
+      <point x="331" y="1402" type="qcurve"/>
+      <point x="416" y="1402"/>
+      <point x="530" y="1298"/>
+      <point x="530" y="1222" type="qcurve"/>
+      <point x="530" y="1145"/>
+      <point x="416" y="1045"/>
+      <point x="331" y="1045" type="qcurve"/>
+      <point x="246" y="1045"/>
+      <point x="129" y="1146"/>
+    </contour>
+    <contour>
+      <point x="246" y="1222" type="qcurve"/>
+      <point x="246" y="1185"/>
+      <point x="294" y="1138"/>
+      <point x="331" y="1138" type="qcurve"/>
+      <point x="368" y="1138"/>
+      <point x="412" y="1185"/>
+      <point x="412" y="1222" type="qcurve"/>
+      <point x="412" y="1260"/>
+      <point x="368" y="1308"/>
+      <point x="331" y="1308" type="qcurve"/>
+      <point x="294" y="1308"/>
+      <point x="246" y="1260"/>
+    </contour>
+  </outline>
+</glyph>

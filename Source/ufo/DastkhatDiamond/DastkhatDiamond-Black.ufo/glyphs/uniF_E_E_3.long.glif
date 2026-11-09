@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFEE3.long" format="2">
+  <advance width="1208"/>
+  <anchor x="603" y="-251" name="Anchor-2"/>
+  <anchor x="678" y="1243" name="Anchor-3"/>
+  <outline>
+    <contour>
+      <point x="-21" y="310" type="line"/>
+      <point x="-21" y="0" type="line"/>
+      <point x="50" y="0" type="line"/>
+      <point x="50" y="310" type="line"/>
+    </contour>
+    <contour>
+      <point x="703" y="603" type="qcurve"/>
+      <point x="771" y="603"/>
+      <point x="848" y="487"/>
+      <point x="848" y="415" type="qcurve"/>
+      <point x="848" y="362"/>
+      <point x="806" y="282"/>
+      <point x="755" y="282" type="qcurve"/>
+      <point x="732" y="282"/>
+      <point x="674" y="296"/>
+      <point x="638" y="315" type="qcurve"/>
+      <point x="615" y="328"/>
+      <point x="562" y="367"/>
+      <point x="532" y="397" type="qcurve"/>
+      <point x="548" y="435"/>
+      <point x="596" y="530"/>
+      <point x="661" y="603"/>
+    </contour>
+    <contour>
+      <point x="753" y="-23" type="qcurve"/>
+      <point x="880" y="-23"/>
+      <point x="1045" y="90"/>
+      <point x="1127" y="283"/>
+      <point x="1127" y="415" type="qcurve"/>
+      <point x="1127" y="567"/>
+      <point x="1022" y="835"/>
+      <point x="827" y="971"/>
+      <point x="693" y="971" type="qcurve"/>
+      <point x="599" y="971"/>
+      <point x="458" y="891"/>
+      <point x="350" y="737"/>
+      <point x="264" y="552"/>
+      <point x="187" y="394"/>
+      <point x="109" y="310"/>
+      <point x="61" y="310" type="qcurve"/>
+      <point x="21" y="310" type="line"/>
+      <point x="21" y="0" type="line"/>
+      <point x="67" y="0" type="line"/>
+      <point x="147" y="0"/>
+      <point x="252" y="36"/>
+      <point x="329" y="94"/>
+      <point x="365" y="128" type="qcurve"/>
+      <point x="424" y="87"/>
+      <point x="548" y="18"/>
+      <point x="680" y="-23"/>
+    </contour>
+  </outline>
+</glyph>
