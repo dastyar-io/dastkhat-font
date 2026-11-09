@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="Logo/dastkhat-logo-icon.svg" alt="لوگوی دستخط" width="96">
+
 <img src="Demos/images/dastkhat-cover.png" alt="دستخط، فونت فارسی و لاتین برای رابط کاربری" width="100%">
 
 # دستخط (Dastkhat)

@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="Logo/dastkhat-logo-icon.svg" alt="Dastkhat logo" width="96">
+
 <img src="Demos/images/dastkhat-cover.png" alt="Dastkhat, a Persian and Latin UI typeface" width="100%">
 
 # Dastkhat (دستخط)

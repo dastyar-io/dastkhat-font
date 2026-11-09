@@ -12,7 +12,8 @@ a{color:var(--primary);text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
 .brand{font-weight:900;font-size:22px;letter-spacing:-.01em}
-.brand span{display:inline-block;width:12px;height:12px;background:var(--primary);margin-inline-start:8px;transform:translateY(-2px)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand span{display:inline-block;width:38px;height:38px;background:url(logo.svg) center/contain no-repeat}
 .nav a{margin-inline-start:22px;color:var(--ink);font-weight:500}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:var(--secondary);color:var(--on-secondary);font-weight:700;font-size:14px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:12px;background:var(--ink);color:#fff;font-weight:700;font-family:inherit;font-size:16px;border:0;cursor:pointer}

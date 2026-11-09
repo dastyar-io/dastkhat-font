@@ -52,6 +52,7 @@ def page(title, body, rel_css='../Webfonts/dastkhat.css', rel_site='../Demos/ass
     return f'''<!DOCTYPE html>
 <html lang="fa" dir="{dir_}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title>
+<link rel="icon" type="image/svg+xml" href="{rel_site.replace("site.css", "logo-icon.svg")}">
 <link rel="stylesheet" href="{rel_css}"><link rel="stylesheet" href="{rel_site}">
 <style>{extra_css}</style></head><body>
 {body}
@@ -63,7 +64,7 @@ def nav(active=''):
     links = [('index.html', 'معرفی'), ('type-tester.html', 'تست متن'), ('glyph-map.html', 'نقشه حروف'),
              ('ui-demo.html', 'نمونه رابط'), ('poster.html', 'پوستر')]
     a = ''.join(f'<a href="{h}" style="{"color:var(--primary)" if h == active else ""}">{t}</a>' for h, t in links)
-    return f'<div class="wrap"><div class="nav"><div class="brand">دستخط<span></span></div><div>{a}</div></div></div>'
+    return f'<div class="wrap"><div class="nav"><div class="brand"><span></span>دستخط</div><div>{a}</div></div></div>'
 
 
 FOOT = ('<div class="wrap"><div class="foot"><span>© ۱۴۰۵ دستیار · dastyar.io</span>'
