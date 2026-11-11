@@ -1,0 +1,4 @@
+# People who contributed to Dastkhat but are not listed as authors in AUTHORS.txt.
+
+Saber Rastikerdar (original designer of Vazirmatn, the base of Dastkhat)
+https://github.com/rastikerdar/vazirmatn

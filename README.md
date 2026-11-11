@@ -1,41 +1,43 @@
+<div dir="rtl">
+
 <div align="center">
 
-<img src="Logo/dastkhat-logo-icon.svg" alt="Dastkhat logo" width="96">
+<img src="Logo/dastkhat-logo-icon.svg" alt="لوگوی دستخط" width="96">
 
-<img src="Demos/images/dastkhat-cover.png" alt="Dastkhat, a Persian and Latin UI typeface" width="100%">
+<img src="Demos/images/dastkhat-cover.png" alt="دستخط، فونت فارسی و لاتین برای رابط کاربری" width="100%">
 
-# Dastkhat (دستخط)
+# دستخط (Dastkhat)
 
-**A Persian and Latin UI typeface with geometric dots.**
+**فونت فارسی و لاتین برای رابط کاربری، با نقطه‌های هندسی.**
 
 [![Version](https://img.shields.io/badge/version-1.201-blue)](FONTLOG.txt)
 [![License: OFL 1.1](https://img.shields.io/badge/license-SIL%20OFL%201.1-green)](OFL.txt)
-[![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#whats-in-the-package)
+[![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#محتویات-بسته)
 
-**English** · [فارسی](README.fa.md)
+[English](README.en.md) · **فارسی**
 
 </div>
 
 ---
 
-Dastkhat is built for product interfaces, e-commerce pages and dense Persian text on screens. It comes in 9 weights (Thin 100 to Black 900) plus a variable font, in three dot styles, with FaNum and NoEn builds for common real-world setups.
+دستخط برای رابط کاربری محصولات، فروشگاه‌های اینترنتی و متن‌های فارسی پرحجم روی صفحه طراحی شده است. این فونت در ۹ وزن (از Thin با وزن ۱۰۰ تا Black با وزن ۹۰۰) و یک نسخه متغیر منتشر می‌شود، در سه سبک نقطه، و برای نیازهای رایج، نسخه‌های FaNum و NoEn هم دارد.
 
-It is published by [Dastyar](https://dastyar.io) and is a derivative of [Vazirmatn](https://github.com/rastikerdar/vazirmatn).
+دستخط را [دستیار](https://dastyar.io) منتشر کرده و بر پایه [وزیرمتن](https://github.com/rastikerdar/vazirmatn) ساخته شده است.
 
-## Contents
+## فهرست
 
-- [Quick start](#quick-start)
-- [Which one should I use?](#which-one-should-i-use)
-- [What's in the package](#whats-in-the-package)
-- [Installation](#installation)
-- [Usage on the web](#usage-on-the-web)
-- [Typography tips](#typography-tips)
-- [License](#license)
-- [Credits](#credits)
+- [شروع سریع](#شروع-سریع)
+- [کدام نسخه را انتخاب کنم؟](#کدام-نسخه-را-انتخاب-کنم)
+- [محتویات بسته](#محتویات-بسته)
+- [نصب](#نصب)
+- [استفاده در وب](#استفاده-در-وب)
+- [نکات تایپوگرافی](#نکات-تایپوگرافی)
+- [مجوز استفاده](#مجوز-استفاده)
+- [سازندگان](#سازندگان)
 
-## Quick start
+## شروع سریع
 
-For a website, copy the `Webfonts` folder into your project and add three lines:
+برای وب‌سایت، پوشه `Webfonts` را در پروژه کپی کنید و این چند خط را اضافه کنید:
 
 ```html
 <link rel="stylesheet" href="/Webfonts/dastkhat.css">
@@ -44,113 +46,111 @@ For a website, copy the `Webfonts` folder into your project and add three lines:
 </style>
 ```
 
-For a design tool such as Figma, Photoshop or Illustrator, install the TTF files from `Fonts/Main/Dastkhat/TTF`. See [Installation](#installation).
+برای نرم‌افزارهای طراحی مثل فیگما، فتوشاپ و ایلاستریتور، فایل‌های TTF پوشه `fonts/Main/Dastkhat/TTF` را نصب کنید. جزئیات در بخش [نصب](#نصب) آمده است.
 
-## Which one should I use?
+## کدام نسخه را انتخاب کنم؟
 
-### Dot styles
+### سبک‌های نقطه
 
-| Family | Dots | Best for |
+| خانواده | نقطه‌ها | کاربرد پیشنهادی |
 |---|---|---|
-| **Dastkhat** | Square | Default for interfaces and body text |
-| **Dastkhat Diamond** | Square rotated 45° | A softer, more classic look |
-| **Dastkhat Bar** | Two dots merge into a bar, three into a bar and a square | Logos, headlines and brand marks |
+| **Dastkhat** | مربع | پیش‌فرض برای رابط کاربری و متن |
+| **Dastkhat Diamond** | مربع چرخیده ۴۵ درجه (لوزی) | ظاهر نرم‌تر و کلاسیک |
+| **Dastkhat Bar** | دو نقطه یک خط می‌شود، سه نقطه یک خط و یک مربع | لوگو، تیتر و هویت بصری |
 
-<img src="Demos/images/dastkhat-dot-styles.png" alt="The three dot styles side by side" width="100%">
+<img src="Demos/images/dastkhat-dot-styles.png" alt="مقایسه سه سبک نقطه" width="100%">
 
-### Builds
+### نسخه‌ها
 
-Every family is available in three builds.
+هر خانواده در سه نسخه ارائه می‌شود.
 
-| Build | What changes | Use it when |
+| نسخه | تفاوت | چه زمانی استفاده کنم؟ |
 |---|---|---|
-| **Main** | Full Persian and Latin | Most projects |
-| **FaNum** | Latin digits `0-9` display as Persian digits `۰-۹` | Prices, tables and dashboards. Your data and code stay unchanged. |
-| **NoEn** | Latin letters removed | You want to pair Dastkhat with your own Latin font, such as Inter or Geist |
+| **Main** | فارسی و لاتین کامل | بیشتر پروژه‌ها |
+| **FaNum** | عددهای لاتین `0-9` با شکل فارسی `۰-۹` نمایش داده می‌شوند | قیمت، جدول و داشبورد. داده و کد شما تغییری نمی‌کند. |
+| **NoEn** | حروف لاتین حذف شده‌اند | می‌خواهید دستخط را با فونت لاتین دلخواه خودتان (مثل Inter یا Geist) ترکیب کنید |
 
-### Static or variable?
+### ثابت یا متغیر؟
 
-| Need | Use |
+| نیاز شما | پوشه پیشنهادی |
 |---|---|
-| Precise control over each weight in design tools | `Fonts/Main/<Family>/TTF` (9 weights) |
-| Smaller files, every weight from 100 to 900 in one file | `Fonts/Main/<Family>/Variable` |
-| Websites and web apps | `Webfonts/` (WOFF2) |
+| کنترل دقیق هر وزن در نرم‌افزار طراحی | `fonts/Main/<Family>/TTF` (۹ وزن) |
+| حجم کمتر و همه وزن‌های ۱۰۰ تا ۹۰۰ در یک فایل | `fonts/Main/<Family>/Variable` |
+| وب‌سایت و اپلیکیشن وب | `Webfonts/` (فرمت WOFF2) |
 
-## What's in the package
+## محتویات بسته
 
 ```
 Dastkhat-v1.201/
-├── Fonts/
-│   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar   (TTF ×9 + Variable)
-│   ├── FaNum/     Same families, Latin digits shown as Persian digits
-│   └── NoEn/      Same families, Persian only
+├── fonts/
+│   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar   (۹ وزن TTF + Variable)
+│   ├── FaNum/     همان خانواده‌ها، با عددهای فارسی
+│   └── NoEn/      همان خانواده‌ها، فقط فارسی
 ├── Webfonts/      dastkhat.css, fonts/*.woff2, webfont-test.html
 ├── Specimen/      Dastkhat-Specimen.pdf
-├── Demos/         Font page, type tester, glyph map, UI demos, images
-├── Helps/         Installation and usage guide (Persian and English)
-├── OFL.txt        SIL Open Font License 1.1
-├── License/       Third-party notices
-├── Source/        UFO + designspace sources (ufo/), build scripts
-├── GoogleFonts/   Metadata for the Google Fonts submission
-├── docs/          Publishing and Google Fonts guides
-├── FONTLOG.txt    Change history
-├── README.md      This file
-└── README.fa.md   Persian version of this file
+├── Demos/         صفحه معرفی، تست‌کننده متن، نقشه حروف، نمونه رابط کاربری، تصاویر
+├── Helps/         راهنمای نصب و استفاده (فارسی و انگلیسی)
+├── OFL.txt        مجوز SIL Open Font License 1.1
+├── License/       اطلاعیه اجزای دیگران
+├── sources/        اسکریپت‌های ساخت
+├── FONTLOG.txt    تاریخچه تغییرات
+├── README.md      همین فایل
+└── README.en.md   راهنمای انگلیسی
 ```
 
-## Installation
+## نصب
 
 > [!IMPORTANT]
-> On one computer, install **either** the static fonts **or** the variable font, never both. Identical family names cause conflicts in many apps.
+> روی هر سیستم **یا** نسخه ثابت را نصب کنید **یا** نسخه متغیر را، نه هر دو را. نام‌های یکسان در بسیاری از نرم‌افزارها تداخل ایجاد می‌کند.
 
-### Windows
+### ویندوز
 
-1. Open `Fonts/Main/Dastkhat/TTF`.
-2. Select all files (`Ctrl+A`), right-click and choose **Install for all users**.
-3. Restart your design software.
+۱. پوشه `fonts/Main/Dastkhat/TTF` را باز کنید.
+۲. همه فایل‌ها را انتخاب کنید (`Ctrl+A`)، راست‌کلیک کنید و گزینه **Install for all users** را بزنید.
+۳. نرم‌افزار طراحی را یک بار ببندید و دوباره باز کنید.
 
-### macOS
+### مک
 
-1. Open **Font Book**.
-2. Drag the TTF files into the window.
-3. If you see a duplicate warning, remove the previous Dastkhat version first.
+۱. برنامه **Font Book** را باز کنید.
+۲. فایل‌های TTF را به داخل پنجره بکشید.
+۳. اگر هشدار تکراری بودن دیدید، ابتدا نسخه قبلی دستخط را حذف کنید.
 
-### Linux
+### لینوکس
 
 ```bash
 mkdir -p ~/.local/share/fonts/Dastkhat
-cp Fonts/Main/Dastkhat/TTF/*.ttf ~/.local/share/fonts/Dastkhat/
+cp fonts/Main/Dastkhat/TTF/*.ttf ~/.local/share/fonts/Dastkhat/
 fc-cache -f
 ```
 
-## Usage on the web
+## استفاده در وب
 
-### Plain CSS
+### CSS ساده
 
-The stylesheet defines one variable per family:
+فایل CSS برای هر خانواده یک متغیر تعریف کرده است:
 
 ```css
-body    { font-family: var(--font-dastkhat); }                         /* square dots */
-.price  { font-family: var(--font-dastkhat-fanum); }                   /* Persian digits */
-.logo   { font-family: var(--font-dastkhat-bar); font-weight: 900; }   /* merged dots */
+body    { font-family: var(--font-dastkhat); }                         /* نقطه مربع */
+.price  { font-family: var(--font-dastkhat-fanum); }                   /* اعداد فارسی */
+.logo   { font-family: var(--font-dastkhat-bar); font-weight: 900; }   /* نقطه‌های ادغام‌شده */
 ```
 
-| Variable | Family |
+| متغیر | خانواده |
 |---|---|
 | `--font-dastkhat` | Dastkhat |
 | `--font-dastkhat-diamond` | Dastkhat Diamond |
 | `--font-dastkhat-bar` | Dastkhat Bar |
 | `--font-dastkhat-fanum` | Dastkhat FaNum |
 
-The variable families are named `Dastkhat`, `Dastkhat Diamond` and `Dastkhat Bar` (add ` FaNum` or ` NoEn` for the other builds). The static fallbacks use the same names with ` Static` added. All `@font-face` rules use `font-display: swap`.
+نام خانواده‌های متغیر `Dastkhat`، `Dastkhat Diamond` و `Dastkhat Bar` است (برای نسخه‌های دیگر، `FaNum` یا `NoEn` را به انتهای نام اضافه کنید). نسخه‌های ثابت همین نام‌ها را با پسوند `Static` دارند. همه قانون‌های `@font-face` از `font-display: swap` استفاده می‌کنند.
 
-### With a separate Latin font (NoEn)
+### ترکیب با فونت لاتین دیگر (NoEn)
 
 ```css
 body { font-family: 'Dastkhat NoEn', 'Inter', sans-serif; }
 ```
 
-The browser finds no Latin letters in Dastkhat NoEn and falls through to Inter for English text.
+دستخط NoEn حروف لاتین ندارد، پس مرورگر متن انگلیسی را با Inter نمایش می‌دهد.
 
 ### Next.js
 
@@ -167,69 +167,86 @@ export const dastkhat = localFont({
 
 ### Tailwind CSS
 
-Set `fontFamily.sans` to `var(--font-dastkhat)` in your Tailwind config.
+در تنظیمات Tailwind، مقدار `fontFamily.sans` را برابر `var(--font-dastkhat)` قرار دهید.
 
-### Right-to-left pages
+### صفحه‌های راست‌به‌چپ
 
-Set the direction and language on the document so punctuation and numbers behave correctly:
+جهت و زبان را روی سند تعیین کنید تا علائم نگارشی و عددها درست نمایش داده شوند:
 
 ```html
 <html lang="fa" dir="rtl">
 ```
 
-### Performance
+### سرعت بارگذاری
 
-- Prefer the variable WOFF2 when you use three or more weights.
-- Preload only the file used above the fold:
+- اگر از سه وزن یا بیشتر استفاده می‌کنید، WOFF2 متغیر را انتخاب کنید.
+- فقط فایلی را پیش‌بارگذاری (preload) کنید که در بخش اول صفحه لازم است:
   ```html
   <link rel="preload" href="/Webfonts/fonts/Dastkhat-Variable.woff2" as="font" type="font/woff2" crossorigin>
   ```
-- Self-host the files. Do not rely on a third-party CDN for fonts.
+- فایل‌ها را روی سرور خودتان قرار دهید و برای فونت به CDN شخص ثالث تکیه نکنید.
 
-Open `Webfonts/webfont-test.html` in a browser to confirm everything loads.
+برای اطمینان از بارگذاری درست، فایل `Webfonts/webfont-test.html` را در مرورگر باز کنید.
 
-## Typography tips
+## نکات تایپوگرافی
 
-| Element | Recommendation |
+| بخش | پیشنهاد |
 |---|---|
-| Body text | 15 to 18 px, line height 1.8 to 2 |
-| Headings | Weight 700 to 900, line height 1.2 to 1.3 |
-| Prices and tables | Use the FaNum build |
-| Persian text | **Do not use `letter-spacing`.** It breaks the joining of letters. |
+| متن بدنه | اندازه ۱۵ تا ۱۸ پیکسل، فاصله خطوط ۱٫۸ تا ۲ |
+| تیتر | وزن ۷۰۰ تا ۹۰۰، فاصله خطوط ۱٫۲ تا ۱٫۳ |
+| قیمت و جدول | نسخه FaNum |
+| متن فارسی | **از `letter-spacing` استفاده نکنید.** اتصال حروف را می‌شکند. |
 
-Persian needs more line height than Latin because of its tall ascenders and stacked dots. If your text looks cramped, increase line height before reducing font size.
+متن فارسی به‌خاطر کشیدگی بالای حروف و نقطه‌ها به فاصله خطوط بیشتری از لاتین نیاز دارد. اگر متن فشرده به نظر می‌رسد، به‌جای کوچک‌کردن اندازه، اول فاصله خطوط را زیاد کنید.
 
-## Preview
+## پیش‌نمایش
 
 | | |
 |---|---|
-| <img src="Demos/images/dastkhat-weights.png" alt="Nine weights"> | <img src="Demos/images/dastkhat-ui.png" alt="Interface example"> |
-| Nine weights | Interface example |
+| <img src="Demos/images/dastkhat-weights.png" alt="نه وزن"> | <img src="Demos/images/dastkhat-ui.png" alt="نمونه رابط کاربری"> |
+| نه وزن | نمونه رابط کاربری |
 
-Explore more in `Demos/index.html`, the type tester (`Demos/type-tester.html`) and the glyph map (`Demos/glyph-map.html`). The full specimen is in `Specimen/Dastkhat-Specimen.pdf`.
+نمونه‌های بیشتر را در `Demos/index.html`، تست‌کننده متن (`Demos/type-tester.html`) و نقشه حروف (`Demos/glyph-map.html`) ببینید. نمونه‌نامه کامل در `Specimen/Dastkhat-Specimen.pdf` قرار دارد.
 
-## Building from source
-Editable sources are in `Source/ufo/` (three UFO masters and a designspace per dot style). To rebuild every font, statics, WOFF2 and the FaNum and NoEn builds:
+## ساخت از روی سورس
+سورس قابل ویرایش (سه مستر UFO و یک designspace برای هر سبک نقطه) در `sources/ufo/` است. برای ساخت دوباره همه فونت‌ها:
 
 ```bash
 pip install fontmake fonttools brotli
-sh Source/build_all.sh build
+sh sources/build_all.sh build
 ```
 
-For just the variable font, `fontmake -m Source/ufo/Dastkhat/Dastkhat.designspace -o variable` or `gftools builder Source/config.yaml`.
+## مجوز استفاده
 
-## License
-Dastkhat is **free and open source**, licensed under the [SIL Open Font License 1.1](OFL.txt).
+دستخط **آزاد و متن‌باز** است و با مجوز [SIL Open Font License 1.1](OFL.txt) منتشر می‌شود.
 
-- ✅ Use it for anything: websites, apps, print, packaging, video, logos, client work, commercial products
-- ✅ Self-host, embed or bundle it with your software
-- ✅ Modify it and share your modified version, under the same license
-- ❌ Don't sell the font files by themselves
-- ❌ Don't relicense it under different terms
+- ✅ برای هر کاری آزادانه استفاده کنید: وب، اپ، چاپ، بسته‌بندی، ویدیو، لوگو، کار مشتری و محصول تجاری
+- ✅ فونت را روی سرور خودتان بگذارید، در نرم‌افزار تعبیه کنید یا همراه آن پخش کنید
+- ✅ فونت را تغییر دهید و نسخه تغییریافته را با همین مجوز منتشر کنید
+- ❌ خود فایل‌های فونت را به‌تنهایی نفروشید
+- ❌ فونت را با مجوز دیگری منتشر نکنید
 
-Dastkhat is a derivative of [Vazirmatn](https://github.com/rastikerdar/vazirmatn) by Saber Rastikerdar (SIL OFL 1.1). The Latin glyphs derive from Roboto (Apache 2.0). See `License/THIRD-PARTY-NOTICES.txt`.
+دستخط بر پایه [وزیرمتن](https://github.com/rastikerdar/vazirmatn) اثر صابر راستی‌کردار (مجوز OFL 1.1) ساخته شده است.
 
-## Contributing and support
-Bug reports, glyph fixes and new-script proposals are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). If Dastkhat is useful to you, you can support it through [GitHub Sponsors](https://github.com/sponsors/dastyar-io).
+## مشارکت و حمایت
+گزارش خطا، اصلاح حروف و پیشنهاد پشتیبانی از خط‌های جدید خوشحالمان می‌کند: [CONTRIBUTING.md](CONTRIBUTING.md). اگر دستخط برایتان مفید بود، می‌توانید از طریق [GitHub Sponsors](https://github.com/sponsors/dastyar-io) حمایت کنید.
 
-© 2026 The Dastkhat Project Authors · published by Dastyar · https://dastyar.io
+© 2026 مشارکت‌کنندگان دستخط · منتشرشده توسط دستیار
+
+## سازندگان
+
+- **دستیار** ([dastyar.io](https://dastyar.io)): سبک‌های نقطه، تغییرات و انتشار.
+- **صابر راستی‌کردار**: طراح [وزیرمتن](https://github.com/rastikerdar/vazirmatn) که پایه دستخط است و با اجازه ایشان استفاده شده است.
+- حروف لاتین از Roboto (مجوز Apache 2.0) گرفته شده است.
+
+تاریخچه کامل تغییرات در [FONTLOG.txt](FONTLOG.txt) آمده است.
+
+---
+
+<div align="center">
+
+© ۱۴۰۵ دستیار · [dastyar.io](https://dastyar.io)
+
+</div>
+
+</div>

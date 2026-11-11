@@ -6,15 +6,15 @@ A practical checklist, in the order that matters.
 Open fonts live or die on technical quality. Run these and fix every FAIL:
 ```bash
 pip install fontbakery gftools fonttools
-fontbakery check-googlefonts Fonts/Main/Dastkhat/TTF/*.ttf
-fontbakery check-googlefonts "Fonts/Main/Dastkhat/Variable/Dastkhat[wght].ttf"
+fontbakery check-googlefonts fonts/Main/Dastkhat/TTF/*.ttf
+fontbakery check-googlefonts "fonts/Main/Dastkhat/Variable/Dastkhat[wght].ttf"
 ```
 Also check: Persian shaping in Chrome, Safari, Firefox, Word, Figma, Photoshop; digits, ZWNJ (half-space), kashida, Arabic-Indic vs Persian digits, kerning in dense UI text, hinting/rendering on Windows. Test with real Persian pages, not just specimens.
 
 ## 2. Repo hygiene (done / to do)
 - [x] `OFL.txt`, copyright and license in font name table
 - [x] `FONTLOG.txt`, `CONTRIBUTING.md`, `FUNDING.yml`
-- [x] Editable sources: `Source/ufo` (UFO + designspace), rebuild with `Source/build_all.sh`
+- [x] Editable sources: `sources/ufo` (UFO + designspace), rebuild with `sources/build_all.sh`
 - [ ] Add GitHub topics: `font`, `persian`, `farsi`, `arabic-script`, `open-font`, `variable-font`, `ofl`
 - [ ] Create a GitHub Release with a ZIP, and add GitHub issue templates
 - [ ] Add a short `OFL-FAQ` link and a screenshot-heavy README (already strong)
