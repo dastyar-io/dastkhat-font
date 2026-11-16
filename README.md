@@ -14,7 +14,7 @@
 [![License: OFL 1.1](https://img.shields.io/badge/license-SIL%20OFL%201.1-green)](OFL.txt)
 [![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#محتویات-بسته)
 
-[English](README.en.md) · **فارسی**
+**فارسی** · [English](README.en.md)
 
 </div>
 
