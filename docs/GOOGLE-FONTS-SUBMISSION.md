@@ -6,9 +6,9 @@ Everything Google asks for is prepared. Font Bakery (`check-googlefonts`) report
 | Need | Where |
 |---|---|
 | License | `OFL.txt` (Google's canonical body text, one copyright line) |
-| Editable sources | `Source/ufo/Dastkhat/` (3 UFO masters + designspace) |
-| Build recipe | `Source/config.yaml`, `Source/build_all.sh` |
-| Fonts | `Fonts/Main/Dastkhat/Variable/Dastkhat[wght].ttf` |
+| Editable sources | `sources/ufo/Dastkhat/` (3 UFO masters + designspace) |
+| Build recipe | `sources/config.yaml`, `sources/build_all.sh` |
+| Fonts | `fonts/Main/Dastkhat/Variable/Dastkhat[wght].ttf` |
 | Metadata | `GoogleFonts/<Family>/METADATA.pb` and `DESCRIPTION.en_us.html` |
 
 ## Steps

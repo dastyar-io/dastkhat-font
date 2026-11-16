@@ -28,7 +28,7 @@ source {
     dest_file: "OFL.txt"
   }
   files {
-    source_file: "Fonts/Main/DastkhatBar/Variable/DastkhatBar[wght].ttf"
+    source_file: "fonts/Main/DastkhatBar/Variable/DastkhatBar[wght].ttf"
     dest_file: "DastkhatBar[wght].ttf"
   }
   files {
@@ -36,6 +36,6 @@ source {
     dest_file: "DESCRIPTION.en_us.html"
   }
   branch: "main"
-  config_yaml: "Source/config-DastkhatBar.yaml"
+  config_yaml: "sources/config-DastkhatBar.yaml"
 }
 primary_script: "Arab"

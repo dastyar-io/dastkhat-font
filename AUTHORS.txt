@@ -1,0 +1,6 @@
+# This is the official list of project authors for copyright purposes.
+# Contributors who are not authors belong in CONTRIBUTORS.txt.
+
+Dastyar (https://dastyar.io)
+Alireza Eskandari
+The Vazirmatn Project Authors (https://github.com/rastikerdar/vazirmatn)

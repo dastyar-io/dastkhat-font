@@ -30,7 +30,7 @@ def kw_grid(size=44, weight=700):
 KW_CSS = '.kw{margin-top:24px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.kwr{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}.kwr:last-child{border:0}.kwr>div{padding:14px 22px;line-height:1.5}.kwr>div+div{border-inline-start:1px solid var(--line)}.kwhead{background:var(--primary-soft)}.kwhead div{font-size:15px;font-weight:700;color:var(--primary)}'
 
 # ---------- glyph inventory ----------
-cmap = TTFont(os.path.join(PKG, 'Fonts/Main/Dastkhat/TTF/Dastkhat-Regular.ttf')).getBestCmap()
+cmap = TTFont(os.path.join(PKG, 'fonts/Main/Dastkhat/TTF/Dastkhat-Regular.ttf')).getBestCmap()
 cps = sorted(cmap)
 def chars(pred):
     return [chr(c) for c in cps if pred(c)]
@@ -367,17 +367,17 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid var(--line);pad
 
 <h2>کدام نسخه را نصب کنم؟</h2>
 <table><tr><th>نیاز شما</th><th>نسخه پیشنهادی</th></tr>
-<tr><td>طراحی در فیگما، فتوشاپ، ایلاستریتور</td><td>Fonts/Main ← پوشه TTF (۹ وزن)</td></tr>
-<tr><td>طراحی با کنترل دقیق وزن</td><td>Fonts/Main ← پوشه Variable</td></tr>
+<tr><td>طراحی در فیگما، فتوشاپ، ایلاستریتور</td><td>fonts/Main ← پوشه TTF (۹ وزن)</td></tr>
+<tr><td>طراحی با کنترل دقیق وزن</td><td>fonts/Main ← پوشه Variable</td></tr>
 <tr><td>وب‌سایت و اپلیکیشن وب</td><td>پوشه Webfonts</td></tr>
-<tr><td>عدد فارسی بدون تغییر کد یا تنظیمات</td><td>Fonts/FaNum</td></tr>
-<tr><td>ترکیب با فونت لاتین دیگر (مثلاً Inter یا Geist)</td><td>Fonts/NoEn</td></tr></table>
+<tr><td>عدد فارسی بدون تغییر کد یا تنظیمات</td><td>fonts/FaNum</td></tr>
+<tr><td>ترکیب با فونت لاتین دیگر (مثلاً Inter یا Geist)</td><td>fonts/NoEn</td></tr></table>
 <p>روی یک سیستم، یا نسخه ثابت (TTF) را نصب کنید یا نسخه متغیر، نه هر دو؛ نام‌های یکسان باعث تداخل در نرم‌افزارها می‌شود.</p>
 
-<h2>ویندوز</h2><ol><li>پوشه Fonts/Main/Dastkhat/TTF را باز کنید.</li><li>همه فایل‌ها را انتخاب کنید (Ctrl+A).</li><li>راست‌کلیک کنید و گزینه Install for all users را بزنید.</li><li>نرم‌افزار طراحی را یک بار ببندید و دوباره باز کنید.</li></ol>
+<h2>ویندوز</h2><ol><li>پوشه fonts/Main/Dastkhat/TTF را باز کنید.</li><li>همه فایل‌ها را انتخاب کنید (Ctrl+A).</li><li>راست‌کلیک کنید و گزینه Install for all users را بزنید.</li><li>نرم‌افزار طراحی را یک بار ببندید و دوباره باز کنید.</li></ol>
 <h2>مک</h2><ol><li>برنامه Font Book را باز کنید.</li><li>فایل‌های TTF را به داخل پنجره بکشید.</li><li>اگر هشدار تکراری بودن دیدید، نسخه قبلی دستخط را حذف کنید.</li></ol>
 <h2>لینوکس</h2><pre>mkdir -p ~/.local/share/fonts/Dastkhat
-cp Fonts/Main/Dastkhat/TTF/*.ttf ~/.local/share/fonts/Dastkhat/
+cp fonts/Main/Dastkhat/TTF/*.ttf ~/.local/share/fonts/Dastkhat/
 fc-cache -f</pre>
 
 <h2>وب</h2>
@@ -405,7 +405,7 @@ export const dastkhat = localFont({{
 
 <div class="en">
 <h2>English quick guide</h2>
-<ul><li><b>Desktop:</b> install the TTF files from <code>Fonts/Main/&lt;Family&gt;/TTF</code>, or the variable font, not both.</li>
+<ul><li><b>Desktop:</b> install the TTF files from <code>fonts/Main/&lt;Family&gt;/TTF</code>, or the variable font, not both.</li>
 <li><b>Web:</b> copy <code>Webfonts/</code>, link <code>dastkhat.css</code>, use <code>var(--font-dastkhat)</code>.</li>
 <li><b>FaNum:</b> Latin digits render as Persian digits. <b>NoEn:</b> Persian only, pair it with your own Latin font.</li>
 <li><b>License:</b> SIL Open Font License 1.1, free for personal and commercial use. See <code>OFL.txt</code>.</li></ul></div>

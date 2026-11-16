@@ -15,4 +15,4 @@ Thank you for helping. Dastkhat is licensed under the [SIL OFL 1.1](OFL.txt); by
 - Be kind. See the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
 ## Building
-See `Source/`. `release_fonts.py` needs Python 3 with `fonttools` and `brotli`.
+See `sources/`. `release_fonts.py` needs Python 3 with `fonttools` and `brotli`.

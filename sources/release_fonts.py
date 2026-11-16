@@ -1,5 +1,5 @@
 """Produce the release font set for Dastkhat (publisher: Dastyar).
-Input: variable fonts for the 3 dot styles, compiled from Source/ufo by build_all.sh.
+Input: variable fonts for the 3 dot styles, compiled from sources/ufo by build_all.sh.
 Output: base / FaNum / NoEn x (variable + 9 statics) as TTF + WOFF2.
 Usage: python3 -I release_fonts.py <out_dir> <dir_with_compiled_variable_fonts>
 """

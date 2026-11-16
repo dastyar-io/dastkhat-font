@@ -28,7 +28,7 @@ source {
     dest_file: "OFL.txt"
   }
   files {
-    source_file: "Fonts/Main/DastkhatDiamond/Variable/DastkhatDiamond[wght].ttf"
+    source_file: "fonts/Main/DastkhatDiamond/Variable/DastkhatDiamond[wght].ttf"
     dest_file: "DastkhatDiamond[wght].ttf"
   }
   files {
@@ -36,6 +36,6 @@ source {
     dest_file: "DESCRIPTION.en_us.html"
   }
   branch: "main"
-  config_yaml: "Source/config-DastkhatDiamond.yaml"
+  config_yaml: "sources/config-DastkhatDiamond.yaml"
 }
 primary_script: "Arab"

@@ -1,7 +1,7 @@
 #!/bin/sh
 # Rebuild every Dastkhat font from the UFO sources.
 #   pip install fontmake fonttools brotli
-#   sh Source/build_all.sh <output_dir>
+#   sh sources/build_all.sh <output_dir>
 # Output: <output_dir>/{Main,FaNum,NoEn}/<Family>/{Variable,TTF,Webfonts}
 set -e
 OUT="${1:?usage: build_all.sh <output_dir>}"
