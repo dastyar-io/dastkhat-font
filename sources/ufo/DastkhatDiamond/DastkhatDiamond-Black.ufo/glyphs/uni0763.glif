@@ -18,13 +18,13 @@
       <point x="1416" y="1000"/>
       <point x="1331" y="1048" type="qcurve"/>
       <point x="1875" y="1242" type="line"/>
-      <point x="1875" y="1493" type="line"/>
-      <point x="1062" y="1232" type="line"/>
-      <point x="1004" y="1213"/>
-      <point x="947" y="1120"/>
-      <point x="947" y="1063" type="qcurve"/>
-      <point x="947" y="1008"/>
-      <point x="995" y="900"/>
+      <point x="1875" y="1558" type="line"/>
+      <point x="1062" y="1297" type="line"/>
+      <point x="1004" y="1275"/>
+      <point x="947" y="1165"/>
+      <point x="947" y="1098" type="qcurve"/>
+      <point x="947" y="1034"/>
+      <point x="995" y="907"/>
       <point x="1040" y="863" type="qcurve"/>
       <point x="1084" y="826"/>
       <point x="1203" y="734"/>
@@ -56,22 +56,22 @@
       <point x="920" y="0" type="qcurve"/>
     </contour>
     <contour>
-      <point x="1392" y="2022" type="line"/>
-      <point x="1226" y="1856" type="line"/>
-      <point x="1392" y="1690" type="line"/>
-      <point x="1558" y="1856" type="line"/>
+      <point x="1392" y="2087" type="line"/>
+      <point x="1226" y="1921" type="line"/>
+      <point x="1392" y="1755" type="line"/>
+      <point x="1558" y="1921" type="line"/>
     </contour>
     <contour>
-      <point x="1575" y="1769" type="line"/>
-      <point x="1409" y="1603" type="line"/>
-      <point x="1575" y="1437" type="line"/>
-      <point x="1741" y="1603" type="line"/>
+      <point x="1575" y="1834" type="line"/>
+      <point x="1409" y="1668" type="line"/>
+      <point x="1575" y="1502" type="line"/>
+      <point x="1741" y="1668" type="line"/>
     </contour>
     <contour>
-      <point x="1210" y="1769" type="line"/>
-      <point x="1044" y="1603" type="line"/>
-      <point x="1210" y="1437" type="line"/>
-      <point x="1376" y="1603" type="line"/>
+      <point x="1210" y="1834" type="line"/>
+      <point x="1044" y="1668" type="line"/>
+      <point x="1210" y="1502" type="line"/>
+      <point x="1376" y="1668" type="line"/>
     </contour>
   </outline>
 </glyph>

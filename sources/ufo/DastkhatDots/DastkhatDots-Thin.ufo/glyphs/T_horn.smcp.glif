@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Thorn.smcp" format="2">
+  <advance width="894"/>
+  <anchor x="489" y="1228" name="Anchor-0"/>
+  <anchor x="418" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="158" y="0" type="line"/>
+      <point x="158" y="1083" type="line"/>
+      <point x="208" y="1083" type="line"/>
+      <point x="208" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="175" y="242" type="line"/>
+      <point x="175" y="293" type="line"/>
+      <point x="433" y="293" type="line"/>
+      <point x="607" y="293"/>
+      <point x="761" y="445"/>
+      <point x="761" y="552" type="qcurve"/>
+      <point x="761" y="663"/>
+      <point x="607" y="821"/>
+      <point x="433" y="821" type="qcurve"/>
+      <point x="175" y="821" type="line"/>
+      <point x="175" y="872" type="line"/>
+      <point x="433" y="872" type="line"/>
+      <point x="558" y="872"/>
+      <point x="726" y="792"/>
+      <point x="812" y="649"/>
+      <point x="812" y="553" type="qcurve"/>
+      <point x="812" y="457"/>
+      <point x="726" y="317"/>
+      <point x="558" y="242"/>
+      <point x="433" y="242" type="qcurve"/>
+    </contour>
+  </outline>
+</glyph>

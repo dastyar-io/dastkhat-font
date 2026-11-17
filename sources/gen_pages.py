@@ -8,13 +8,25 @@ os.makedirs(BUILD, exist_ok=True)
 CSS_FONTS = os.path.join(PKG, 'Webfonts', 'dastkhat.css')
 CSS_SITE = os.path.join(PKG, 'Demos', 'assets', 'site.css')
 
+VSTR = '1.210'          # cache-busts the font stylesheet when the fonts change
 WEIGHTS = [(100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regular'), (500, 'Medium'),
            (600, 'SemiBold'), (700, 'Bold'), (800, 'ExtraBold'), (900, 'Black')]
 WEIGHT_FA = {100: 'نازک', 200: 'خیلی سبک', 300: 'سبک', 400: 'معمولی', 500: 'متوسط', 600: 'نیمه‌ضخیم',
              700: 'ضخیم', 800: 'خیلی ضخیم', 900: 'سیاه'}
 FAMS = [('Dastkhat', 'مربع', 'نقطه‌های مربعی، پیش‌فرض برای رابط کاربری و متن'),
         ('Dastkhat Diamond', 'لوزی', 'مربع چرخیده ۴۵ درجه، ظاهری نرم‌تر و کلاسیک'),
-        ('Dastkhat Bar', 'ادغام‌شده', 'دو نقطه یک خط، سه نقطه خط و مربع؛ برای لوگو و تیتر')]
+        ('Dastkhat Bar', 'ادغام‌شده', 'دو نقطه یک خط، سه نقطه خط و مربع؛ برای لوگو و تیتر'),
+        ('Dastkhat Dots', 'دایره', 'نقطه‌های دایره‌ای، همان هندسه با بافتی نرم‌تر'),
+        ('Dastkhat BarDots', 'کپسولی', 'دو نقطه یک کپسول، سه نقطه کپسول و دایره؛ برای لوگو و تیتر')]
+NFAMS = len(FAMS)
+
+
+def fam_seg(extra=''):
+    """The segmented buttons that switch the family on the demo pages."""
+    ON = ' class="on"'
+    btns = ''.join(f'<button{ON if i == 0 else ""} data-f="{f}">{fa}</button>'
+                   for i, (f, fa, _) in enumerate(FAMS))
+    return f'<div class="seg" id="fam"{extra}>{btns}</div>'
 PARA = ('دستخط برای صفحه‌هایی طراحی شده که هر روز خوانده می‌شوند: فروشگاه‌ها، داشبوردها، اپلیکیشن‌ها و '
         'دستیارهای هوشمند. بدنه بلندتر حروف، خوانایی را در اندازه‌های کوچک بالا می‌برد و نقطه‌های هندسی، '
         'به متن ظاهری منظم و امروزی می‌دهند. اعداد فارسی پهن‌تر شده‌اند تا قیمت‌ها و ارقام با یک نگاه خوانده شوند.')
@@ -27,10 +39,11 @@ def kw_grid(size=44, weight=700):
     head = ''.join(f'<div class="kwh" style="font-family:\'{f}\'">{fa}</div>' for f, fa, _ in FAMS)
     rows = ''.join(f'<div class="kwr">' + ''.join(f'<div style="font-family:\'{f}\';font-size:{size}px;font-weight:{weight}">{k}</div>' for f, _, _ in FAMS) + '</div>' for k in KEYWORDS)
     return f'<div class="kw"><div class="kwr kwhead">{head}</div>{rows}</div>'
-KW_CSS = '.kw{margin-top:24px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.kwr{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}.kwr:last-child{border:0}.kwr>div{padding:14px 22px;line-height:1.5}.kwr>div+div{border-inline-start:1px solid var(--line)}.kwhead{background:var(--primary-soft)}.kwhead div{font-size:15px;font-weight:700;color:var(--primary)}'
+KW_CSS = '.kw{margin-top:24px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.kwr{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-bottom:1px solid var(--line)}.kwr:last-child{border:0}.kwr>div{padding:14px 22px;line-height:1.5}.kwr>div+div{border-inline-start:1px solid var(--line)}.kwhead{background:var(--primary-soft)}.kwhead div{font-size:15px;font-weight:700;color:var(--primary)}'
 
 # ---------- glyph inventory ----------
-cmap = TTFont(os.path.join(PKG, 'fonts/Main/Dastkhat/TTF/Dastkhat-Regular.ttf')).getBestCmap()
+REGULAR = TTFont(os.path.join(PKG, 'fonts/Main/Dastkhat/TTF/Dastkhat-Regular.ttf'))
+cmap = REGULAR.getBestCmap()
 cps = sorted(cmap)
 def chars(pred):
     return [chr(c) for c in cps if pred(c)]
@@ -39,12 +52,13 @@ GLYPH_GROUPS = [
     ('حروف عربی و گسترده', 'Arabic & extended', [ch for ch in chars(lambda c: (0x621 <= c <= 0x6D5) and ud.category(chr(c)).startswith('L'))
                                                 if ch not in 'ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیآأإؤئءةۀ']),
     ('اعداد', 'Numerals', list('۰۱۲۳۴۵۶۷۸۹') + list('٠١٢٣٤٥٦٧٨٩') + list('0123456789')),
-    ('نشانه‌ها', 'Punctuation & signs', list('،؛؟٪٫٬«»()[]{}!?.,:;-–—/\\@#&*+=<>%$€£¥﷼') + ['ـ']),
+    ('نشانه‌ها', 'Punctuation & signs', list('،؛؟٪٫٬«»()[]{}!?.,:;-–—/\\@#&*+=<>%$€£¥') + ['ـ']),
+    ('نشانه‌های پول', 'Currency signs', ['\uE000', '\uE001', '\uE002', '\uFDFC']),
     ('حروف لاتین', 'Latin', chars(lambda c: 0x41 <= c <= 0x5A or 0x61 <= c <= 0x7A) +
      chars(lambda c: 0xC0 <= c <= 0x17F and ud.category(chr(c)).startswith('L'))),
 ]
 GLYPH_GROUPS = [(a, b, [ch for ch in g if ord(ch) in cmap]) for a, b, g in GLYPH_GROUPS]
-TOTAL_GLYPHS = 1333
+TOTAL_GLYPHS = REGULAR['maxp'].numGlyphs
 faN = lambda n: ''.join('۰۱۲۳۴۵۶۷۸۹'[int(d)] for d in str(n))
 
 
@@ -53,7 +67,7 @@ def page(title, body, rel_css='../Webfonts/dastkhat.css', rel_site='../Demos/ass
 <html lang="fa" dir="{dir_}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title>
 <link rel="icon" type="image/svg+xml" href="{rel_site.replace("site.css", "logo-icon.svg")}">
-<link rel="stylesheet" href="{rel_css}"><link rel="stylesheet" href="{rel_site}">
+<link rel="stylesheet" href="{rel_css}?v={VSTR}"><link rel="stylesheet" href="{rel_site}">
 <style>{extra_css}</style></head><body>
 {body}
 <script>{script}</script>
@@ -97,8 +111,8 @@ def index_page():
 .tester .seg{background:#2A2725}.tester .seg button{color:#fff}.tester .seg button.on{background:var(--secondary);color:var(--on-secondary)}
 .tester label{color:#bbb;font-size:14px;display:flex;gap:10px;align-items:center}
 #live{font-size:64px;line-height:1.5;outline:none;min-height:120px}
-.fams{grid-template-columns:repeat(3,1fr);margin-top:30px}
-.fam-big{font-size:84px;white-space:nowrap;line-height:1.3;margin:10px 0}
+.fams{grid-template-columns:repeat(5,minmax(0,1fr));margin-top:30px}
+.fam-big{font-size:clamp(28px,3.4vw,50px);white-space:nowrap;line-height:1.3;margin:10px 0}
 .wrow{display:grid;grid-template-columns:180px 120px 1fr;align-items:baseline;border-bottom:1px solid var(--line);padding:12px 0}
 .wrow p{margin:0;font-size:38px}.wfa{color:var(--mute);font-size:14px}.wrow .lbl{text-align:right}
 .feat{grid-template-columns:repeat(4,1fr);margin-top:30px}
@@ -113,30 +127,30 @@ def index_page():
     body = nav('index.html') + f'''
 <div class="wrap">
  <div class="hero">
-  <div><span class="pill">نسخه ۱٫۲۰۱ · متن‌باز (OFL)</span>
+  <div><span class="pill">نسخه ۱٫۲۱۰ · متن‌باز (OFL)</span>
    <h1>دستخط</h1>
-   <p class="lead">فونتی فارسی و لاتین برای رابط‌های کاربری امروز؛ با بدنه بلندتر، نقطه‌های هندسی و سه سبک نقطه، از طرف دستیار.</p>
+   <p class="lead">فونتی فارسی و لاتین برای رابط‌های کاربری امروز؛ با بدنه بلندتر، نقطه‌های هندسی و پنج سبک نقطه، از طرف دستیار.</p>
    <div style="display:flex;gap:12px;margin-top:24px"><a class="btn" href="#download">دانلود رایگان</a><a class="btn alt" href="type-tester.html">تست متن</a></div>
   </div>
   <div class="meta">
    <div><b>۹</b><span>وزن، از نازک تا سیاه</span></div>
-   <div><b>۳</b><span>سبک نقطه</span></div>
+   <div><b>۵</b><span>سبک نقطه</span></div>
    <div><b>متغیر</b><span>محور وزن ۱۰۰ تا ۹۰۰</span></div>
-   <div><b>۸۱۱</b><span>نویسه یونیکد</span></div>
+   <div><b>{faN(len(cmap))}</b><span>نویسه یونیکد</span></div>
   </div>
  </div>
  <div class="tester">
   <div class="bar">
-   <div class="seg" id="fam"><button class="on" data-f="Dastkhat">مربع</button><button data-f="Dastkhat Diamond">لوزی</button><button data-f="Dastkhat Bar">ادغام‌شده</button></div>
+   {fam_seg()}
    <label>وزن <input type="range" id="w" min="100" max="900" value="700"><span id="wv">۷۰۰</span></label>
    <label>اندازه <input type="range" id="s" min="20" max="140" value="64"></label>
   </div>
   <div id="live" contenteditable="true" spellcheck="false" style="font-weight:700">دستیار هوشمند خلاق</div>
  </div>
 </div>
-<div class="sec"><div class="wrap"><h2>سه سبک نقطه</h2><p class="lead">یک فونت، سه شخصیت. هر سه خانواده وزن‌ها و فاصله‌گذاری یکسان دارند و می‌توانید بدون جابه‌جایی متن، بینشان جابه‌جا شوید.</p>
+<div class="sec"><div class="wrap"><h2>پنج سبک نقطه</h2><p class="lead">یک فونت، پنج شخصیت. هر پنج خانواده وزن‌ها و فاصله‌گذاری یکسان دارند و می‌توانید بدون جابه‌جایی متن، بینشان جابه‌جا شوید.</p>
  <div class="grid fams">{fams}</div></div></div>
-<div class="sec"><div class="wrap"><h2>کلیدواژه‌های تست</h2><p class="lead">پنج واژه پرکاربرد محصولات دستیار در هر سه سبک نقطه.</p>{kw_grid(30, 800)}</div></div>
+<div class="sec"><div class="wrap"><h2>کلیدواژه‌های تست</h2><p class="lead">پنج واژه پرکاربرد محصولات دستیار در هر پنج سبک نقطه.</p>{kw_grid(30, 800)}</div></div>
 <div class="sec"><div class="wrap"><h2>۹ وزن</h2><p class="lead">از نازک برای تیترهای ظریف تا سیاه برای بنرها، به‌همراه نسخه متغیر برای هر وزن دلخواه بین ۱۰۰ تا ۹۰۰.</p>
  <div style="margin-top:24px">{weights}</div></div></div>
 <div class="sec"><div class="wrap"><h2>برای خوانایی ساخته شده</h2>
@@ -232,7 +246,7 @@ def glyph_page():
     body = nav('glyph-map.html') + f'''<div class="wrap" style="padding-top:40px">
 <h1 style="font-size:56px;font-weight:900">نقشه حروف</h1>
 <p class="lead">{faN(len(cps))} نویسه یونیکد و {faN(TOTAL_GLYPHS)} گلیف. روی هر حرف کلیک کنید تا بزرگ دیده شود.</p>
-<div class="seg" id="fam" style="margin-top:14px"><button class="on" data-f="Dastkhat">مربع</button><button data-f="Dastkhat Diamond">لوزی</button><button data-f="Dastkhat Bar">ادغام‌شده</button></div>
+{fam_seg(' style="margin-top:14px"')}
 <div id="all">{secs}
 <h2 style="font-size:28px">شکل‌های اتصال <span class="lbl">Contextual forms</span></h2><div class="forms">{forms}</div></div>
 </div><div id="zoom"><b></b><span class="lbl"></span></div>''' + FOOT
@@ -320,11 +334,11 @@ POSTER_CSS = '''
 .poster .sq{width:110px;height:110px;background:var(--secondary);position:absolute;left:60px;top:930px}
 '''
 POSTER_BODY = '''<div class="poster">
- <div class="ptag"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.201</span></div>
+ <div class="ptag"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.210</span></div>
  <div class="sq"></div>
  <div class="big">دستخط</div>
  <div class="big2">دستخط</div>
- <div class="meta"><div><b>۹ وزن · ۳ سبک نقطه</b>فونت فارسی برای رابط‌های امروز</div><div class="ltr" style="text-align:left">SIL OFL 1.1<br>dastyar.io</div></div>
+ <div class="meta"><div><b>۹ وزن · ۵ سبک نقطه</b>فونت فارسی برای رابط‌های امروز</div><div class="ltr" style="text-align:left">SIL OFL 1.1<br>dastyar.io</div></div>
 </div>'''
 
 
@@ -401,6 +415,18 @@ export const dastkhat = localFont({{
 <h2>نسخه NoEn</h2><p>حروف لاتین در این نسخه حذف شده‌اند تا مرورگر برای متن انگلیسی از فونت بعدی در لیست استفاده کند:</p>
 <pre>font-family: 'Dastkhat NoEn', 'Inter', sans-serif;</pre>
 
+<h2>نشانه ریال و تومان</h2>
+<p>ریال نشانه استاندارد یونیکد دارد: <span style="font-size:1.3em">&#xFDFC;</span> (U+FDFC). تومان کدپوینت ندارد، پس دستخط سه نشانه خودش را اضافه کرده است.</p>
+<table><tr><th>نشانه</th><th>کدپوینت</th><th>شکل</th></tr>
+<tr><td style="font-size:1.6em">&#xFDFC;</td><td>U+FDFC</td><td>ریال، واژه «ریال» در یک گلیف</td></tr>
+<tr><td style="font-size:1.6em">&#xE000;</td><td>U+E000</td><td>تومان، «ت» که دو نقطه‌اش دو خط شده</td></tr>
+<tr><td style="font-size:1.6em">&#xE001;</td><td>U+E001</td><td>ریال فشرده، دو ستون «ا» و «ل» که «ر» از میانشان می‌گذرد</td></tr>
+<tr><td style="font-size:1.6em">&#xE002;</td><td>U+E002</td><td>تومان روی‌هم، «ن» روی «توما»</td></tr></table>
+<p>لازم نیست این کدپوینت‌ها را دستی در متن بگذارید. همان واژه را بنویسید و یکی از دو ویژگی اختیاری را روشن کنید:</p>
+<pre>.price      {{ font-feature-settings: 'ss02'; }}   /* تومان و ریال ← نشانه فشرده */
+.price-long {{ font-feature-settings: 'ss03'; }}   /* تومان ← نشانه روی‌هم، ریال ← &#xFDFC; */</pre>
+<p>هیچ‌کدام پیش‌فرض نیست. نشانه‌های U+E000 تا U+E002 در ناحیه استفاده شخصی‌اند و فقط در دستخط دیده می‌شوند، پس هرجا متن باید کپی یا جست‌وجو شود، واژه ساده را نگه دارید.</p>
+
 <h2>فاصله‌گذاری پیشنهادی</h2><ul><li>متن بدنه: اندازه ۱۵ تا ۱۸ پیکسل، فاصله خطوط ۱٫۸ تا ۲</li><li>تیتر: وزن ۷۰۰ تا ۹۰۰، فاصله خطوط ۱٫۲ تا ۱٫۳</li><li>از letter-spacing روی متن فارسی استفاده نکنید؛ اتصال حروف را می‌شکند.</li></ul>
 
 <div class="en">
@@ -408,6 +434,7 @@ export const dastkhat = localFont({{
 <ul><li><b>Desktop:</b> install the TTF files from <code>fonts/Main/&lt;Family&gt;/TTF</code>, or the variable font, not both.</li>
 <li><b>Web:</b> copy <code>Webfonts/</code>, link <code>dastkhat.css</code>, use <code>var(--font-dastkhat)</code>.</li>
 <li><b>FaNum:</b> Latin digits render as Persian digits. <b>NoEn:</b> Persian only, pair it with your own Latin font.</li>
+<li><b>Currency:</b> rial is <code>U+FDFC</code>. Toman has no Unicode code point, so Dastkhat adds <code>U+E000</code> (compact) and <code>U+E002</code> (stacked), plus <code>U+E001</code> for a compact rial. Turn on <code>ss02</code> or <code>ss03</code> and keep writing the words.</li>
 <li><b>License:</b> SIL Open Font License 1.1, free for personal and commercial use. See <code>OFL.txt</code>.</li></ul></div>
 </div>''' + FOOT
     write('Helps/guide.html', page('راهنمای دستخط', body, extra_css=css))
@@ -428,22 +455,22 @@ body{background:#fff}
 .wl{display:grid;grid-template-columns:62mm 1fr;align-items:baseline;border-bottom:1px solid var(--line);padding:2.3mm 0}.wl .lbl{text-align:right;white-space:nowrap}
 .wfr{display:grid;grid-template-columns:16mm 1fr;align-items:baseline;line-height:1.45}.wfr div{white-space:nowrap;overflow:hidden}
 .wl p{margin:0;font-size:30px;line-height:1.3}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;margin-top:8mm}
+.cols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5mm;margin-top:8mm}
 .gg{display:flex;flex-wrap:wrap;gap:3mm 6mm;font-size:30px;line-height:1.5}
 '''
     W = lambda s: f'<div class="s{" " + s if s else ""}">'
     hd = lambda t: f'<div class="hd"><span>دستخط · نمونه‌نامه</span><span>{t}</span></div>'
-    ft = lambda n: f'<div class="ft"><span>Dastkhat v1.201 · Dastyar</span><span class="ltr">{len(pages) + 1:02d}</span></div>'
+    ft = lambda n: f'<div class="ft"><span>Dastkhat v1.210 · Dastyar</span><span class="ltr">{len(pages) + 1:02d}</span></div>'
     pages = []
     pages.append(W('cover') + hd('۱۴۰۵') + '''<div style="font-family:'Dastkhat Bar';font-weight:900;font-size:230px;line-height:1;margin-top:18mm">دستخط</div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10mm">
-<div style="font-size:22px;max-width:150mm">فونت فارسی و لاتین برای رابط‌های کاربری<br><b>۹ وزن · ۳ سبک نقطه · نسخه متغیر</b></div>
+<div style="font-size:22px;max-width:150mm">فونت فارسی و لاتین برای رابط‌های کاربری<br><b>۹ وزن · ۵ سبک نقطه · نسخه متغیر</b></div>
 <div style="width:34mm;height:34mm;background:var(--secondary)"></div></div>''' + ft('01') + '</div>')
-    fams = ''.join(f'''<div><div class="lbl">{f}</div><div style="font-family:'{f}';font-size:92px;line-height:1.25;margin:4mm 0">تث شق</div>
+    fams = ''.join(f'''<div><div class="lbl">{f}</div><div style="font-family:'{f}';font-size:46px;line-height:1.25;margin:4mm 0">تث شق</div>
 <div style="font-family:'{f}';font-size:30px;line-height:1.6">{DOTS}</div><p style="font-size:14px;color:var(--mute)">{d}</p></div>''' for f, fa, d in FAMS)
-    pages.append(W('') + hd('سبک نقطه‌ها') + f'<div class="ttl">سه سبک نقطه</div><div class="cols">{fams}</div>' + ft('02') + '</div>')
-    kwrows = ''.join(f'<div style="display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);padding:2mm 0">' + ''.join(f'<div style="font-family:\'{f}\';font-size:30px;font-weight:700;line-height:1.4;white-space:nowrap">{k}</div>' for f, _, _ in FAMS) + '</div>' for k in KEYWORDS)
-    kwhead = '<div style="display:grid;grid-template-columns:repeat(3,1fr);margin-top:4mm">' + ''.join(f'<div class="lbl" style="text-align:right">{f}</div>' for f, _, _ in FAMS) + '</div>'
+    pages.append(W('') + hd('سبک نقطه‌ها') + f'<div class="ttl">پنج سبک نقطه</div><div class="cols">{fams}</div>' + ft('02') + '</div>')
+    kwrows = ''.join(f'<div style="display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line);padding:2mm 0">' + ''.join(f'<div style="font-family:\'{f}\';font-size:22px;font-weight:700;line-height:1.4">{k}</div>' for f, _, _ in FAMS) + '</div>' for k in KEYWORDS)
+    kwhead = '<div style="display:grid;grid-template-columns:repeat(5,1fr);margin-top:4mm">' + ''.join(f'<div class="lbl" style="text-align:right">{f}</div>' for f, _, _ in FAMS) + '</div>'
     pages.append(W('') + hd('کلیدواژه‌ها') + f'<div class="ttl">کلیدواژه‌های تست</div>{kwhead}{kwrows}' + ft('03') + '</div>')
     wl = ''.join(f'<div class="wl"><span class="lbl">{w} {s} · {WEIGHT_FA[w]}</span><p style="font-weight:{w}">دستیار هوشمند خلاق · هوشنگ</p></div>' for w, s in WEIGHTS)
     pages.append(W('') + hd('وزن‌ها') + f'<div class="ttl" style="margin-bottom:3mm">۹ وزن</div>{wl}' + ft('03') + '</div>')
@@ -468,7 +495,7 @@ body{background:#fff}
 <div class="card"><div class="lbl">Variable · wght 100-900</div><p style="font-size:34px;margin:3mm 0"><span style="font-weight:150">دستخط</span> <span style="font-weight:450">دستخط</span> <span style="font-weight:850">دستخط</span></p><p style="color:var(--mute);font-size:14px">هر وزن دلخواه بین ۱۰۰ تا ۹۰۰ در یک فایل.</p></div></div>''' + ft('07') + '</div>')
     pages.append(W('cover') + hd('اطلاعات') + '''<div class="ttl" style="margin-top:14mm">دستخط</div>
 <div class="cols" style="grid-template-columns:1fr 1fr;font-size:15px;line-height:2.1">
-<div>ناشر: دستیار<br>نسخه: ۱٫۲۰۱<br>وزن‌ها: ۹ + متغیر<br>خانواده‌ها: Dastkhat · Dastkhat Diamond · Dastkhat Bar<br>نسخه‌ها: اصلی · FaNum · NoEn<br>فرمت‌ها: TTF · WOFF2</div>
+<div>ناشر: دستیار<br>نسخه: ۱٫۲۱۰<br>وزن‌ها: ۹ + متغیر<br>خانواده‌ها: Dastkhat · Dastkhat Diamond · Dastkhat Bar ·<br>Dastkhat Dots · Dastkhat BarDots<br>نسخه‌ها: اصلی · FaNum · NoEn<br>فرمت‌ها: TTF · WOFF2</div>
 <div>مجوز: OFL 1.1 (متن‌باز)<br>بر پایه: وزیرمتن، اثر صابر راستی‌کردار<br>وب‌سایت:<br><span class="ltr">dastyar.io</span></div></div>''' + ft('08') + '</div>')
     open(os.path.join(BUILD, 'specimen.html'), 'w').write(
         page('Dastkhat Specimen', ''.join(pages), rel_css='file://' + CSS_FONTS, rel_site='file://' + CSS_SITE, extra_css=css))
@@ -484,20 +511,20 @@ body{background:#fff}
 '''
     fr = []
     fr.append('''<div class="f wide" id="cover" style="background:var(--primary);color:#fff"><div class="c">
-<div style="display:flex;justify-content:space-between;font-size:26px;opacity:.8"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.201</span></div>
+<div style="display:flex;justify-content:space-between;font-size:26px;opacity:.8"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.210</span></div>
 <div style="font-family:'Dastkhat Bar';font-weight:900;font-size:400px;line-height:1.05;margin-top:60px">دستخط</div>
-<div style="display:flex;justify-content:space-between;align-items:flex-end;font-size:34px;margin-top:30px"><span>فونت فارسی برای رابط‌های امروز · ۹ وزن · ۳ سبک نقطه</span><span style="width:120px;height:120px;background:var(--secondary);display:block"></span></div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;font-size:34px;margin-top:30px"><span>فونت فارسی برای رابط‌های امروز · ۹ وزن · ۵ سبک نقطه</span><span style="width:120px;height:120px;background:var(--secondary);display:block"></span></div>
 </div></div>''')
-    cols = ''.join(f'''<div style="text-align:center"><div style="font-family:'{f}';font-size:250px;line-height:1.3">تث</div>
-<div style="font-family:'{f}';font-size:120px;line-height:1.3">ش چ ق</div><div style="font-size:40px;font-weight:800;margin-top:20px">{fa}</div><div class="lbl" style="font-size:20px">{f}</div></div>''' for f, fa, _ in FAMS)
-    fr.append(f'<div class="f wide" id="dot-styles"><div class="c"><div style="font-size:70px;font-weight:900">سه سبک نقطه</div><div style="display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px">{cols}</div></div></div>')
+    cols = ''.join(f'''<div style="text-align:center"><div style="font-family:'{f}';font-size:165px;line-height:1.3">تث</div>
+<div style="font-family:'{f}';font-size:80px;line-height:1.3">ش چ ق</div><div style="font-size:34px;font-weight:800;margin-top:20px">{fa}</div><div class="lbl" style="font-size:18px">{f}</div></div>''' for f, fa, _ in FAMS)
+    fr.append(f'<div class="f wide" id="dot-styles"><div class="c"><div style="font-size:70px;font-weight:900">پنج سبک نقطه</div><div style="display:grid;grid-template-columns:repeat(5,1fr);margin-top:40px">{cols}</div></div></div>')
     wl = ''.join(f'<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding:6px 0"><p style="margin:0;font-size:64px;line-height:1.25;font-weight:{w}">دستیار هوشمند خلاق · Dastkhat</p><span class="lbl" style="font-size:20px">{w} {s}</span></div>' for w, s in WEIGHTS)
     fr.append(f'<div class="f wide" id="weights"><div class="c" style="inset:50px 70px">{wl}</div></div>')
     g = ''.join(f'<span>{html.escape(c)}</span>' for c in GLYPH_GROUPS[0][2])
     fr.append(f'''<div class="f wide" id="glyphs" style="background:var(--ink);color:#fff"><div class="c"><div style="font-size:60px;font-weight:900;color:var(--secondary)">حروف</div>
 <div style="display:flex;flex-wrap:wrap;gap:24px 54px;font-size:110px;line-height:1.35;margin-top:30px">{g}</div></div></div>''')
-    kwr = ''.join('<div style="display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)">' + ''.join(f'<div style="font-family:\'{f}\';font-size:52px;font-weight:800;line-height:1.5;padding:4px 0;white-space:nowrap">{k}</div>' for f, _, _ in FAMS) + '</div>' for k in KEYWORDS)
-    kwh = '<div style="display:grid;grid-template-columns:repeat(3,1fr);margin:24px 0 6px">' + ''.join(f'<div style="font-size:28px;font-weight:700;color:var(--primary)">{fa} <span class="lbl" style="font-size:18px">{f}</span></div>' for f, fa, _ in FAMS) + '</div>'
+    kwr = ''.join('<div style="display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line)">' + ''.join(f'<div style="font-family:\'{f}\';font-size:34px;font-weight:800;line-height:1.5;padding:4px 0;white-space:nowrap">{k}</div>' for f, _, _ in FAMS) + '</div>' for k in KEYWORDS)
+    kwh = '<div style="display:grid;grid-template-columns:repeat(5,1fr);margin:24px 0 6px">' + ''.join(f'<div style="font-size:22px;font-weight:700;color:var(--primary)">{fa} <span class="lbl" style="font-size:15px">{f}</span></div>' for f, fa, _ in FAMS) + '</div>'
     fr.append(f'<div class="f wide" id="keywords"><div class="c" style="inset:60px 70px"><div style="font-size:56px;font-weight:900">کلیدواژه‌های تست</div>{kwh}{kwr}</div></div>')
     fr.append(f'<div class="f wide" id="ui" style="padding:30px 70px;height:760px">{UI_BODY}</div>')
     fr.append(f'<div id="poster" style="width:1080px">{POSTER_BODY}</div>')

@@ -7,7 +7,7 @@ Hello Google Fonts team, and thank you for the guidance on my earlier pull reque
 **Dastkhat** (دستخط) is a Persian (Arabic script) and Latin UI typeface with geometric dots, built for product interfaces, e-commerce pages and dense Persian text on screens.
 
 - Repository: https://github.com/dastyar-io/dastkhat-font
-- Version: 1.201
+- Version: 1.210
 - License: SIL Open Font License 1.1 (`OFL.txt` in the repo)
 - Publisher: Dastyar (https://dastyar.io)
 - Designer / maintainer: Alireza Eskandari

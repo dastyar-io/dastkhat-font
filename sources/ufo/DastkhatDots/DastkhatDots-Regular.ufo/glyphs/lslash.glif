@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lslash" format="2">
+  <advance width="515"/>
+  <unicode hex="0142"/>
+  <anchor x="260" y="1578" name="Anchor-0"/>
+  <anchor x="260" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="486" y="865" type="line"/>
+      <point x="486" y="751" type="line"/>
+      <point x="33" y="578" type="line"/>
+      <point x="33" y="691" type="line"/>
+    </contour>
+    <contour>
+      <point x="339" y="1428" type="line"/>
+      <point x="339" y="0" type="line"/>
+      <point x="166" y="0" type="line"/>
+      <point x="166" y="1428" type="line"/>
+    </contour>
+  </outline>
+</glyph>

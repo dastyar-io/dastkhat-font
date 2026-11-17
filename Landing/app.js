@@ -69,7 +69,15 @@
         const wave = calm ? 0.5 : 0.5 + 0.5 * Math.sin(x * 0.011 + y * 0.017 + t * 0.0009);
         const s = 2.4 + wave * 1.4 + k * 13;
         cx.globalAlpha = 0.14 + wave * 0.08 + k * 0.7;
-        if (mode === 'bar') {
+        if (mode === 'bardots') {
+          cx.beginPath();
+          cx.roundRect(x - s * 1.15, y - s * 0.27, s * 2.3, s * 0.54, s * 0.27);
+          cx.fill();
+        } else if (mode === 'dots') {
+          cx.beginPath();
+          cx.arc(x, y, s / 2, 0, Math.PI * 2);
+          cx.fill();
+        } else if (mode === 'bar') {
           cx.fillRect(x - s * 1.15, y - s * 0.27, s * 2.3, s * 0.54);
         } else {
           const a = mode === 'diamond' ? Math.PI / 4 : k * Math.PI / 2;

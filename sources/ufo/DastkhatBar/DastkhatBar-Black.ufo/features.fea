@@ -2964,3 +2964,51 @@ feature kern {
             lookup ChainedContextualGPOS15;
 
 } kern;
+
+# --- Dastkhat currency signs ---------------------------------------------
+# ss02 turns the typed words into the compact signs, ss03 into the word signs.
+# Both are opt-in: nothing changes unless the feature is switched on.
+
+lookup CurrencySignCompact {
+    lookupflag 0;
+    sub uniFE97 uniFEEE uniFEE3 uniFE8E uni0646 by tomansign;
+    sub uni0631 uniFBFE uniFE8E uni0644 by rialsign;
+    sub uni0631 uniFEF3 uniFE8E uni0644 by rialsign;
+} CurrencySignCompact;
+
+lookup CurrencySignWord {
+    lookupflag 0;
+    sub uniFE97 uniFEEE uniFEE3 uniFE8E uni0646 by tomansign.word;
+    sub uni0631 uniFBFE uniFE8E uni0644 by uniFDFC;
+    sub uni0631 uniFEF3 uniFE8E uni0644 by uniFDFC;
+} CurrencySignWord;
+
+feature ss02 {
+    featureNames { name "Toman and rial signs"; };
+    script DFLT;
+    language dflt;
+            lookup CurrencySignCompact;
+} ss02;
+
+feature ss02 {
+    script arab;
+    language dflt;
+            lookup CurrencySignCompact;
+    language URD;
+            lookup CurrencySignCompact;
+} ss02;
+
+feature ss03 {
+    featureNames { name "Toman and rial word signs"; };
+    script DFLT;
+    language dflt;
+            lookup CurrencySignWord;
+} ss03;
+
+feature ss03 {
+    script arab;
+    language dflt;
+            lookup CurrencySignWord;
+    language URD;
+            lookup CurrencySignWord;
+} ss03;

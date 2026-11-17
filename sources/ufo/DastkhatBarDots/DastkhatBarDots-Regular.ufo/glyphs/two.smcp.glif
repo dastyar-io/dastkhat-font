@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="two.smcp" format="2">
+  <advance width="967"/>
+  <outline>
+    <contour>
+      <point x="903" y="141" type="line"/>
+      <point x="903" y="0" type="line"/>
+      <point x="98" y="0" type="line"/>
+      <point x="98" y="122" type="line"/>
+      <point x="496" y="506" type="line"/>
+      <point x="602" y="604"/>
+      <point x="678" y="727"/>
+      <point x="678" y="783" type="qcurve"/>
+      <point x="678" y="857"/>
+      <point x="574" y="957"/>
+      <point x="482" y="957" type="qcurve"/>
+      <point x="359" y="957"/>
+      <point x="246" y="844"/>
+      <point x="246" y="753" type="qcurve"/>
+      <point x="73" y="753" type="line"/>
+      <point x="73" y="848"/>
+      <point x="169" y="1005"/>
+      <point x="352" y="1098"/>
+      <point x="482" y="1098" type="qcurve"/>
+      <point x="654" y="1098"/>
+      <point x="850" y="926"/>
+      <point x="850" y="788" type="qcurve"/>
+      <point x="850" y="720"/>
+      <point x="787" y="594"/>
+      <point x="681" y="470"/>
+      <point x="615" y="401" type="qcurve"/>
+      <point x="310" y="141" type="line"/>
+    </contour>
+  </outline>
+</glyph>

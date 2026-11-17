@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Zdotaccent.smcp" format="2">
+  <advance width="979"/>
+  <anchor x="496" y="1228" name="Anchor-0"/>
+  <anchor x="496" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="904" y="50" type="line"/>
+      <point x="904" y="0" type="line"/>
+      <point x="91" y="0" type="line"/>
+      <point x="91" y="50" type="line"/>
+    </contour>
+    <contour>
+      <point x="878" y="1044" type="line"/>
+      <point x="108" y="0" type="line"/>
+      <point x="74" y="0" type="line"/>
+      <point x="74" y="43" type="line"/>
+      <point x="843" y="1083" type="line"/>
+      <point x="878" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="855" y="1083" type="line"/>
+      <point x="855" y="1033" type="line"/>
+      <point x="105" y="1033" type="line"/>
+      <point x="105" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="436" y="1324" type="qcurve"/>
+      <point x="436" y="1346"/>
+      <point x="466" y="1376"/>
+      <point x="487" y="1376" type="qcurve"/>
+      <point x="509" y="1376"/>
+      <point x="539" y="1346"/>
+      <point x="539" y="1324" type="qcurve"/>
+      <point x="539" y="1303"/>
+      <point x="509" y="1273"/>
+      <point x="487" y="1273" type="qcurve"/>
+      <point x="466" y="1273"/>
+      <point x="436" y="1303"/>
+    </contour>
+  </outline>
+</glyph>

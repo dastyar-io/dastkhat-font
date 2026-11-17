@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="won" format="2">
+  <advance width="1409"/>
+  <unicode hex="20A9"/>
+  <outline>
+    <contour>
+      <point x="1380" y="911" type="line"/>
+      <point x="1380" y="771" type="line"/>
+      <point x="29" y="771" type="line"/>
+      <point x="29" y="911" type="line"/>
+    </contour>
+    <contour>
+      <point x="1380" y="590" type="line"/>
+      <point x="1380" y="449" type="line"/>
+      <point x="29" y="449" type="line"/>
+      <point x="29" y="590" type="line"/>
+    </contour>
+    <contour>
+      <point x="396" y="0" type="line"/>
+      <point x="458" y="439" type="line"/>
+      <point x="623" y="1354" type="line"/>
+      <point x="745" y="1354" type="line"/>
+      <point x="683" y="914" type="line"/>
+      <point x="515" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="235" y="1354" type="line"/>
+      <point x="409" y="443" type="line"/>
+      <point x="458" y="0" type="line"/>
+      <point x="344" y="0" type="line"/>
+      <point x="57" y="1354" type="line"/>
+    </contour>
+    <contour>
+      <point x="952" y="0" type="line"/>
+      <point x="1001" y="444" type="line"/>
+      <point x="1170" y="1354" type="line"/>
+      <point x="1349" y="1354" type="line"/>
+      <point x="1061" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="790" y="1354" type="line"/>
+      <point x="955" y="442" type="line"/>
+      <point x="1015" y="0" type="line"/>
+      <point x="890" y="0" type="line"/>
+      <point x="728" y="918" type="line"/>
+      <point x="670" y="1354" type="line"/>
+    </contour>
+  </outline>
+</glyph>

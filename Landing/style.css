@@ -11,6 +11,8 @@
 }
 html[data-dots=diamond]{--fa:'Dastkhat Diamond',Tahoma,sans-serif;--fa-num:'Dastkhat Diamond FaNum',Tahoma,sans-serif}
 html[data-dots=bar]{--fa:'Dastkhat Bar',Tahoma,sans-serif;--fa-num:'Dastkhat Bar FaNum',Tahoma,sans-serif}
+html[data-dots=dots]{--fa:'Dastkhat Dots',Tahoma,sans-serif;--fa-num:'Dastkhat Dots FaNum',Tahoma,sans-serif}
+html[data-dots=bardots]{--fa:'Dastkhat BarDots',Tahoma,sans-serif;--fa-num:'Dastkhat BarDots FaNum',Tahoma,sans-serif}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -28,13 +30,17 @@ button{cursor:pointer;border:0;background:none;padding:0}
 .f-sq{font-family:'Dastkhat',Tahoma,sans-serif}
 .f-di{font-family:'Dastkhat Diamond',Tahoma,sans-serif}
 .f-ba{font-family:'Dastkhat Bar',Tahoma,sans-serif}
+.f-do{font-family:'Dastkhat Dots',Tahoma,sans-serif}
+.f-bd{font-family:'Dastkhat BarDots',Tahoma,sans-serif}
 .num{font-family:var(--fa-num)}
 
 /* the dot: one shape, three states. used everywhere as bullet and ornament */
 .d{display:inline-block;width:.5em;height:.5em;background:currentColor;flex:none;transition:transform .7s var(--spring)}
 html[data-dots=diamond] .d{transform:rotate(45deg) scale(.86)}
 html[data-dots=bar] .d{transform:scaleX(2.1) scaleY(.5)}
-html[data-dots=bar] .hero-side .d{transform-origin:0 50%}
+html[data-dots=dots] .d{border-radius:50%}
+html[data-dots=bardots] .d{border-radius:50%;transform:scaleX(2.1) scaleY(.5)}
+html[data-dots=bar] .hero-side .d,html[data-dots=bardots] .hero-side .d{transform-origin:0 50%}
 .ride .tot{flex-wrap:wrap}
 .d.red{background:var(--red)}.d.blue{background:var(--blue)}
 
@@ -52,6 +58,8 @@ html[data-dots=bar] .hero-side .d{transform-origin:0 50%}
 .switch button i{display:block;width:11px;height:11px;background:currentColor}
 .switch button[data-set-dots=diamond] i{transform:rotate(45deg) scale(.86)}
 .switch button[data-set-dots=bar] i{width:22px;height:6px}
+.switch button[data-set-dots=dots] i{border-radius:50%}
+.switch button[data-set-dots=bardots] i{width:22px;height:6px;border-radius:3px}
 .switch button[aria-pressed=true]{background:#fff;color:var(--blue)}
 .nav.solid .switch button[aria-pressed=true]{background:var(--ink);color:#fff}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 24px;border-radius:14px;font-weight:700;font-size:16px;background:var(--ink);color:#fff;transition:transform .25s var(--ease),background .25s,color .25s}
@@ -116,18 +124,19 @@ html[data-dots=bar] .hero-side .d{transform-origin:0 50%}
 .morph i+i{animation-name:mB;background:var(--blue)}
 @keyframes mA{0%,22%{transform:none}33%,55%{transform:rotate(45deg) scale(.86)}66%,90%{transform:translateX(-9px) scaleY(.5) scaleX(1.02)}100%{transform:none}}
 @keyframes mB{0%,22%{transform:none}33%,55%{transform:rotate(45deg) scale(.86)}66%,90%{transform:translateX(9px) scaleY(.5) scaleX(1.02);background:var(--ink)}100%{transform:none}}
-.fams{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.fam{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);padding:30px;text-align:start;display:flex;flex-direction:column;gap:6px;transition:transform .35s var(--ease),border-color .3s,box-shadow .35s;position:relative;overflow:hidden}
+.fams{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.fam{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);padding:24px;text-align:start;display:flex;flex-direction:column;gap:6px;transition:transform .35s var(--ease),border-color .3s,box-shadow .35s;position:relative;overflow:hidden}
 .fam:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(21,19,18,.45)}
 .fam[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
 .fam .tag{font-family:var(--mono);font-size:12.5px;color:var(--mute);direction:ltr;text-align:end}
-.fam .big{font-size:clamp(64px,8.4vw,128px);line-height:1.45;font-weight:800;white-space:nowrap}
-.fam .word{font-size:clamp(24px,2.5vw,34px);font-weight:700;line-height:1.7}
-.fam h3{font-size:24px;font-weight:800;margin-top:10px;display:flex;align-items:center;gap:12px}
+.fam .big{font-size:clamp(34px,3.7vw,50px);line-height:1.45;font-weight:800;white-space:nowrap}
+.fam .word{font-size:clamp(17px,1.6vw,22px);font-weight:700;line-height:1.7}
+.fam h3{font-size:20px;font-weight:800;margin-top:10px;display:flex;align-items:center;gap:12px}
 .fam h3 i{width:14px;height:14px;background:var(--blue);display:block}
 .fam.di h3 i{transform:rotate(45deg) scale(.86)}.fam.ba h3 i{width:30px;height:8px}
-.fam p{color:var(--mute);font-size:16px}
-.fam .state{margin-top:14px;font-size:14.5px;font-weight:700;color:var(--blue)}
+.fam.do h3 i{border-radius:50%}.fam.bd h3 i{width:30px;height:8px;border-radius:4px}
+.fam p{color:var(--mute);font-size:15px}
+.fam .state{margin-top:14px;font-size:13.5px;font-weight:700;color:var(--blue)}
 .fam[aria-pressed=true] .state{color:var(--ink)}
 
 /* ---------- one dot wordplay ---------- */
@@ -248,6 +257,7 @@ input[type=range]{accent-color:var(--red);width:130px}
 .cal .today{background:var(--blue);color:#fff;font-weight:800;border-radius:0}
 html[data-dots=diamond] .cal .today{border-radius:0;background:none;position:relative;z-index:0}
 html[data-dots=diamond] .cal .today::before{content:"";position:absolute;inset:8%;background:var(--blue);transform:rotate(45deg);z-index:-1}
+html[data-dots=dots] .cal .today,html[data-dots=bardots] .cal .today{border-radius:50%}
 .cal-f{margin-top:auto;padding-top:14px;font-size:15px;color:var(--mute);display:flex;justify-content:space-between}
 /* ride */
 .ride{background:var(--blue-soft);border-color:var(--blue-soft)}
@@ -397,7 +407,8 @@ footer li{margin:2px 0}
 /* ---------- responsive ---------- */
 @media (max-width:1020px){
   .nav ul,.nav .hide-sm{display:none}.nav .switch{margin-inline-start:auto}
-  .fams,.vars,.lic{grid-template-columns:1fr}
+  .fams{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vars,.lic{grid-template-columns:1fr}
   .pairs{grid-template-columns:repeat(3,1fr)}
   .fact,.fact.w6,.fact.w8{grid-column:span 6}
   .c3,.c4,.c5{grid-column:span 6}.c7,.c8{grid-column:span 12}
@@ -407,6 +418,7 @@ footer li{margin:2px 0}
   footer .wrap{grid-template-columns:1fr 1fr}
 }
 @media (max-width:680px){
+  .fams{grid-template-columns:1fr}
   body{font-size:16px}
   .wrap{padding-inline:16px}
   .nav .wrap{gap:10px;height:60px}

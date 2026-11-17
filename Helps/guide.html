@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>راهنمای دستخط</title>
 <link rel="icon" type="image/svg+xml" href="../Demos/assets/logo-icon.svg">
-<link rel="stylesheet" href="../Webfonts/dastkhat.css"><link rel="stylesheet" href="../Demos/assets/site.css">
+<link rel="stylesheet" href="../Webfonts/dastkhat.css?v=1.210"><link rel="stylesheet" href="../Demos/assets/site.css">
 <style>
 .doc{max-width:900px;margin:0 auto;padding:50px 40px}
 .doc h1{font-size:46px;font-weight:900}.doc h2{font-size:28px;margin:44px 0 10px;padding-top:20px;border-top:1px solid var(--line)}
@@ -52,6 +52,18 @@ export const dastkhat = localFont({
 <h2>نسخه NoEn</h2><p>حروف لاتین در این نسخه حذف شده‌اند تا مرورگر برای متن انگلیسی از فونت بعدی در لیست استفاده کند:</p>
 <pre>font-family: 'Dastkhat NoEn', 'Inter', sans-serif;</pre>
 
+<h2>نشانه ریال و تومان</h2>
+<p>ریال نشانه استاندارد یونیکد دارد: <span style="font-size:1.3em">&#xFDFC;</span> (U+FDFC). تومان کدپوینت ندارد، پس دستخط سه نشانه خودش را اضافه کرده است.</p>
+<table><tr><th>نشانه</th><th>کدپوینت</th><th>شکل</th></tr>
+<tr><td style="font-size:1.6em">&#xFDFC;</td><td>U+FDFC</td><td>ریال، واژه «ریال» در یک گلیف</td></tr>
+<tr><td style="font-size:1.6em">&#xE000;</td><td>U+E000</td><td>تومان، «ت» که دو نقطه‌اش دو خط شده</td></tr>
+<tr><td style="font-size:1.6em">&#xE001;</td><td>U+E001</td><td>ریال فشرده، دو ستون «ا» و «ل» که «ر» از میانشان می‌گذرد</td></tr>
+<tr><td style="font-size:1.6em">&#xE002;</td><td>U+E002</td><td>تومان روی‌هم، «ن» روی «توما»</td></tr></table>
+<p>لازم نیست این کدپوینت‌ها را دستی در متن بگذارید. همان واژه را بنویسید و یکی از دو ویژگی اختیاری را روشن کنید:</p>
+<pre>.price      { font-feature-settings: 'ss02'; }   /* تومان و ریال ← نشانه فشرده */
+.price-long { font-feature-settings: 'ss03'; }   /* تومان ← نشانه روی‌هم، ریال ← &#xFDFC; */</pre>
+<p>هیچ‌کدام پیش‌فرض نیست. نشانه‌های U+E000 تا U+E002 در ناحیه استفاده شخصی‌اند و فقط در دستخط دیده می‌شوند، پس هرجا متن باید کپی یا جست‌وجو شود، واژه ساده را نگه دارید.</p>
+
 <h2>فاصله‌گذاری پیشنهادی</h2><ul><li>متن بدنه: اندازه ۱۵ تا ۱۸ پیکسل، فاصله خطوط ۱٫۸ تا ۲</li><li>تیتر: وزن ۷۰۰ تا ۹۰۰، فاصله خطوط ۱٫۲ تا ۱٫۳</li><li>از letter-spacing روی متن فارسی استفاده نکنید؛ اتصال حروف را می‌شکند.</li></ul>
 
 <div class="en">
@@ -59,6 +71,7 @@ export const dastkhat = localFont({
 <ul><li><b>Desktop:</b> install the TTF files from <code>fonts/Main/&lt;Family&gt;/TTF</code>, or the variable font, not both.</li>
 <li><b>Web:</b> copy <code>Webfonts/</code>, link <code>dastkhat.css</code>, use <code>var(--font-dastkhat)</code>.</li>
 <li><b>FaNum:</b> Latin digits render as Persian digits. <b>NoEn:</b> Persian only, pair it with your own Latin font.</li>
+<li><b>Currency:</b> rial is <code>U+FDFC</code>. Toman has no Unicode code point, so Dastkhat adds <code>U+E000</code> (compact) and <code>U+E002</code> (stacked), plus <code>U+E001</code> for a compact rial. Turn on <code>ss02</code> or <code>ss03</code> and keep writing the words.</li>
 <li><b>License:</b> SIL Open Font License 1.1, free for personal and commercial use. See <code>OFL.txt</code>.</li></ul></div>
 </div><div class="wrap"><div class="foot"><span>© ۱۴۰۵ دستیار · dastyar.io</span><span dir="ltr">Dastkhat · SIL OFL 1.1</span></div></div>
 <script></script>

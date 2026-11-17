@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Omega.smcp" format="2">
+  <advance width="1178"/>
+  <anchor x="592" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="895" y="573" type="qcurve"/>
+      <point x="895" y="608" type="line"/>
+      <point x="895" y="710"/>
+      <point x="830" y="866"/>
+      <point x="694" y="954"/>
+      <point x="588" y="954" type="qcurve"/>
+      <point x="483" y="954"/>
+      <point x="347" y="866"/>
+      <point x="282" y="710"/>
+      <point x="282" y="608" type="qcurve"/>
+      <point x="282" y="573" type="line"/>
+      <point x="282" y="446"/>
+      <point x="341" y="271"/>
+      <point x="453" y="166"/>
+      <point x="531" y="146" type="qcurve"/>
+      <point x="531" y="33" type="line"/>
+      <point x="430" y="45"/>
+      <point x="273" y="131"/>
+      <point x="166" y="272"/>
+      <point x="110" y="460"/>
+      <point x="110" y="573" type="qcurve"/>
+      <point x="110" y="606" type="line"/>
+      <point x="110" y="745"/>
+      <point x="221" y="968"/>
+      <point x="435" y="1098"/>
+      <point x="588" y="1098" type="qcurve"/>
+      <point x="741" y="1098"/>
+      <point x="955" y="968"/>
+      <point x="1067" y="745"/>
+      <point x="1067" y="606" type="qcurve"/>
+      <point x="1067" y="573" type="line"/>
+      <point x="1067" y="460"/>
+      <point x="1012" y="273"/>
+      <point x="906" y="132"/>
+      <point x="751" y="46"/>
+      <point x="651" y="33" type="qcurve"/>
+      <point x="651" y="146" type="line"/>
+      <point x="736" y="166"/>
+      <point x="843" y="271"/>
+      <point x="895" y="446"/>
+    </contour>
+    <contour>
+      <point x="651" y="0" type="line"/>
+      <point x="651" y="141" type="line"/>
+      <point x="1070" y="141" type="line"/>
+      <point x="1070" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="113" y="0" type="line"/>
+      <point x="113" y="141" type="line"/>
+      <point x="531" y="141" type="line"/>
+      <point x="531" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

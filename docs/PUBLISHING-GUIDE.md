@@ -22,9 +22,9 @@ Also check: Persian shaping in Chrome, Safari, Firefox, Word, Figma, Photoshop; 
 ## 3. Distribution (publish everywhere)
 | Channel | How | Notes |
 |---|---|---|
-| **GitHub Releases** | Attach `Dastkhat-v1.201.zip` | Your canonical download |
+| **GitHub Releases** | Attach `Dastkhat-v1.210.zip` | Your canonical download |
 | **npm / Fontsource** | `npm publish`, or PR to fontsource/font-files | Lets devs `npm i @fontsource/dastkhat`. Huge for web adoption |
-| **jsDelivr CDN** | Free, automatic from GitHub/npm | `cdn.jsdelivr.net/gh/dastyar-io/dastkhat-font@v1.201/...` |
+| **jsDelivr CDN** | Free, automatic from GitHub/npm | `cdn.jsdelivr.net/gh/dastyar-io/dastkhat-font@v1.210/...` |
 | **Google Fonts** | PR to `google/fonts`, or issue at `google/fonts` "New font" | Highest reach; strict quality review; they will require sources and may ask for family consolidation |
 | **Homebrew / package managers** | `brew install --cask font-dastkhat` via homebrew-cask-fonts | Mac designers |
 | **Font Library, Open Font Library** | Upload ZIP | OFL friendly |

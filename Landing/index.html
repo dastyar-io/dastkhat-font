@@ -5,20 +5,20 @@
 <link rel="icon" type="image/svg+xml" href="logo-icon.svg">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>فونت دستخط | فونت فارسی رابط کاربری با نقطه‌های هندسی</title>
-<meta name="description" content="دستخط فونت فارسی و لاتین برای رابط کاربری است: ۹ وزن و نسخه متغیر، سه سبک نقطه (مربع، لوزی و خط) و نسخه‌های FaNum و NoEn. همین‌جا متن خودتان را با آن امتحان کنید.">
+<meta name="description" content="دستخط فونت فارسی و لاتین برای رابط کاربری است: ۹ وزن و نسخه متغیر، پنج سبک نقطه (مربع، لوزی، خط، دایره و کپسول) و نسخه‌های FaNum و NoEn. همین‌جا متن خودتان را با آن امتحان کنید.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="دستخط، فونت فارسی با نقطه‌های هندسی">
-<meta property="og:description" content="۹ وزن، نسخه متغیر و سه سبک نقطه برای رابط کاربری فارسی.">
+<meta property="og:description" content="۹ وزن، نسخه متغیر و پنج سبک نقطه برای رابط کاربری فارسی.">
 <meta property="og:image" content="../Demos/images/dastkhat-cover.png">
 <meta property="og:locale" content="fa_IR">
 <meta name="theme-color" content="#4285F4">
 <link rel="preload" href="../Webfonts/fonts/Dastkhat-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../Webfonts/dastkhat.css">
+<link rel="stylesheet" href="../Webfonts/dastkhat.css?v=1.210">
 <link rel="stylesheet" href="style.css">
 <script>document.documentElement.classList.add('js');try{var s=localStorage.getItem('dk-dots');if(s==='diamond'||s==='bar')document.documentElement.dataset.dots=s}catch(e){}</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"دستخط با وزیرمتن چه فرقی دارد؟","acceptedAnswer":{"@type":"Answer","text":"دستخط بر پایه وزیرمتن ساخته شده است. بدنه حروف فارسی بلندتر و ۴٪ پهن‌تر شده، ارقام فارسی ۷٪ پهن‌تر شده‌اند، حروف لاتین به ۹۳٪ کوچک شده‌اند و نقطه‌ها از نو به شکل هندسی طراحی شده‌اند. دو خانواده لوزی و خط هم اضافه شده است."}},
+{"@type":"Question","name":"دستخط با وزیرمتن چه فرقی دارد؟","acceptedAnswer":{"@type":"Answer","text":"دستخط بر پایه وزیرمتن ساخته شده است. بدنه حروف فارسی بلندتر و ۴٪ پهن‌تر شده، ارقام فارسی ۷٪ پهن‌تر شده‌اند، حروف لاتین به ۹۳٪ کوچک شده‌اند و نقطه‌ها از نو به شکل هندسی طراحی شده‌اند. چهار خانواده لوزی، خط، دایره و کپسول هم اضافه شده است."}},
 {"@type":"Question","name":"کدام نسخه را انتخاب کنم؟","acceptedAnswer":{"@type":"Answer","text":"برای بیشتر پروژه‌ها نسخه اصلی کافی است. اگر قیمت، جدول یا داشبورد دارید FaNum را بردارید. اگر می‌خواهید لاتین را با فونت دیگری مثل Inter نمایش دهید NoEn مناسب است."}},
 {"@type":"Question","name":"نسخه ثابت نصب کنم یا متغیر؟","acceptedAnswer":{"@type":"Answer","text":"روی هر سیستم فقط یکی را نصب کنید. نام‌های یکسان در بسیاری از نرم‌افزارها تداخل ایجاد می‌کند."}},
 {"@type":"Question","name":"می‌توانم با دستخط لوگو طراحی کنم؟","acceptedAnswer":{"@type":"Answer","text":"بله، با مجوز دسکتاپ. لوگو و طرح‌هایی که به منحنی یا تصویر تبدیل شده‌اند بدون محدودیت قابل استفاده‌اند."}},
@@ -44,6 +44,8 @@
       <button data-set-dots="square" aria-pressed="true" aria-label="نقطه مربع" title="مربع"><i></i></button>
       <button data-set-dots="diamond" aria-pressed="false" aria-label="نقطه لوزی" title="لوزی"><i></i></button>
       <button data-set-dots="bar" aria-pressed="false" aria-label="نقطه خطی" title="خط"><i></i></button>
+      <button data-set-dots="dots" aria-pressed="false" aria-label="نقطه دایره" title="دایره"><i></i></button>
+      <button data-set-dots="bardots" aria-pressed="false" aria-label="نقطه کپسولی" title="کپسول"><i></i></button>
     </div>
     <a class="btn sm ghost hide-sm" href="https://github.com/dastyar-io/dastkhat-font" target="_blank" rel="noopener">GitHub</a>
     <a class="btn sm ghost hide-sm" href="https://github.com/dastyar-io/dastkhat-font/blob/main/AGENTS.md" target="_blank" rel="noopener">AGENTS.md</a>
@@ -55,11 +57,11 @@
 <header class="hero" id="top">
   <canvas id="grid" aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="eyebrow"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.200</span></p>
+    <p class="eyebrow"><span>دستیار معرفی می‌کند</span><span class="ltr">Dastkhat v1.210</span></p>
     <h1 id="word">دستخط</h1>
     <div class="hero-row">
       <div>
-        <p class="lead">فونت فارسی برای رابط‌های امروز. با بدنه بلندتر، نقطه‌های هندسی و سه سبک نقطه که با یک کلیک عوض می‌شوند.</p>
+        <p class="lead">فونت فارسی برای رابط‌های امروز. با بدنه بلندتر، نقطه‌های هندسی و پنج سبک نقطه که با یک کلیک عوض می‌شوند.</p>
         <div class="cta">
           <a class="btn white" href="#tester">متن خودتان را امتحان کنید</a>
           <a class="btn ghost" href="https://dastyar.io" target="_blank" rel="noopener">خرید مجوز</a>
@@ -72,7 +74,7 @@
     </div>
     <dl class="stats">
       <div><dt>وزن، از نازک تا سیاه</dt><dd data-count="9">۹</dd></div>
-      <div><dt>سبک نقطه</dt><dd data-count="3">۳</dd></div>
+      <div><dt>سبک نقطه</dt><dd data-count="5">۵</dd></div>
       <div><dt>خانواده فونت</dt><dd data-count="9">۹</dd></div>
       <div><dt>محور وزن در نسخه متغیر</dt><dd>۱۰۰ تا ۹۰۰</dd></div>
     </dl>
@@ -94,7 +96,7 @@
     <div class="head rv">
       <p class="kicker"><span class="d" aria-hidden="true"></span>۰۱ · سبک نقطه</p>
       <h2 class="h2">یک فونت، سه جور نقطه.</h2>
-      <p class="sub">هر سه خانواده وزن‌ها و فاصله‌گذاری یکسان دارند. سبک را عوض کنید و متن سر جایش می‌ماند. یکی را انتخاب کنید تا همین صفحه با آن نوشته شود.</p>
+      <p class="sub">هر پنج خانواده وزن‌ها و فاصله‌گذاری یکسان دارند. سبک را عوض کنید و متن سر جایش می‌ماند. یکی را انتخاب کنید تا همین صفحه با آن نوشته شود.</p>
     </div>
     <div class="morph rv" aria-hidden="true"><i></i><i></i></div>
     <div class="fams">
@@ -120,6 +122,22 @@
         <span class="word f-ba">پیشنهاد شگفت‌انگیز</span>
         <h3><i></i>خط</h3>
         <p>دو نقطه یک خط می‌شود و سه نقطه یک خط و یک مربع. برای لوگو، تیتر و هویت بصری.</p>
+        <span class="state" data-on="این صفحه الان با همین سبک است" data-off="کل صفحه را با این سبک ببینید"></span>
+      </button>
+      <button class="fam do rv" style="--dl:.24s" data-set-dots="dots" aria-pressed="false">
+        <span class="tag">Dastkhat Dots</span>
+        <span class="big f-do">تث شق</span>
+        <span class="word f-do">پیشنهاد شگفت‌انگیز</span>
+        <h3><i></i>دایره</h3>
+        <p>نقطه‌های دایره‌ای؛ همان هندسه با بافتی نرم‌تر و گردتر.</p>
+        <span class="state" data-on="این صفحه الان با همین سبک است" data-off="کل صفحه را با این سبک ببینید"></span>
+      </button>
+      <button class="fam bd rv" style="--dl:.32s" data-set-dots="bardots" aria-pressed="false">
+        <span class="tag">Dastkhat BarDots</span>
+        <span class="big f-bd">تث شق</span>
+        <span class="word f-bd">پیشنهاد شگفت‌انگیز</span>
+        <h3><i></i>کپسولی</h3>
+        <p>دو نقطه یک کپسول می‌شود و سه نقطه یک کپسول و یک دایره. برای لوگو و تیتر با ظاهر گرد.</p>
         <span class="state" data-on="این صفحه الان با همین سبک است" data-off="کل صفحه را با این سبک ببینید"></span>
       </button>
     </div>
@@ -193,6 +211,8 @@
           <button data-f="Dastkhat" aria-pressed="true">مربع</button>
           <button data-f="Dastkhat Diamond" aria-pressed="false">لوزی</button>
           <button data-f="Dastkhat Bar" aria-pressed="false">خط</button>
+          <button data-f="Dastkhat Dots" aria-pressed="false">دایره</button>
+          <button data-f="Dastkhat BarDots" aria-pressed="false">کپسول</button>
         </div>
         <label>وزن <input type="range" id="t-w" min="100" max="900" value="700"><output id="t-wv">۷۰۰</output></label>
         <label>اندازه <input type="range" id="t-s" min="16" max="180" value="72"><output id="t-sv">۷۲</output></label>
@@ -525,7 +545,7 @@ body {
       <h2 class="h2">چند سؤال، قبل از خرید.</h2>
     </div>
     <div class="faq rv">
-      <details open><summary>دستخط با وزیرمتن چه فرقی دارد؟</summary><p>دستخط بر پایه وزیرمتن و با اجازه طراح آن ساخته شده است. بدنه حروف فارسی بلندتر و ۴٪ پهن‌تر شده، ارقام فارسی ۷٪ پهن‌تر شده‌اند و حروف لاتین به ۹۳٪ کوچک شده‌اند. نقطه‌ها هم از نو به شکل هندسی طراحی شده‌اند و دو خانواده لوزی و خط اضافه شده است.</p></details>
+      <details open><summary>دستخط با وزیرمتن چه فرقی دارد؟</summary><p>دستخط بر پایه وزیرمتن و با اجازه طراح آن ساخته شده است. بدنه حروف فارسی بلندتر و ۴٪ پهن‌تر شده، ارقام فارسی ۷٪ پهن‌تر شده‌اند و حروف لاتین به ۹۳٪ کوچک شده‌اند. نقطه‌ها هم از نو به شکل هندسی طراحی شده‌اند و چهار خانواده لوزی، خط، دایره و کپسول اضافه شده است.</p></details>
       <details><summary>کدام نسخه را انتخاب کنم؟</summary><p>برای بیشتر پروژه‌ها نسخه اصلی کافی است. اگر قیمت، جدول یا داشبورد دارید FaNum را بردارید. اگر می‌خواهید لاتین را با فونت دیگری مثل Inter نمایش دهید، NoEn مناسب است.</p></details>
       <details><summary>نسخه ثابت نصب کنم یا متغیر؟</summary><p>روی هر سیستم فقط یکی را نصب کنید، نه هر دو را. نام‌های یکسان در بسیاری از نرم‌افزارها تداخل ایجاد می‌کند. برای کنترل دقیق هر وزن در نرم‌افزار طراحی، فایل‌های TTF ثابت انتخاب بهتری است.</p></details>
       <details><summary>می‌توانم با دستخط لوگو طراحی کنم؟</summary><p>بله، با مجوز دسکتاپ. لوگو و طرح‌هایی که به منحنی یا تصویر تبدیل شده‌اند بدون محدودیت قابل استفاده‌اند. سبک خط برای همین کار ساخته شده است.</p></details>
@@ -578,7 +598,7 @@ body {
         <li><a href="../Specimen/Dastkhat-Specimen.pdf">نمونه‌نامه</a></li>
       </ul>
     </div>
-    <div class="copyr"><span>© ۱۴۰۵ دستیار</span><span class="ltr">Dastkhat v1.200 · Commercial license</span></div>
+    <div class="copyr"><span>© ۱۴۰۵ دستیار</span><span class="ltr">Dastkhat v1.210 · Commercial license</span></div>
   </div>
 </footer>
 

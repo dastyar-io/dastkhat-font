@@ -7,13 +7,13 @@
     <contour>
       <point x="381" y="1048" type="qcurve"/>
       <point x="925" y="1242" type="line"/>
-      <point x="925" y="1493" type="line"/>
-      <point x="111" y="1232" type="line"/>
-      <point x="53" y="1213"/>
-      <point x="-3" y="1120"/>
-      <point x="-3" y="1063" type="qcurve"/>
-      <point x="-3" y="1008"/>
-      <point x="45" y="900"/>
+      <point x="925" y="1558" type="line"/>
+      <point x="111" y="1297" type="line"/>
+      <point x="53" y="1275"/>
+      <point x="-3" y="1165"/>
+      <point x="-3" y="1098" type="qcurve"/>
+      <point x="-3" y="1034"/>
+      <point x="45" y="907"/>
       <point x="89" y="863" type="qcurve"/>
       <point x="133" y="826"/>
       <point x="253" y="734"/>
@@ -39,10 +39,10 @@
       <point x="466" y="1000"/>
     </contour>
     <contour>
-      <point x="362" y="1770" type="line"/>
-      <point x="175" y="1584" type="line"/>
-      <point x="362" y="1397" type="line"/>
-      <point x="548" y="1584" type="line"/>
+      <point x="362" y="1835" type="line"/>
+      <point x="175" y="1649" type="line"/>
+      <point x="362" y="1462" type="line"/>
+      <point x="548" y="1649" type="line"/>
     </contour>
   </outline>
 </glyph>

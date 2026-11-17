@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="four.smcp" format="2">
+  <advance width="939"/>
+  <outline>
+    <contour>
+      <point x="916" y="339" type="line"/>
+      <point x="916" y="288" type="line"/>
+      <point x="67" y="288" type="line"/>
+      <point x="67" y="319" type="line"/>
+      <point x="647" y="1083" type="line"/>
+      <point x="692" y="1083" type="line"/>
+      <point x="589" y="922" type="line"/>
+      <point x="142" y="339" type="line"/>
+    </contour>
+    <contour>
+      <point x="707" y="1083" type="line"/>
+      <point x="707" y="0" type="line"/>
+      <point x="657" y="0" type="line"/>
+      <point x="657" y="1083" type="line"/>
+    </contour>
+  </outline>
+</glyph>

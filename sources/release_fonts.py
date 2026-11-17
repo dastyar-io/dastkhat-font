@@ -1,5 +1,5 @@
 """Produce the release font set for Dastkhat (publisher: Dastyar).
-Input: variable fonts for the 3 dot styles, compiled from sources/ufo by build_all.sh.
+Input: variable fonts for the 5 dot styles, compiled from sources/ufo by build_all.sh.
 Output: base / FaNum / NoEn x (variable + 9 statics) as TTF + WOFF2.
 Usage: python3 -I release_fonts.py <out_dir> <dir_with_compiled_variable_fonts>
 """
@@ -10,14 +10,16 @@ from fontTools import subset
 from fontTools.ttLib import woff2
 
 OUT = sys.argv[1]
-VERSION = 1.201
-VSTR = '1.201'
+VERSION = 1.210
+VSTR = '1.210'
 VENDOR = 'DSTY'
 VFDIR = sys.argv[2]
 SRC = {
     'Dastkhat': os.path.join(VFDIR, 'Dastkhat-VF.ttf'),
     'Dastkhat Diamond': os.path.join(VFDIR, 'DastkhatDiamond-VF.ttf'),
     'Dastkhat Bar': os.path.join(VFDIR, 'DastkhatBar-VF.ttf'),
+    'Dastkhat Dots': os.path.join(VFDIR, 'DastkhatDots-VF.ttf'),
+    'Dastkhat BarDots': os.path.join(VFDIR, 'DastkhatBarDots-VF.ttf'),
 }
 WEIGHTS = [(100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regular'), (500, 'Medium'),
            (600, 'SemiBold'), (700, 'Bold'), (800, 'ExtraBold'), (900, 'Black')]
@@ -25,8 +27,8 @@ WEIGHTS = [(100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regular'),
 COPYRIGHT = ('Copyright 2015 The Vazirmatn Project Authors (https://github.com/rastikerdar/vazirmatn). '
              'Copyright 2026 The Dastkhat Project Authors (https://github.com/dastyar-io/dastkhat-font).')
 DESC = ('Dastkhat is a Persian and Latin UI typeface published by Dastyar, derived from Vazirmatn by Saber Rastikerdar. '
-        'It has a taller letter body, wider Persian letters and digits, a smaller Latin, and three dot styles: '
-        'square, diamond and bar. Latin glyphs derive from Roboto (Apache License 2.0).')
+        'It has a taller letter body, wider Persian letters and digits, a smaller Latin, and five dot styles: '
+        'square, diamond, bar, circle and circle bar. Latin glyphs derive from Roboto (Apache License 2.0).')
 LICENSE = ('This Font Software is licensed under the SIL Open Font License, Version 1.1. '
            'This license is available with a FAQ at: https://openfontlicense.org')
 
