@@ -10,7 +10,7 @@
 
 **فونت فارسی و لاتین برای رابط کاربری، با نقطه‌های هندسی.**
 
-[![Version](https://img.shields.io/badge/version-1.201-blue)](FONTLOG.txt)
+[![Version](https://img.shields.io/badge/version-1.210-blue)](FONTLOG.txt)
 [![License: OFL 1.1](https://img.shields.io/badge/license-SIL%20OFL%201.1-green)](OFL.txt)
 [![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#محتویات-بسته)
 
@@ -57,8 +57,10 @@
 | **Dastkhat** | مربع | پیش‌فرض برای رابط کاربری و متن |
 | **Dastkhat Diamond** | مربع چرخیده ۴۵ درجه (لوزی) | ظاهر نرم‌تر و کلاسیک |
 | **Dastkhat Bar** | دو نقطه یک خط می‌شود، سه نقطه یک خط و یک مربع | لوگو، تیتر و هویت بصری |
+| **Dastkhat Dots** | دایره | همان هندسه با بافتی نرم‌تر و گردتر |
+| **Dastkhat BarDots** | دو نقطه یک کپسول می‌شود، سه نقطه یک کپسول و یک دایره | لوگو و تیتر با ظاهر گرد |
 
-<img src="Demos/images/dastkhat-dot-styles.png" alt="مقایسه سه سبک نقطه" width="100%">
+<img src="Demos/images/dastkhat-dot-styles.png" alt="مقایسه سبک‌های نقطه" width="100%">
 
 ### نسخه‌ها
 
@@ -81,9 +83,10 @@
 ## محتویات بسته
 
 ```
-Dastkhat-v1.201/
+Dastkhat-v1.210/
 ├── fonts/
-│   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar   (۹ وزن TTF + Variable)
+│   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar,
+│   │              DastkhatDots, DastkhatBarDots           (۹ وزن TTF + Variable)
 │   ├── FaNum/     همان خانواده‌ها، با عددهای فارسی
 │   └── NoEn/      همان خانواده‌ها، فقط فارسی
 ├── Webfonts/      dastkhat.css, fonts/*.woff2, webfont-test.html
@@ -140,9 +143,11 @@ body    { font-family: var(--font-dastkhat); }                         /* نقط
 | `--font-dastkhat` | Dastkhat |
 | `--font-dastkhat-diamond` | Dastkhat Diamond |
 | `--font-dastkhat-bar` | Dastkhat Bar |
+| `--font-dastkhat-dots` | Dastkhat Dots |
+| `--font-dastkhat-bardots` | Dastkhat BarDots |
 | `--font-dastkhat-fanum` | Dastkhat FaNum |
 
-نام خانواده‌های متغیر `Dastkhat`، `Dastkhat Diamond` و `Dastkhat Bar` است (برای نسخه‌های دیگر، `FaNum` یا `NoEn` را به انتهای نام اضافه کنید). نسخه‌های ثابت همین نام‌ها را با پسوند `Static` دارند. همه قانون‌های `@font-face` از `font-display: swap` استفاده می‌کنند.
+نام خانواده‌های متغیر `Dastkhat`، `Dastkhat Diamond`، `Dastkhat Bar`، `Dastkhat Dots` و `Dastkhat BarDots` است (برای نسخه‌های دیگر، `FaNum` یا `NoEn` را به انتهای نام اضافه کنید). نسخه‌های ثابت همین نام‌ها را با پسوند `Static` دارند. همه قانون‌های `@font-face` از `font-display: swap` استفاده می‌کنند.
 
 ### ترکیب با فونت لاتین دیگر (NoEn)
 
@@ -199,6 +204,29 @@ export const dastkhat = localFont({
 
 متن فارسی به‌خاطر کشیدگی بالای حروف و نقطه‌ها به فاصله خطوط بیشتری از لاتین نیاز دارد. اگر متن فشرده به نظر می‌رسد، به‌جای کوچک‌کردن اندازه، اول فاصله خطوط را زیاد کنید.
 
+### نشانه‌های پول
+
+ریال نشانه استاندارد دارد، `﷼` (U+FDFC)، اما تومان هیچ کدپوینتی در یونیکد ندارد: کمیته فنی یونیکد پیشنهاد سال ۲۰۱۷ را رد کرد، چون تومان همیشه به‌صورت واژه نوشته می‌شد و نشانه‌ای در عمل به کار نمی‌رفت. دستخط سه نشانه خودش را در ناحیه استفاده شخصی اضافه می‌کند، در همه خانواده‌ها و همه وزن‌ها.
+
+| نشانه | کدپوینت | شکل |
+|---|---|---|
+| ریال | `U+FDFC` ﷼ | نشانه استاندارد: واژه «ریال» در یک گلیف. بدون تغییر. |
+| تومان | `U+E000` | «ت» که دو نقطه‌اش به دو خط کشیده شده، مثل «=» در ₹ و € و ¥. دستخط Bar نقطه‌ها را به خط تبدیل می‌کند؛ اینجا همان خط‌ها نشانه پول می‌شوند. |
+| ریال، فشرده | `U+E001` | «ا» و «ل» به‌صورت دو ستون، که «ر» از میانشان می‌گذرد. واژه به خط‌هایش خلاصه شده، همان منطق نشانه ریال سعودی. |
+| تومان، روی‌هم | `U+E002` | «ن» روی «توما»، همان آیکون تومانی که سایت‌های ایرانی به کار می‌برند، با حروف دستخط. قرینه ﷼. |
+
+دو ویژگی اختیاری OpenType واژه تایپ‌شده را به نشانه تبدیل می‌کنند، پس در محتوا و کد همان «تومان» و «ریال» را می‌نویسید. `ss02` همان مجموعه سبکی است که فونت‌های فارسی دیگر مثل راوی و ابر برای نشانه پول به کار می‌برند.
+
+```css
+.price      { font-feature-settings: 'ss02'; }   /* «تومان» و «ریال» نشانه فشرده می‌شوند */
+.price-long { font-feature-settings: 'ss03'; }   /* «تومان» نشانه روی‌هم و «ریال» به ﷼ تبدیل می‌شود */
+```
+
+هیچ‌کدام به‌صورت پیش‌فرض روشن نیست، پس در بقیه متن واژه‌ها واژه می‌مانند. فقط واژه واحد پول جایگزین می‌شود و عدد کنارش دست‌نخورده باقی می‌ماند.
+
+> [!NOTE]
+> نشانه‌های فشرده در ناحیه استفاده شخصی‌اند، یعنی مخصوص دستخط‌اند: اگر فونت جایگزین بارگذاری شود، آن کدپوینت‌ها چیز درستی نشان نمی‌دهند. برای نمایش از آن‌ها استفاده کنید و هرجا متن باید کپی و جابه‌جا شود، واژه ساده را نگه دارید.
+
 ## پیش‌نمایش
 
 | | |
@@ -230,6 +258,16 @@ sh sources/build_all.sh build
 
 ## مشارکت و حمایت
 گزارش خطا، اصلاح حروف و پیشنهاد پشتیبانی از خط‌های جدید خوشحالمان می‌کند: [CONTRIBUTING.md](CONTRIBUTING.md). اگر دستخط برایتان مفید بود، می‌توانید از طریق [GitHub Sponsors](https://github.com/sponsors/dastyar-io) حمایت کنید.
+
+## تاریخچه ستاره‌ها
+
+<a href="https://www.star-history.com/?repos=dastyar-io%2Fdastkhat-font&type=timeline&releases=&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=dastyar-io/dastkhat-font&type=timeline&theme=dark&logscale&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=dastyar-io/dastkhat-font&type=timeline&logscale&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=dastyar-io/dastkhat-font&type=timeline&logscale&legend=bottom-right" />
+ </picture>
+</a>
 
 © 2026 مشارکت‌کنندگان دستخط · منتشرشده توسط دستیار
 

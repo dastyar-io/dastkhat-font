@@ -35,13 +35,13 @@
     <contour>
       <point x="229" y="1102" type="qcurve"/>
       <point x="883" y="1323" type="line"/>
-      <point x="883" y="1466" type="line"/>
-      <point x="135" y="1227" type="line"/>
-      <point x="85" y="1211"/>
-      <point x="38" y="1147"/>
-      <point x="38" y="1109" type="qcurve"/>
-      <point x="38" y="1075"/>
-      <point x="74" y="1005"/>
+      <point x="883" y="1508" type="line"/>
+      <point x="135" y="1269" type="line"/>
+      <point x="85" y="1250"/>
+      <point x="38" y="1175"/>
+      <point x="38" y="1131" type="qcurve"/>
+      <point x="38" y="1091"/>
+      <point x="74" y="1009"/>
       <point x="107" y="979" type="qcurve"/>
       <point x="168" y="932"/>
       <point x="307" y="826"/>

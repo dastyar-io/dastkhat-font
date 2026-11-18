@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Hbar.smcp" format="2">
+  <advance width="1163"/>
+  <anchor x="572" y="1228" name="Anchor-0"/>
+  <anchor x="572" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="893" y="605" type="line"/>
+      <point x="893" y="463" type="line"/>
+      <point x="267" y="463" type="line"/>
+      <point x="267" y="605" type="line"/>
+    </contour>
+    <contour>
+      <point x="301" y="1083" type="line"/>
+      <point x="301" y="0" type="line"/>
+      <point x="129" y="0" type="line"/>
+      <point x="129" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="1035" y="1083" type="line"/>
+      <point x="1035" y="0" type="line"/>
+      <point x="863" y="0" type="line"/>
+      <point x="863" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="1119" y="929" type="line"/>
+      <point x="1119" y="788" type="line"/>
+      <point x="45" y="788" type="line"/>
+      <point x="45" y="929" type="line"/>
+    </contour>
+  </outline>
+</glyph>

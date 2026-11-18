@@ -25,6 +25,8 @@ Never install static and variable fonts of the same family on one machine. Ident
 | `Dastkhat` | Square | UI and body text. **Choose this unless told otherwise.** |
 | `Dastkhat Diamond` | Square rotated 45° | A softer, classic look |
 | `Dastkhat Bar` | Adjacent dots merge into bars | Logos, headlines, brand marks. Avoid for long text. |
+| `Dastkhat Dots` | Circular | The same geometry, softer texture |
+| `Dastkhat BarDots` | Adjacent circles merge into capsules | Rounded logos and headlines. Avoid for long text. |
 
 ### Pick the right build
 
@@ -45,9 +47,9 @@ Never install static and variable fonts of the same family on one machine. Ident
 </style>
 ```
 
-CSS variables: `--font-dastkhat`, `--font-dastkhat-diamond`, `--font-dastkhat-bar`, `--font-dastkhat-fanum`. Read `Webfonts/dastkhat.css` for the full list before inventing a name.
+CSS variables: `--font-dastkhat`, `--font-dastkhat-diamond`, `--font-dastkhat-bar`, `--font-dastkhat-dots`, `--font-dastkhat-bardots`, `--font-dastkhat-fanum`. Read `Webfonts/dastkhat.css` for the full list before inventing a name.
 
-- Variable families are named exactly `Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar` (+ ` FaNum` / ` NoEn`). Static families use the same names plus ` Static`.
+- Variable families are named exactly `Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots` (+ ` FaNum` / ` NoEn`). Static families use the same names plus ` Static`.
 - Variable fonts accept any `font-weight` from 100 to 900.
 - Preload the main file for first paint: `<link rel="preload" href="/Webfonts/fonts/Dastkhat-Variable.woff2" as="font" type="font/woff2" crossorigin>`.
 - Keep `font-display: swap` (already set in the stylesheet).
@@ -65,6 +67,25 @@ CSS variables: `--font-dastkhat`, `--font-dastkhat-diamond`, `--font-dastkhat-ba
 - Never apply `letter-spacing` to Persian or Arabic-script text. It breaks letter joining.
 - Never apply `text-transform` expecting an effect on Persian.
 
+### Currency signs
+
+| Want | Use |
+|---|---|
+| Rial | `﷼` U+FDFC. Standard, works in any font. |
+| Toman, as a sign | `U+E000` («ت» whose dots became two bars) or `U+E002` («ن» stacked over «توما») |
+| Rial, compact, to pair with toman | `U+E001` (two stems crossed by «ر») |
+
+The toman has no Unicode code point — the UTC rejected the 2017 proposal — so Dastkhat's toman signs are Private Use Area, which means they only render in Dastkhat. Write «تومان» as a word in anything that must survive a fallback font or a copy and paste.
+
+Two opt-in features turn typed words into signs, so the source text stays readable:
+
+```css
+.price      { font-feature-settings: 'ss02'; }   /* تومان, ریال -> compact signs */
+.price-long { font-feature-settings: 'ss03'; }   /* تومان -> stacked sign, ریال -> ﷼ */
+```
+
+Neither is on by default. Don't hand-substitute the PUA characters into data, IDs or URLs; use the feature, or the plain word.
+
 ### Licensing, in short
 
 - The font is free to use, embed, modify and redistribute under OFL 1.1, including commercially. It may not be sold by itself.
@@ -80,10 +101,11 @@ CSS variables: `--font-dastkhat`, `--font-dastkhat-diamond`, `--font-dastkhat-ba
 
 ```
 sources/      Build scripts and UFO sources (the source of truth)
-  ufo/         Dastkhat, DastkhatDiamond, DastkhatBar (.designspace + UFOs)
+  ufo/         Dastkhat, DastkhatDiamond, DastkhatBar, DastkhatDots, DastkhatBarDots (.designspace + UFOs)
   build_all.sh     Full rebuild from UFO to release set
   release_fonts.py Produces Main / FaNum / NoEn as TTF + WOFF2
   gen_pages.py     Generates the HTML demo pages
+  round_dots.py    Derives the DastkhatDots and DastkhatBarDots UFOs from the square and bar ones
   patch_ufo_gf.py, extract_ufo.py, render_all.js   Maintenance helpers
 fonts/       Built output: Main/, FaNum/, NoEn/ per family
 Webfonts/    dastkhat.css, WOFF2 files, webfont-test.html
@@ -123,10 +145,10 @@ python3 -m http.server 8765
 
 1. **Binaries are off limits unless asked.** Do not regenerate or overwrite `fonts/`, `Webfonts/fonts/`, `Specimen/*.pdf` or `Demos/images/*.png` as a side effect of other work. They are large and produce noisy diffs.
 2. **UFO sources are the truth.** Fix glyph problems in `sources/ufo/`, then rebuild. Never hand-edit built TTF/WOFF2 files.
-3. **Version bumps touch several places.** Version `1.200` appears in `release_fonts.py` (`VERSION`, `VSTR`), `dastkhat.css`, `FONTLOG.txt`, both READMEs, the landing page and generated pages. Search for the old string before and after.
+3. **Version bumps touch several places.** Version `1.210` appears in `release_fonts.py` (`VERSION`, `VSTR`), `dastkhat.css`, `FONTLOG.txt`, both READMEs, the landing page and generated pages. Search for the old string before and after.
 4. **Update `FONTLOG.txt`** for any visible font change and add contributors to the acknowledgements.
 5. **Respect licensing.** Do not copy outlines from fonts with an incompatible license. Keep the Vazirmatn and Dastkhat copyright notices in `release_fonts.py` and `OFL.txt` intact. Latin glyphs derive from Roboto; keep `License/THIRD-PARTY-NOTICES.txt` accurate.
-6. **Do not rename families** (`Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, ` FaNum`, ` NoEn`) or CSS variables. Users depend on them.
+6. **Do not rename families** (`Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots`, ` FaNum`, ` NoEn`) or CSS variables. Users depend on them.
 7. **Docs stay bilingual.** A change in `README.md` needs the matching change in `README.en.md`.
 8. **One logical change per commit or PR**, with a clear explanation. See [CONTRIBUTING.md](CONTRIBUTING.md).
 

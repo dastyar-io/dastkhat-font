@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tomansign" format="2">
+  <advance width="1596" />
+  <unicode hex="E000" />
+  <outline>
+    <contour>
+      <point x="997" y="0" type="line" />
+      <point x="1112" y="0" />
+      <point x="1317" y="17" />
+      <point x="1474" y="82" />
+      <point x="1564" y="234" />
+      <point x="1564" y="385" type="qcurve" />
+      <point x="1564" y="441" />
+      <point x="1555" y="617" />
+      <point x="1542" y="686" type="qcurve" />
+      <point x="1481" y="667" type="line" />
+      <point x="1498" y="575" />
+      <point x="1507" y="418" />
+      <point x="1507" y="363" type="qcurve" />
+      <point x="1507" y="242" />
+      <point x="1415" y="120" />
+      <point x="1265" y="72" />
+      <point x="1086" y="62" />
+      <point x="998" y="62" type="qcurve" />
+      <point x="756" y="62" type="line" />
+      <point x="623" y="62" />
+      <point x="382" y="81" />
+      <point x="195" y="150" />
+      <point x="88" y="311" />
+      <point x="88" y="465" type="qcurve" />
+      <point x="88" y="511" />
+      <point x="104" y="609" />
+      <point x="113" y="656" type="qcurve" />
+      <point x="64" y="679" type="line" />
+      <point x="49" y="622" />
+      <point x="32" y="503" />
+      <point x="32" y="443" type="qcurve" />
+      <point x="32" y="281" />
+      <point x="144" y="106" />
+      <point x="343" y="26" />
+      <point x="605" y="0" />
+      <point x="756" y="0" type="qcurve" />
+    </contour>
+    <contour>
+      <point x="277" y="711" type="line" />
+      <point x="1319" y="711" type="line" />
+      <point x="1319" y="789" type="line" />
+      <point x="277" y="789" type="line" />
+    </contour>
+    <contour>
+      <point x="277" y="844" type="line" />
+      <point x="1319" y="844" type="line" />
+      <point x="1319" y="922" type="line" />
+      <point x="277" y="922" type="line" />
+    </contour>
+  </outline>
+</glyph>

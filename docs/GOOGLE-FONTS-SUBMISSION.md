@@ -12,7 +12,7 @@ Everything Google asks for is prepared. Font Bakery (`check-googlefonts`) report
 | Metadata | `GoogleFonts/<Family>/METADATA.pb` and `DESCRIPTION.en_us.html` |
 
 ## Steps
-1. Push this repo to **github.com/dastyar-io/dastkhat-font** (public) and tag a release: `git tag v1.201 && git push --tags`.
+1. Push this repo to **github.com/dastyar-io/dastkhat-font** (public) and tag a release: `git tag v1.210 && git push --tags`.
 2. Fork `github.com/google/fonts`, then create `ofl/dastkhat/` and copy in:
    `OFL.txt`, `Dastkhat[wght].ttf`, `DESCRIPTION.en_us.html`, `METADATA.pb` (all from the places above).
    Fill `commit:` in the `source { }` block of `METADATA.pb` with the release commit hash.

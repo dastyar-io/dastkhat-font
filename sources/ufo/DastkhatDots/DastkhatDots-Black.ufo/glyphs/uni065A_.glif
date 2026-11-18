@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni065A" format="2">
+  <unicode hex="065A"/>
+  <anchor x="584" y="1444" name="_Anchor-3"/>
+  <anchor x="579" y="1861" name="Anchor-6"/>
+  <anchor x="584" y="1444" name="_Anchor-6"/>
+  <outline>
+    <contour>
+      <point x="519" y="1456" type="line"/>
+      <point x="643" y="1456" type="line"/>
+      <point x="807" y="1790" type="line"/>
+      <point x="699" y="1843" type="line"/>
+      <point x="581" y="1603" type="line"/>
+      <point x="463" y="1843" type="line"/>
+      <point x="355" y="1790" type="line"/>
+    </contour>
+  </outline>
+</glyph>

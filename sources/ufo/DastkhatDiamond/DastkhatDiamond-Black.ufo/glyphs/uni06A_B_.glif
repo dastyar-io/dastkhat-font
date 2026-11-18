@@ -46,13 +46,13 @@
       <point x="1416" y="1000"/>
       <point x="1331" y="1048" type="qcurve"/>
       <point x="1875" y="1242" type="line"/>
-      <point x="1875" y="1493" type="line"/>
-      <point x="1062" y="1232" type="line"/>
-      <point x="1004" y="1213"/>
-      <point x="947" y="1120"/>
-      <point x="947" y="1063" type="qcurve"/>
-      <point x="947" y="1008"/>
-      <point x="995" y="900"/>
+      <point x="1875" y="1558" type="line"/>
+      <point x="1062" y="1297" type="line"/>
+      <point x="1004" y="1275"/>
+      <point x="947" y="1165"/>
+      <point x="947" y="1098" type="qcurve"/>
+      <point x="947" y="1034"/>
+      <point x="995" y="907"/>
       <point x="1040" y="863" type="qcurve"/>
       <point x="1084" y="826"/>
       <point x="1203" y="734"/>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Rcaron.smcp" format="2">
+  <advance width="1067"/>
+  <anchor x="484" y="1228" name="Anchor-0"/>
+  <anchor x="488" y="7" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="154" y="1083" type="line"/>
+      <point x="526" y="1083" type="line"/>
+      <point x="696" y="1083"/>
+      <point x="910" y="913"/>
+      <point x="910" y="761" type="qcurve"/>
+      <point x="910" y="683"/>
+      <point x="838" y="556"/>
+      <point x="714" y="474"/>
+      <point x="637" y="462" type="qcurve"/>
+      <point x="612" y="453" type="line"/>
+      <point x="172" y="453" type="line"/>
+      <point x="170" y="503" type="line"/>
+      <point x="563" y="503" type="line"/>
+      <point x="661" y="503"/>
+      <point x="793" y="578"/>
+      <point x="859" y="696"/>
+      <point x="859" y="761" type="qcurve"/>
+      <point x="859" y="884"/>
+      <point x="680" y="1032"/>
+      <point x="526" y="1032" type="qcurve"/>
+      <point x="205" y="1032" type="line"/>
+      <point x="205" y="0" type="line"/>
+      <point x="154" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="906" y="0" type="line"/>
+      <point x="590" y="472" type="line"/>
+      <point x="646" y="473" type="line"/>
+      <point x="959" y="9" type="line"/>
+      <point x="959" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="304" y="1430" type="line"/>
+      <point x="484" y="1229" type="line"/>
+      <point x="664" y="1430" type="line"/>
+      <point x="713" y="1430" type="line"/>
+      <point x="713" y="1418" type="line"/>
+      <point x="511" y="1186" type="line"/>
+      <point x="456" y="1186" type="line"/>
+      <point x="251" y="1420" type="line"/>
+      <point x="251" y="1430" type="line"/>
+    </contour>
+  </outline>
+</glyph>

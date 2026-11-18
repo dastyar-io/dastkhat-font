@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="fi" format="2">
+  <advance width="992"/>
+  <unicode hex="FB01"/>
+  <outline>
+    <contour>
+      <point x="286" y="0" type="line"/>
+      <point x="236" y="0" type="line"/>
+      <point x="236" y="1131" type="line"/>
+      <point x="236" y="1284"/>
+      <point x="397" y="1448"/>
+      <point x="537" y="1448" type="qcurve"/>
+      <point x="594" y="1448"/>
+      <point x="723" y="1425"/>
+      <point x="786" y="1395" type="qcurve"/>
+      <point x="778" y="1347" type="line"/>
+      <point x="723" y="1372"/>
+      <point x="619" y="1398"/>
+      <point x="538" y="1398" type="qcurve"/>
+      <point x="422" y="1398"/>
+      <point x="286" y="1258"/>
+      <point x="286" y="1131" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="552" y="1006" type="line"/>
+      <point x="552" y="955" type="line"/>
+      <point x="61" y="955" type="line"/>
+      <point x="61" y="1006" type="line"/>
+    </contour>
+    <contour>
+      <point x="822" y="1006" type="line"/>
+      <point x="822" y="0" type="line"/>
+      <point x="772" y="0" type="line"/>
+      <point x="772" y="1006" type="line"/>
+    </contour>
+  </outline>
+</glyph>

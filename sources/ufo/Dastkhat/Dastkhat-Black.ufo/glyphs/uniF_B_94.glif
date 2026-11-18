@@ -6,21 +6,21 @@
   <anchor x="357" y="1611" name="Anchor-3"/>
   <outline>
     <contour>
-      <point x="54" y="1298" type="line"/>
-      <point x="910" y="1577" type="line"/>
-      <point x="910" y="1731" type="line"/>
-      <point x="54" y="1428" type="line"/>
+      <point x="54" y="1363" type="line"/>
+      <point x="910" y="1642" type="line"/>
+      <point x="910" y="1796" type="line"/>
+      <point x="54" y="1493" type="line"/>
     </contour>
     <contour>
       <point x="381" y="1048" type="qcurve"/>
       <point x="925" y="1242" type="line"/>
-      <point x="925" y="1493" type="line"/>
-      <point x="111" y="1232" type="line"/>
-      <point x="53" y="1213"/>
-      <point x="-3" y="1120"/>
-      <point x="-3" y="1063" type="qcurve"/>
-      <point x="-3" y="1008"/>
-      <point x="45" y="900"/>
+      <point x="925" y="1558" type="line"/>
+      <point x="111" y="1297" type="line"/>
+      <point x="53" y="1275"/>
+      <point x="-3" y="1165"/>
+      <point x="-3" y="1098" type="qcurve"/>
+      <point x="-3" y="1034"/>
+      <point x="45" y="907"/>
       <point x="89" y="863" type="qcurve"/>
       <point x="133" y="826"/>
       <point x="253" y="734"/>

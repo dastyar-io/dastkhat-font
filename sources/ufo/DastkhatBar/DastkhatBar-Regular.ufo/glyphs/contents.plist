@@ -1136,6 +1136,8 @@
     <string>rcommaaccent.glif</string>
     <key>registered</key>
     <string>registered.glif</string>
+    <key>rialsign</key>
+    <string>rialsign.glif</string>
     <key>ring</key>
     <string>ring.glif</string>
     <key>ringacute</key>
@@ -1228,6 +1230,10 @@
     <string>tildeacutecomb.glif</string>
     <key>tildecomb</key>
     <string>tildecomb.glif</string>
+    <key>tomansign</key>
+    <string>tomansign.glif</string>
+    <key>tomansign.word</key>
+    <string>tomansign.word.glif</string>
     <key>trademark</key>
     <string>trademark.glif</string>
     <key>two</key>

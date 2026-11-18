@@ -8,7 +8,7 @@ OUT="${1:?usage: build_all.sh <output_dir>}"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 VF="$OUT/_vf"
 mkdir -p "$VF"
-for fam in Dastkhat DastkhatDiamond DastkhatBar; do
+for fam in Dastkhat DastkhatDiamond DastkhatBar DastkhatDots DastkhatBarDots; do
   fontmake -m "$HERE/ufo/$fam/$fam.designspace" -o variable --output-dir "$VF" --no-production-names
 done
 python3 -I "$HERE/release_fonts.py" "$OUT" "$VF"
