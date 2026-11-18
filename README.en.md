@@ -61,6 +61,10 @@ For a design tool such as Figma, Photoshop or Illustrator, install the TTF files
 
 <img src="Demos/images/dastkhat-dot-styles.png" alt="The dot styles side by side" width="100%">
 
+### Dastkhat Arabic
+
+For readers of Arabic only, **Dastkhat Arabic** is the main Dastkhat family without the Persian-only letters (پ چ ژ گ ک ی) and Persian digits `۰-۹`. The Arabic kaf `ك` and yeh `ي` stay. It comes in three builds: `Dastkhat Arabic`, `Dastkhat Arabic ArNum` (Latin digits `0-9` display as Arabic-Indic digits `٠-٩`) and `Dastkhat Arabic NoEn` (no Latin letters). Files are in `fonts/Main/DastkhatArabic`, `fonts/ArNum/DastkhatArabicArNum` and `fonts/NoEn/DastkhatArabicNoEn`. On the web, load `Webfonts/dastkhat-arabic.css`. For Persian, use the regular families.
+
 ### Builds
 
 Every family is available in three builds.

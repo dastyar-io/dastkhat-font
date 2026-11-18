@@ -27,6 +27,8 @@ e-commerce pages and dense Persian text on screens.
     Main   full Persian + Latin
     FaNum  Latin digits 0-9 display as Persian digits ۰-۹
     NoEn   Latin letters removed, so English text uses a fallback font
+- Dastkhat Arabic: the Arabic and Latin cut of the main Dastkhat family, with
+  its own Main, ArNum and NoEn builds (see the changelog)
 - Formats: TTF (static + variable), WOFF2
 
 Dastkhat is a derivative of Vazirmatn by Saber Rastikerdar (SIL OFL 1.1). Vazirmatn's Latin glyphs derive from Roboto
@@ -60,6 +62,21 @@ ChangeLog
 - The zero carries a square dot, the family's own dot, so 0 and O differ.
 - sources/release_fonts.py skips families whose variable font was not compiled,
   so a single family can be built on its own.
+
+2026-11-18 (Dastyar) Dastkhat Arabic
+- New family Dastkhat Arabic, an Arabic-only cut of the main (square-dot)
+  Dastkhat. It is derived from the compiled Dastkhat variable font by the new
+  script sources/release_arabic.py, so the Arabic letters, Latin, spacing,
+  kerning and features are identical to Dastkhat.
+- Removed the Persian-only code points: پ U+067E, چ U+0686, ژ U+0698,
+  گ U+06AF, ک U+06A9, ی U+06CC, the Persian digits ۰-۹ U+06F0-06F9 and the
+  private-use toman signs U+E000-E002. The Arabic kaf ك and yeh ي stay.
+- Three builds, each as TTF (9 weights), variable and WOFF2:
+    DastkhatArabic         Arabic + Latin
+    DastkhatArabicArNum    Latin digits 0-9 display as Arabic-Indic digits ٠-٩
+    DastkhatArabicNoEn     Latin letters removed
+- New Webfonts/dastkhat-arabic.css and Webfonts/webfont-test-arabic.html.
+  sources/build_all.sh now builds the Arabic family too.
 
 2026-11-17 (Dastyar) Dastkhat v1.210
 - Two new round-dot families, in Main, FaNum and NoEn builds:

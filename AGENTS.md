@@ -29,6 +29,10 @@ Never install static and variable fonts of the same family on one machine. Ident
 | `Dastkhat BarDots` | Adjacent circles merge into capsules | Rounded logos and headlines. Avoid for long text. |
 | `Dastkhat Mono` | Square, dotted zero | Code, terminals, tables. Latin, digits and symbols are fixed-width; Persian letters stay proportional because they join. Main build only (no FaNum or NoEn). |
 
+### Arabic readers only
+
+`Dastkhat Arabic` (+ ` ArNum` / ` NoEn`) is the main square-dot family without Persian-only letters (پ چ ژ گ ک ی), Persian digits and toman signs. Use it for Arabic-language products; ArNum shows Latin digits as Arabic-Indic `٠-٩`. Load `Webfonts/dastkhat-arabic.css`; variables `--font-dastkhat-arabic`, `--font-dastkhat-arabic-arnum`, `--font-dastkhat-arabic-noen`. Files: `fonts/Main/DastkhatArabic`, `fonts/ArNum/DastkhatArabicArNum`, `fonts/NoEn/DastkhatArabicNoEn`. Built by `sources/release_arabic.py`. Set `dir="rtl"` and `lang="ar"`.
+
 ### Pick the right build
 
 | Build | Suffix | Use when |
