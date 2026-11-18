@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="zero.sup" format="2">
+  <advance width="1280"/>
+  <outline>
+    <contour>
+      <point x="914" y="432" type="qcurve"/>
+      <point x="914" y="302" type="line"/>
+      <point x="914" y="142"/>
+      <point x="764" y="-10"/>
+      <point x="642" y="-10" type="qcurve"/>
+      <point x="518" y="-10"/>
+      <point x="366" y="142"/>
+      <point x="366" y="302" type="qcurve"/>
+      <point x="366" y="432" type="line"/>
+      <point x="366" y="591"/>
+      <point x="516" y="744"/>
+      <point x="640" y="744" type="qcurve"/>
+      <point x="763" y="744"/>
+      <point x="914" y="591"/>
+    </contour>
+    <contour>
+      <point x="767" y="290" type="qcurve"/>
+      <point x="767" y="445" type="line"/>
+      <point x="767" y="538"/>
+      <point x="701" y="624"/>
+      <point x="640" y="624" type="qcurve"/>
+      <point x="578" y="624"/>
+      <point x="512" y="538"/>
+      <point x="512" y="445" type="qcurve"/>
+      <point x="512" y="290" type="line"/>
+      <point x="512" y="197"/>
+      <point x="579" y="109"/>
+      <point x="642" y="109" type="qcurve"/>
+      <point x="702" y="109"/>
+      <point x="767" y="197"/>
+    </contour>
+  </outline>
+</glyph>

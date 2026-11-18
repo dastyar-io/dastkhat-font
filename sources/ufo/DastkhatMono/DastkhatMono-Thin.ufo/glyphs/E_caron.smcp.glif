@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ecaron.smcp" format="2">
+  <advance width="1280"/>
+  <anchor x="626" y="1228" name="Anchor-0"/>
+  <anchor x="626" y="7" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="996" y="50" type="line"/>
+      <point x="996" y="0" type="line"/>
+      <point x="306" y="0" type="line"/>
+      <point x="306" y="50" type="line"/>
+    </contour>
+    <contour>
+      <point x="334" y="1083" type="line"/>
+      <point x="334" y="0" type="line"/>
+      <point x="284" y="0" type="line"/>
+      <point x="284" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="914" y="589" type="line"/>
+      <point x="914" y="538" type="line"/>
+      <point x="306" y="538" type="line"/>
+      <point x="306" y="589" type="line"/>
+    </contour>
+    <contour>
+      <point x="994" y="1083" type="line"/>
+      <point x="994" y="1032" type="line"/>
+      <point x="306" y="1032" type="line"/>
+      <point x="306" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="440" y="1430" type="line"/>
+      <point x="620" y="1229" type="line"/>
+      <point x="800" y="1430" type="line"/>
+      <point x="850" y="1430" type="line"/>
+      <point x="850" y="1418" type="line"/>
+      <point x="648" y="1186" type="line"/>
+      <point x="592" y="1186" type="line"/>
+      <point x="388" y="1420" type="line"/>
+      <point x="388" y="1430" type="line"/>
+    </contour>
+  </outline>
+</glyph>

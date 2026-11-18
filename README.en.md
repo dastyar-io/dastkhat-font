@@ -57,6 +57,7 @@ For a design tool such as Figma, Photoshop or Illustrator, install the TTF files
 | **Dastkhat Bar** | Two dots merge into a bar, three into a bar and a square | Logos, headlines and brand marks |
 | **Dastkhat Dots** | Circle | The same geometry with a softer, rounder texture |
 | **Dastkhat BarDots** | Two dots merge into a capsule, three into a capsule and a circle | Rounded logos and headlines |
+| **Dastkhat Mono** | Square | Code, terminals and tables. Latin, digits and symbols share one width; the zero carries a dot. Persian letters stay proportional because they join. Main build only. |
 
 <img src="Demos/images/dastkhat-dot-styles.png" alt="The dot styles side by side" width="100%">
 
@@ -84,7 +85,8 @@ Every family is available in three builds.
 Dastkhat-v1.210/
 ├── fonts/
 │   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar,
-│   │              DastkhatDots, DastkhatBarDots           (TTF ×9 + Variable)
+│   │              DastkhatDots, DastkhatBarDots,
+│   │              DastkhatMono                            (TTF ×9 + Variable)
 │   ├── FaNum/     Same families, Latin digits shown as Persian digits
 │   └── NoEn/      Same families, Persian only
 ├── Webfonts/      dastkhat.css, fonts/*.woff2, webfont-test.html
@@ -145,9 +147,10 @@ body    { font-family: var(--font-dastkhat); }                         /* square
 | `--font-dastkhat-bar` | Dastkhat Bar |
 | `--font-dastkhat-dots` | Dastkhat Dots |
 | `--font-dastkhat-bardots` | Dastkhat BarDots |
+| `--font-dastkhat-mono` | Dastkhat Mono |
 | `--font-dastkhat-fanum` | Dastkhat FaNum |
 
-The variable families are named `Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots` and `Dastkhat BarDots` (add ` FaNum` or ` NoEn` for the other builds). The static fallbacks use the same names with ` Static` added. All `@font-face` rules use `font-display: swap`.
+The variable families are named `Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots` and `Dastkhat Mono` (add ` FaNum` or ` NoEn` for the other builds). The static fallbacks use the same names with ` Static` added. All `@font-face` rules use `font-display: swap`.
 
 ### With a separate Latin font (NoEn)
 

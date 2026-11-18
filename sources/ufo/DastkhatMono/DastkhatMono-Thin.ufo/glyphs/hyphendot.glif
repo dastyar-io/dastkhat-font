@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hyphendot" format="2">
+  <advance width="1280"/>
+  <unicode hex="2027"/>
+  <outline>
+    <contour>
+      <point x="588" y="619" type="qcurve"/>
+      <point x="588" y="641"/>
+      <point x="618" y="671"/>
+      <point x="640" y="671" type="qcurve"/>
+      <point x="662" y="671"/>
+      <point x="692" y="641"/>
+      <point x="692" y="619" type="qcurve"/>
+      <point x="692" y="598"/>
+      <point x="662" y="568"/>
+      <point x="640" y="568" type="qcurve"/>
+      <point x="618" y="568"/>
+      <point x="588" y="598"/>
+    </contour>
+  </outline>
+</glyph>

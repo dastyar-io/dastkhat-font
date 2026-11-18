@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFE9B" format="2">
+  <advance width="653"/>
+  <unicode hex="FE9B"/>
+  <anchor x="241" y="-245" name="Anchor-2"/>
+  <anchor x="271" y="1604" name="Anchor-3"/>
+  <outline>
+    <contour>
+      <point x="-21" y="182" type="line"/>
+      <point x="-21" y="0" type="line"/>
+      <point x="53" y="0" type="line"/>
+      <point x="53" y="182" type="line"/>
+    </contour>
+    <contour>
+      <point x="194" y="0" type="line"/>
+      <point x="326" y="0"/>
+      <point x="482" y="107"/>
+      <point x="550" y="306"/>
+      <point x="550" y="455" type="qcurve"/>
+      <point x="550" y="546"/>
+      <point x="529" y="746"/>
+      <point x="512" y="843" type="qcurve"/>
+      <point x="331" y="791" type="line"/>
+      <point x="345" y="696"/>
+      <point x="370" y="503"/>
+      <point x="370" y="419" type="qcurve"/>
+      <point x="370" y="309"/>
+      <point x="296" y="182"/>
+      <point x="192" y="182" type="qcurve"/>
+      <point x="25" y="182" type="line"/>
+      <point x="25" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="361" y="1256" type="line"/>
+      <point x="361" y="1450" type="line"/>
+      <point x="167" y="1450" type="line"/>
+      <point x="167" y="1256" type="line"/>
+    </contour>
+    <contour>
+      <point x="539" y="1041" type="line"/>
+      <point x="539" y="1235" type="line"/>
+      <point x="345" y="1235" type="line"/>
+      <point x="345" y="1041" type="line"/>
+    </contour>
+    <contour>
+      <point x="183" y="1041" type="line"/>
+      <point x="183" y="1235" type="line"/>
+      <point x="-11" y="1235" type="line"/>
+      <point x="-11" y="1041" type="line"/>
+    </contour>
+  </outline>
+</glyph>

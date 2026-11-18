@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Lacute" format="2">
+  <advance width="1280"/>
+  <unicode hex="0139"/>
+  <anchor x="336" y="1484" name="Anchor-0"/>
+  <anchor x="666" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="1088" y="251" type="line"/>
+      <point x="1088" y="0" type="line"/>
+      <point x="402" y="0" type="line"/>
+      <point x="402" y="251" type="line"/>
+    </contour>
+    <contour>
+      <point x="520" y="1354" type="line"/>
+      <point x="520" y="0" type="line"/>
+      <point x="192" y="0" type="line"/>
+      <point x="192" y="1354" type="line"/>
+    </contour>
+    <contour>
+      <point x="222" y="1425" type="line"/>
+      <point x="406" y="1717" type="line"/>
+      <point x="738" y="1717" type="line"/>
+      <point x="478" y="1425" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arabic_gaf_bar" format="2">
+  <advance width="818"/>
+  <outline>
+    <contour>
+      <point x="-64" y="1638" type="line"/>
+      <point x="695" y="1934" type="line"/>
+      <point x="695" y="1983" type="line"/>
+      <point x="-64" y="1686" type="line"/>
+    </contour>
+  </outline>
+</glyph>

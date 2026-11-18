@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Eng.smcp" format="2">
+  <advance width="1280"/>
+  <anchor x="640" y="1228" name="Anchor-0"/>
+  <anchor x="636" y="4" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="1062" y="1083" type="line"/>
+      <point x="1062" y="0" type="line"/>
+      <point x="1010" y="0" type="line"/>
+      <point x="268" y="1000" type="line"/>
+      <point x="268" y="0" type="line"/>
+      <point x="218" y="0" type="line"/>
+      <point x="218" y="1083" type="line"/>
+      <point x="268" y="1083" type="line"/>
+      <point x="1010" y="86" type="line"/>
+      <point x="1010" y="1083" type="line"/>
+    </contour>
+    <contour>
+      <point x="1010" y="17" type="line"/>
+      <point x="1062" y="17" type="line"/>
+      <point x="1062" y="-83" type="line"/>
+      <point x="1062" y="-240"/>
+      <point x="920" y="-406"/>
+      <point x="796" y="-406" type="qcurve"/>
+      <point x="768" y="-406"/>
+      <point x="718" y="-397"/>
+      <point x="692" y="-388" type="qcurve"/>
+      <point x="704" y="-339" type="line"/>
+      <point x="718" y="-345"/>
+      <point x="770" y="-357"/>
+      <point x="796" y="-357" type="qcurve"/>
+      <point x="900" y="-357"/>
+      <point x="1010" y="-214"/>
+      <point x="1010" y="-83" type="qcurve"/>
+    </contour>
+  </outline>
+</glyph>

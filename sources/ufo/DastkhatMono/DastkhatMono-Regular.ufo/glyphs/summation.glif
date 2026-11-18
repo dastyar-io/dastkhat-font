@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="summation" format="2">
+  <advance width="1280"/>
+  <unicode hex="2211"/>
+  <outline>
+    <contour>
+      <point x="1164" y="-110" type="line"/>
+      <point x="1164" y="-250" type="line"/>
+      <point x="184" y="-250" type="line"/>
+      <point x="184" y="-110" type="line"/>
+    </contour>
+    <contour>
+      <point x="1092" y="1354" type="line"/>
+      <point x="1092" y="1214" type="line"/>
+      <point x="152" y="1214" type="line"/>
+      <point x="152" y="1354" type="line"/>
+    </contour>
+    <contour>
+      <point x="866" y="560" type="line"/>
+      <point x="866" y="537" type="line"/>
+      <point x="208" y="-250" type="line"/>
+      <point x="116" y="-250" type="line"/>
+      <point x="116" y="-118" type="line"/>
+      <point x="682" y="549" type="line"/>
+      <point x="116" y="1221" type="line"/>
+      <point x="116" y="1354" type="line"/>
+      <point x="208" y="1354" type="line"/>
+    </contour>
+  </outline>
+</glyph>

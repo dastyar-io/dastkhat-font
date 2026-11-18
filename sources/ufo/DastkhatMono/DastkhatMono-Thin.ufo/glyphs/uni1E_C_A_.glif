@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni1ECA" format="2">
+  <advance width="1280"/>
+  <anchor x="654" y="1499" name="Anchor-0"/>
+  <anchor x="654" y="8" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="668" y="1354" type="line"/>
+      <point x="668" y="0" type="line"/>
+      <point x="618" y="0" type="line"/>
+      <point x="618" y="1354" type="line"/>
+    </contour>
+    <contour>
+      <point x="588" y="-203" type="qcurve"/>
+      <point x="588" y="-181"/>
+      <point x="618" y="-151"/>
+      <point x="640" y="-151" type="qcurve"/>
+      <point x="661" y="-151"/>
+      <point x="692" y="-181"/>
+      <point x="692" y="-203" type="qcurve"/>
+      <point x="692" y="-224"/>
+      <point x="661" y="-254"/>
+      <point x="640" y="-254" type="qcurve"/>
+      <point x="618" y="-254"/>
+      <point x="588" y="-224"/>
+    </contour>
+  </outline>
+</glyph>
