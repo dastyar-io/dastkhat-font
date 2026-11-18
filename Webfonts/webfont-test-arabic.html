@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dastkhat Arabic: webfont test</title>
+<link rel="stylesheet" href="dastkhat-arabic.css">
+<style>
+  body { margin: 0; padding: 32px 16px; max-width: 760px; margin-inline: auto; font-family: var(--font-dastkhat-arabic); line-height: 1.8; color: #1a1a1a; background: #fff; }
+  h1 { font-weight: 900; margin: 0 0 24px; }
+  section { border-top: 1px solid #ddd; padding: 16px 0; }
+  small { display: block; color: #666; font: 400 13px/1.4 system-ui, sans-serif; direction: ltr; margin-bottom: 4px; }
+  .arnum { font-family: var(--font-dastkhat-arabic-arnum); }
+  .noen { font-family: var(--font-dastkhat-arabic-noen); }
+  .w { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+  .big { font-size: 40px; }
+</style>
+</head>
+<body>
+<h1>دستخط العربي</h1>
+<section><small>Dastkhat Arabic, weights 100-900</small>
+  <div class="w">
+    <span style="font-weight:100">خفيف</span><span style="font-weight:300">خفيف</span><span style="font-weight:400">عادي</span>
+    <span style="font-weight:500">متوسط</span><span style="font-weight:700">عريض</span><span style="font-weight:900">أسود</span>
+  </div></section>
+<section><small>Kaf ك and yeh ي, hamza and tashkeel</small>
+  <p class="big">كتاب جميل، يكتب الطالبُ الدَّرسَ في المكتبة. ثمّة أَمْرٌ مُؤْلِمٌ؟</p></section>
+<section><small>Dastkhat Arabic: Latin digits stay Latin; Arabic-Indic digits typed directly</small>
+  <p>سعر المنتج 1250 ريال، والكمية ٤٥٦ قطعة، ورقم الطلب 987654.</p></section>
+<section><small>Dastkhat Arabic ArNum: Latin digits display as Arabic-Indic</small>
+  <p class="arnum">سعر المنتج 1250 ريال، والكمية 456 قطعة، ورقم الطلب 0123456789.</p></section>
+<section><small>Dastkhat Arabic NoEn: Latin letters fall back to the next font</small>
+  <p class="noen">مرحبا بكم في Dastkhat، الخط العربي لواجهات المنتجات.</p></section>
+<section><small>Mixed text with Latin</small>
+  <p>يدعم الخط <span dir="ltr">Dastkhat Arabic</span> اللغتين العربية واللاتينية معاً.</p></section>
+</body>
+</html>

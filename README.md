@@ -62,6 +62,10 @@
 
 <img src="Demos/images/dastkhat-dot-styles.png" alt="مقایسه سبک‌های نقطه" width="100%">
 
+### دستخط عربی
+
+برای خوانندگان عربی‌زبان، **Dastkhat Arabic** همان خانواده اصلی دستخط است، بدون حرف‌های مخصوص فارسی (پ چ ژ گ ک ی) و عددهای فارسی `۰-۹`. «ك» و «ي» عربی در آن می‌مانند. سه نسخه دارد: `Dastkhat Arabic`، `Dastkhat Arabic ArNum` (عددهای لاتین `0-9` با شکل عربی `٠-٩` نمایش داده می‌شوند) و `Dastkhat Arabic NoEn` (بدون حرف‌های لاتین). فایل‌ها در `fonts/Main/DastkhatArabic`، `fonts/ArNum/DastkhatArabicArNum` و `fonts/NoEn/DastkhatArabicNoEn` هستند. در وب، فایل `Webfonts/dastkhat-arabic.css` را بارگذاری کنید. برای فارسی از خانواده‌های معمولی استفاده کنید.
+
 ### نسخه‌ها
 
 هر خانواده در سه نسخه ارائه می‌شود.
