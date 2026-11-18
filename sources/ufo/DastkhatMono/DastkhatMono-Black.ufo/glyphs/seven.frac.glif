@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seven.frac" format="2">
+  <advance width="1280"/>
+  <outline>
+    <contour>
+      <point x="941" y="1351" type="line"/>
+      <point x="941" y="1238" type="line"/>
+      <point x="640" y="618" type="line"/>
+      <point x="420" y="618" type="line"/>
+      <point x="722" y="1188" type="line"/>
+      <point x="339" y="1188" type="line"/>
+      <point x="339" y="1351" type="line"/>
+    </contour>
+  </outline>
+</glyph>

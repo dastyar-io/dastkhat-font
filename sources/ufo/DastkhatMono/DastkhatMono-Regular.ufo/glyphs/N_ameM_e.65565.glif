@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="NameMe.65565" format="2">
+  <advance width="670"/>
+  <outline>
+    <contour>
+      <point x="488" y="201" type="qcurve"/>
+      <point x="429" y="201"/>
+      <point x="325" y="147"/>
+      <point x="259" y="49"/>
+      <point x="259" y="-18" type="qcurve"/>
+      <point x="259" y="-77"/>
+      <point x="322" y="-140"/>
+      <point x="381" y="-140" type="qcurve"/>
+      <point x="451" y="-140" type="line"/>
+      <point x="467" y="-140"/>
+      <point x="498" y="-150"/>
+      <point x="498" y="-166" type="qcurve"/>
+      <point x="498" y="-209"/>
+      <point x="427" y="-271"/>
+      <point x="317" y="-303"/>
+      <point x="259" y="-303" type="qcurve"/>
+      <point x="218" y="-303"/>
+      <point x="154" y="-288"/>
+      <point x="127" y="-276" type="qcurve"/>
+      <point x="87" y="-359" type="line"/>
+      <point x="123" y="-374"/>
+      <point x="207" y="-392"/>
+      <point x="258" y="-392" type="qcurve"/>
+      <point x="353" y="-392"/>
+      <point x="499" y="-335"/>
+      <point x="581" y="-225"/>
+      <point x="581" y="-146" type="qcurve"/>
+      <point x="581" y="-104"/>
+      <point x="527" y="-50"/>
+      <point x="474" y="-50" type="qcurve"/>
+      <point x="387" y="-50" type="line"/>
+      <point x="363" y="-50"/>
+      <point x="347" y="-33"/>
+      <point x="347" y="-10" type="qcurve"/>
+      <point x="347" y="33"/>
+      <point x="424" y="113"/>
+      <point x="488" y="113" type="qcurve"/>
+      <point x="503" y="113"/>
+      <point x="542" y="107"/>
+      <point x="562" y="101" type="qcurve"/>
+      <point x="578" y="185" type="line"/>
+      <point x="553" y="195"/>
+      <point x="502" y="201"/>
+    </contour>
+  </outline>
+</glyph>

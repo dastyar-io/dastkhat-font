@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni20BC" format="2">
+  <advance width="1280"/>
+  <unicode hex="20BC"/>
+  <outline>
+    <contour>
+      <point x="1150" y="0" type="line"/>
+      <point x="1100" y="0" type="line"/>
+      <point x="1100" y="223" type="line"/>
+      <point x="1100" y="382"/>
+      <point x="992" y="627"/>
+      <point x="784" y="765"/>
+      <point x="638" y="765" type="qcurve"/>
+      <point x="494" y="765"/>
+      <point x="290" y="627"/>
+      <point x="180" y="382"/>
+      <point x="180" y="223" type="qcurve"/>
+      <point x="180" y="0" type="line"/>
+      <point x="130" y="0" type="line"/>
+      <point x="130" y="221" type="line"/>
+      <point x="130" y="398"/>
+      <point x="254" y="666"/>
+      <point x="484" y="816"/>
+      <point x="638" y="816" type="qcurve"/>
+      <point x="794" y="816"/>
+      <point x="1024" y="666"/>
+      <point x="1150" y="398"/>
+      <point x="1150" y="221" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="662" y="1006" type="line"/>
+      <point x="662" y="0" type="line"/>
+      <point x="612" y="0" type="line"/>
+      <point x="612" y="1006" type="line"/>
+    </contour>
+  </outline>
+</glyph>

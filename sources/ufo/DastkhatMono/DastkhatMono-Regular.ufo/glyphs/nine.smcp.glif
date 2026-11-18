@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="nine.smcp" format="2">
+  <advance width="1280"/>
+  <outline>
+    <contour>
+      <point x="426" y="137" type="line"/>
+      <point x="443" y="137" type="line"/>
+      <point x="561" y="137"/>
+      <point x="721" y="192"/>
+      <point x="815" y="290"/>
+      <point x="857" y="422"/>
+      <point x="857" y="499" type="qcurve"/>
+      <point x="857" y="687" type="line"/>
+      <point x="857" y="819"/>
+      <point x="725" y="956"/>
+      <point x="637" y="956" type="qcurve"/>
+      <point x="569" y="956"/>
+      <point x="472" y="892"/>
+      <point x="421" y="786"/>
+      <point x="421" y="723" type="qcurve"/>
+      <point x="421" y="663"/>
+      <point x="468" y="557"/>
+      <point x="563" y="492"/>
+      <point x="633" y="492" type="qcurve"/>
+      <point x="700" y="492"/>
+      <point x="806" y="549"/>
+      <point x="871" y="640"/>
+      <point x="874" y="690" type="qcurve"/>
+      <point x="922" y="597" type="line"/>
+      <point x="917" y="543"/>
+      <point x="840" y="431"/>
+      <point x="702" y="355"/>
+      <point x="603" y="355" type="qcurve"/>
+      <point x="483" y="355"/>
+      <point x="327" y="457"/>
+      <point x="251" y="623"/>
+      <point x="251" y="720" type="qcurve"/>
+      <point x="251" y="824"/>
+      <point x="340" y="995"/>
+      <point x="513" y="1098"/>
+      <point x="637" y="1098" type="qcurve"/>
+      <point x="772" y="1098"/>
+      <point x="946" y="980"/>
+      <point x="1029" y="780"/>
+      <point x="1029" y="658" type="qcurve"/>
+      <point x="1029" y="594" type="line"/>
+      <point x="1029" y="473"/>
+      <point x="975" y="257"/>
+      <point x="843" y="89"/>
+      <point x="616" y="-7"/>
+      <point x="443" y="-7" type="qcurve"/>
+      <point x="425" y="-7" type="line"/>
+    </contour>
+  </outline>
+</glyph>

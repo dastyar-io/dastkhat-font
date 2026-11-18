@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni012F.ccmp" format="2">
+  <advance width="1280"/>
+  <anchor x="716" y="1198" name="Anchor-0"/>
+  <anchor x="714" y="9" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="800" y="1006" type="line"/>
+      <point x="800" y="0" type="line"/>
+      <point x="628" y="0" type="line"/>
+      <point x="628" y="1006" type="line"/>
+    </contour>
+    <contour>
+      <point x="716" y="62" type="qcurve"/>
+      <point x="784" y="9" type="line"/>
+      <point x="726" y="-35"/>
+      <point x="626" y="-137"/>
+      <point x="626" y="-197" type="qcurve"/>
+      <point x="626" y="-228"/>
+      <point x="658" y="-265"/>
+      <point x="698" y="-265" type="qcurve"/>
+      <point x="728" y="-265"/>
+      <point x="778" y="-247"/>
+      <point x="792" y="-240" type="qcurve"/>
+      <point x="804" y="-353" type="line"/>
+      <point x="782" y="-367"/>
+      <point x="710" y="-394"/>
+      <point x="654" y="-394" type="qcurve"/>
+      <point x="580" y="-394"/>
+      <point x="476" y="-304"/>
+      <point x="476" y="-217" type="qcurve"/>
+      <point x="476" y="-166"/>
+      <point x="526" y="-68"/>
+      <point x="632" y="23"/>
+    </contour>
+  </outline>
+</glyph>

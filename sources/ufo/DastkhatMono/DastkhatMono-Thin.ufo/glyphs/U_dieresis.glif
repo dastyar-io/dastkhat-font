@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Udieresis" format="2">
+  <advance width="1280"/>
+  <unicode hex="00DC"/>
+  <anchor x="626" y="1489" name="Anchor-0"/>
+  <anchor x="624" y="0" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="1052" y="1354" type="line"/>
+      <point x="1102" y="1354" type="line"/>
+      <point x="1102" y="436" type="line"/>
+      <point x="1102" y="285"/>
+      <point x="982" y="82"/>
+      <point x="772" y="-19"/>
+      <point x="640" y="-19" type="qcurve"/>
+      <point x="508" y="-19"/>
+      <point x="300" y="82"/>
+      <point x="178" y="285"/>
+      <point x="178" y="436" type="qcurve"/>
+      <point x="178" y="1354" type="line"/>
+      <point x="228" y="1354" type="line"/>
+      <point x="228" y="436" type="line"/>
+      <point x="228" y="306"/>
+      <point x="336" y="125"/>
+      <point x="524" y="32"/>
+      <point x="640" y="32" type="qcurve"/>
+      <point x="758" y="32"/>
+      <point x="944" y="125"/>
+      <point x="1052" y="306"/>
+      <point x="1052" y="436" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="398" y="1618" type="qcurve"/>
+      <point x="398" y="1640"/>
+      <point x="426" y="1670"/>
+      <point x="448" y="1670" type="qcurve"/>
+      <point x="470" y="1670"/>
+      <point x="500" y="1640"/>
+      <point x="500" y="1618" type="qcurve"/>
+      <point x="500" y="1597"/>
+      <point x="470" y="1567"/>
+      <point x="448" y="1567" type="qcurve"/>
+      <point x="426" y="1567"/>
+      <point x="398" y="1597"/>
+    </contour>
+    <contour>
+      <point x="810" y="1618" type="qcurve"/>
+      <point x="810" y="1640"/>
+      <point x="840" y="1670"/>
+      <point x="862" y="1670" type="qcurve"/>
+      <point x="884" y="1670"/>
+      <point x="914" y="1640"/>
+      <point x="914" y="1618" type="qcurve"/>
+      <point x="914" y="1597"/>
+      <point x="884" y="1567"/>
+      <point x="862" y="1567" type="qcurve"/>
+      <point x="840" y="1567"/>
+      <point x="810" y="1597"/>
+    </contour>
+  </outline>
+</glyph>

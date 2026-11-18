@@ -20,7 +20,9 @@ SRC = {
     'Dastkhat Bar': os.path.join(VFDIR, 'DastkhatBar-VF.ttf'),
     'Dastkhat Dots': os.path.join(VFDIR, 'DastkhatDots-VF.ttf'),
     'Dastkhat BarDots': os.path.join(VFDIR, 'DastkhatBarDots-VF.ttf'),
+    'Dastkhat Mono': os.path.join(VFDIR, 'DastkhatMono-VF.ttf'),
 }
+MAIN_ONLY = {'Dastkhat Mono'}      # no FaNum or NoEn build: a code font keeps Latin digits and Latin letters
 WEIGHTS = [(100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regular'), (500, 'Medium'),
            (600, 'SemiBold'), (700, 'Bold'), (800, 'ExtraBold'), (900, 'Black')]
 
@@ -28,7 +30,8 @@ COPYRIGHT = ('Copyright 2015 The Vazirmatn Project Authors (https://github.com/r
              'Copyright 2026 The Dastkhat Project Authors (https://github.com/dastyar-io/dastkhat-font).')
 DESC = ('Dastkhat is a Persian and Latin UI typeface published by Dastyar, derived from Vazirmatn by Saber Rastikerdar. '
         'It has a taller letter body, wider Persian letters and digits, a smaller Latin, and five dot styles: '
-        'square, diamond, bar, circle and circle bar. Latin glyphs derive from Roboto (Apache License 2.0).')
+        'square, diamond, bar, circle and circle bar, plus a monospaced family, Dastkhat Mono. '
+        'Latin glyphs derive from Roboto (Apache License 2.0).')
 LICENSE = ('This Font Software is licensed under the SIL Open Font License, Version 1.1. '
            'This license is available with a FAQ at: https://openfontlicense.org')
 
@@ -133,7 +136,12 @@ def to_woff2(src, dst):
 def main():
     made = []
     for base, path in SRC.items():
+        if not os.path.exists(path):          # a partial build of just some families is fine
+            print('skipped', base, '(no compiled variable font)')
+            continue
         for suffix, fn in (('', None), (' FaNum', make_fanum), (' NoEn', make_noen)):
+            if suffix and base in MAIN_ONLY:
+                continue
             fam = base + suffix
             vf = TTFont(path)
             if fn:

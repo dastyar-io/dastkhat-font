@@ -22,6 +22,7 @@ e-commerce pages and dense Persian text on screens.
     Dastkhat Dots     circular dots
     Dastkhat BarDots  merged circular dots: two dots become a capsule,
                       three dots become a capsule and a circle
+    Dastkhat Mono     monospaced, square dots (Main build only)
 - Builds per family:
     Main   full Persian + Latin
     FaNum  Latin digits 0-9 display as Persian digits ۰-۹
@@ -44,6 +45,23 @@ be modified and redistributed under the same license, but not sold by itself.
 
 ChangeLog
 ---------
+
+2026-11-18 (Dastyar) Dastkhat Mono (new family, not yet versioned)
+- Dastkhat Mono, a monospaced family for code, terminals and tables, with the
+  same nine weights and variable axis (wght 100-900) as the others. Main build
+  only: a code font keeps its Latin letters and digits, so there is no FaNum or
+  NoEn build.
+- Derived from Dastkhat by sources/make_mono.py. Latin, Greek and Cyrillic
+  letters, Latin, Persian and Arabic-Indic digits, punctuation, symbols, the
+  currency signs and the space all take one cell of 1280 units (0.625 em);
+  ligatures such as fi take as many cells as they have letters. Glyphs wider
+  than the cell are narrowed to fit (98 in Regular, 192 in Black), narrower ones
+  are centred, and Latin kerning is removed.
+- Persian and Arabic letters keep their proportional widths and shaping: they
+  join, and a letter forced into a fixed cell would break the join.
+- The zero carries a square dot, the family's own dot, so 0 and O differ.
+- sources/release_fonts.py skips families whose variable font was not compiled,
+  so a single family can be built on its own.
 
 2026-11-18 (Dastyar) Dastkhat Arabic
 - New family Dastkhat Arabic, an Arabic-only cut of the main (square-dot)

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFB8B" format="2">
+  <advance width="791"/>
+  <unicode hex="FB8B"/>
+  <anchor x="314" y="-654" name="Anchor-2"/>
+  <anchor x="371" y="1361" name="Anchor-3"/>
+  <outline>
+    <contour>
+      <point x="749" y="0" type="qcurve"/>
+      <point x="812" y="0" type="line"/>
+      <point x="812" y="62" type="line"/>
+      <point x="749" y="62" type="line"/>
+      <point x="649" y="62"/>
+      <point x="541" y="182"/>
+      <point x="518" y="278" type="qcurve"/>
+      <point x="475" y="460" type="line"/>
+      <point x="421" y="438" type="line"/>
+      <point x="450" y="327"/>
+      <point x="478" y="140"/>
+      <point x="478" y="65" type="qcurve"/>
+      <point x="478" y="-72"/>
+      <point x="376" y="-288"/>
+      <point x="181" y="-438"/>
+      <point x="40" y="-479" type="qcurve"/>
+      <point x="57" y="-528" type="line"/>
+      <point x="192" y="-494"/>
+      <point x="417" y="-334"/>
+      <point x="544" y="-72"/>
+      <point x="534" y="115" type="qcurve"/>
+      <point x="558" y="66"/>
+      <point x="665" y="0"/>
+    </contour>
+    <contour>
+      <point x="418" y="1019" type="line"/>
+      <point x="418" y="1109" type="line"/>
+      <point x="328" y="1109" type="line"/>
+      <point x="328" y="1019" type="line"/>
+    </contour>
+    <contour>
+      <point x="544" y="815" type="line"/>
+      <point x="544" y="907" type="line"/>
+      <point x="453" y="907" type="line"/>
+      <point x="453" y="815" type="line"/>
+    </contour>
+    <contour>
+      <point x="294" y="815" type="line"/>
+      <point x="294" y="907" type="line"/>
+      <point x="203" y="907" type="line"/>
+      <point x="203" y="815" type="line"/>
+    </contour>
+  </outline>
+</glyph>

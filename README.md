@@ -59,6 +59,7 @@
 | **Dastkhat Bar** | دو نقطه یک خط می‌شود، سه نقطه یک خط و یک مربع | لوگو، تیتر و هویت بصری |
 | **Dastkhat Dots** | دایره | همان هندسه با بافتی نرم‌تر و گردتر |
 | **Dastkhat BarDots** | دو نقطه یک کپسول می‌شود، سه نقطه یک کپسول و یک دایره | لوگو و تیتر با ظاهر گرد |
+| **Dastkhat Mono** | مربع | کد، ترمینال و جدول. حرف‌های لاتین، عددها و نمادها عرض یکسان دارند و صفر یک نقطه دارد. حرف‌های فارسی چون به هم می‌چسبند هم‌عرض نیستند. فقط نسخهٔ Main. |
 
 <img src="Demos/images/dastkhat-dot-styles.png" alt="مقایسه سبک‌های نقطه" width="100%">
 
@@ -90,7 +91,8 @@
 Dastkhat-v1.210/
 ├── fonts/
 │   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar,
-│   │              DastkhatDots, DastkhatBarDots           (۹ وزن TTF + Variable)
+│   │              DastkhatDots, DastkhatBarDots,
+│   │              DastkhatMono                            (۹ وزن TTF + Variable)
 │   ├── FaNum/     همان خانواده‌ها، با عددهای فارسی
 │   └── NoEn/      همان خانواده‌ها، فقط فارسی
 ├── Webfonts/      dastkhat.css, fonts/*.woff2, webfont-test.html
@@ -149,9 +151,10 @@ body    { font-family: var(--font-dastkhat); }                         /* نقط
 | `--font-dastkhat-bar` | Dastkhat Bar |
 | `--font-dastkhat-dots` | Dastkhat Dots |
 | `--font-dastkhat-bardots` | Dastkhat BarDots |
+| `--font-dastkhat-mono` | Dastkhat Mono |
 | `--font-dastkhat-fanum` | Dastkhat FaNum |
 
-نام خانواده‌های متغیر `Dastkhat`، `Dastkhat Diamond`، `Dastkhat Bar`، `Dastkhat Dots` و `Dastkhat BarDots` است (برای نسخه‌های دیگر، `FaNum` یا `NoEn` را به انتهای نام اضافه کنید). نسخه‌های ثابت همین نام‌ها را با پسوند `Static` دارند. همه قانون‌های `@font-face` از `font-display: swap` استفاده می‌کنند.
+نام خانواده‌های متغیر `Dastkhat`، `Dastkhat Diamond`، `Dastkhat Bar`، `Dastkhat Dots`، `Dastkhat BarDots` و `Dastkhat Mono` است (برای نسخه‌های دیگر، `FaNum` یا `NoEn` را به انتهای نام اضافه کنید). نسخه‌های ثابت همین نام‌ها را با پسوند `Static` دارند. همه قانون‌های `@font-face` از `font-display: swap` استفاده می‌کنند.
 
 ### ترکیب با فونت لاتین دیگر (NoEn)
 

@@ -3,7 +3,8 @@
  * SIL Open Font License 1.1, see OFL.txt. Based on Vazirmatn by Saber Rastikerdar.
  *
  * Variable families (recommended): 'Dastkhat', 'Dastkhat Diamond', 'Dastkhat Bar',
- *                                  'Dastkhat Dots', 'Dastkhat BarDots' (+ ' FaNum' / ' NoEn')
+ *                                  'Dastkhat Dots', 'Dastkhat BarDots' (+ ' FaNum' / ' NoEn'),
+ *                                  'Dastkhat Mono' (monospaced, Main build only)
  * Static families: same names + ' Static'
  *
  * The ?v= on every font URL is the release version: the file names stay the same
@@ -265,6 +266,23 @@
 @font-face { font-family: 'Dastkhat BarDots NoEn Static'; src: url('fonts/DastkhatBarDotsNoEn-ExtraBold.woff2?v=1.210') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Dastkhat BarDots NoEn Static'; src: url('fonts/DastkhatBarDotsNoEn-Black.woff2?v=1.210') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
 
+/* ---------- Dastkhat Mono ---------- */
+@font-face {
+  font-family: 'Dastkhat Mono';
+  src: url('fonts/DastkhatMono-Variable.woff2?v=1.210') format('woff2-variations'),
+       url('fonts/DastkhatMono-Variable.woff2?v=1.210') format('woff2');
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-Thin.woff2?v=1.210') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-ExtraLight.woff2?v=1.210') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-Light.woff2?v=1.210') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-Regular.woff2?v=1.210') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-Medium.woff2?v=1.210') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-SemiBold.woff2?v=1.210') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-Bold.woff2?v=1.210') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-ExtraBold.woff2?v=1.210') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Mono Static'; src: url('fonts/DastkhatMono-Black.woff2?v=1.210') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+
 :root {
   --font-dastkhat: 'Dastkhat', 'Dastkhat Static', Tahoma, sans-serif;
   --font-dastkhat-fanum: 'Dastkhat FaNum', 'Dastkhat FaNum Static', Tahoma, sans-serif;
@@ -272,4 +290,5 @@
   --font-dastkhat-bar: 'Dastkhat Bar', 'Dastkhat Bar Static', Tahoma, sans-serif;
   --font-dastkhat-dots: 'Dastkhat Dots', 'Dastkhat Dots Static', Tahoma, sans-serif;
   --font-dastkhat-bardots: 'Dastkhat BarDots', 'Dastkhat BarDots Static', Tahoma, sans-serif;
+  --font-dastkhat-mono: 'Dastkhat Mono', 'Dastkhat Mono Static', ui-monospace, Menlo, Consolas, monospace;
 }

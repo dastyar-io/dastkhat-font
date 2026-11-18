@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni06F1.tnum" format="2">
+  <advance width="1280"/>
+  <outline>
+    <contour>
+      <point x="746" y="0" type="line"/>
+      <point x="746" y="224" type="line"/>
+      <point x="746" y="534"/>
+      <point x="686" y="1041"/>
+      <point x="588" y="1261" type="qcurve"/>
+      <point x="534" y="1246" type="line"/>
+      <point x="598" y="1111"/>
+      <point x="666" y="799"/>
+      <point x="690" y="437"/>
+      <point x="690" y="227" type="qcurve"/>
+      <point x="690" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

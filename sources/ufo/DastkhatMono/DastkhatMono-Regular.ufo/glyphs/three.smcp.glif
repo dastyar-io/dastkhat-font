@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="three.smcp" format="2">
+  <advance width="1280"/>
+  <outline>
+    <contour>
+      <point x="499" y="621" type="line"/>
+      <point x="614" y="621" type="line"/>
+      <point x="730" y="621"/>
+      <point x="843" y="717"/>
+      <point x="843" y="790" type="qcurve"/>
+      <point x="843" y="868"/>
+      <point x="742" y="957"/>
+      <point x="639" y="957" type="qcurve"/>
+      <point x="577" y="957"/>
+      <point x="484" y="919"/>
+      <point x="430" y="849"/>
+      <point x="430" y="802" type="qcurve"/>
+      <point x="257" y="802" type="line"/>
+      <point x="257" y="888"/>
+      <point x="354" y="1022"/>
+      <point x="526" y="1098"/>
+      <point x="638" y="1098" type="qcurve"/>
+      <point x="807" y="1098"/>
+      <point x="1016" y="942"/>
+      <point x="1016" y="791" type="qcurve"/>
+      <point x="1016" y="728"/>
+      <point x="938" y="604"/>
+      <point x="775" y="524"/>
+      <point x="645" y="524" type="qcurve"/>
+      <point x="499" y="524" type="line"/>
+    </contour>
+    <contour>
+      <point x="499" y="483" type="line"/>
+      <point x="499" y="580" type="line"/>
+      <point x="645" y="580" type="line"/>
+      <point x="795" y="580"/>
+      <point x="965" y="503"/>
+      <point x="1035" y="377"/>
+      <point x="1035" y="302" type="qcurve"/>
+      <point x="1035" y="202"/>
+      <point x="931" y="60"/>
+      <point x="751" y="-15"/>
+      <point x="639" y="-15" type="qcurve"/>
+      <point x="560" y="-15"/>
+      <point x="418" y="23"/>
+      <point x="309" y="100"/>
+      <point x="245" y="216"/>
+      <point x="245" y="292" type="qcurve"/>
+      <point x="418" y="292" type="line"/>
+      <point x="418" y="243"/>
+      <point x="472" y="167"/>
+      <point x="572" y="126"/>
+      <point x="639" y="126" type="qcurve"/>
+      <point x="743" y="126"/>
+      <point x="861" y="218"/>
+      <point x="861" y="301" type="qcurve"/>
+      <point x="861" y="397"/>
+      <point x="727" y="483"/>
+      <point x="614" y="483" type="qcurve"/>
+    </contour>
+  </outline>
+</glyph>

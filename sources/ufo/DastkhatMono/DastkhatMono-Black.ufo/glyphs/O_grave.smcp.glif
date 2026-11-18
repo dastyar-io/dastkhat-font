@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ograve.smcp" format="2">
+  <advance width="1280"/>
+  <anchor x="639" y="1228" name="Anchor-0"/>
+  <anchor x="662" y="0" name="Anchor-1"/>
+  <outline>
+    <contour>
+      <point x="1160" y="560" type="qcurve"/>
+      <point x="1160" y="523" type="line"/>
+      <point x="1160" y="357"/>
+      <point x="1026" y="116"/>
+      <point x="792" y="-15"/>
+      <point x="641" y="-15" type="qcurve"/>
+      <point x="488" y="-15"/>
+      <point x="253" y="116"/>
+      <point x="120" y="357"/>
+      <point x="120" y="523" type="qcurve"/>
+      <point x="120" y="560" type="line"/>
+      <point x="120" y="725"/>
+      <point x="252" y="967"/>
+      <point x="486" y="1098"/>
+      <point x="640" y="1098" type="qcurve"/>
+      <point x="790" y="1098"/>
+      <point x="1025" y="967"/>
+      <point x="1160" y="725"/>
+    </contour>
+    <contour>
+      <point x="844" y="523" type="qcurve"/>
+      <point x="844" y="561" type="line"/>
+      <point x="844" y="656"/>
+      <point x="796" y="790"/>
+      <point x="704" y="859"/>
+      <point x="640" y="859" type="qcurve"/>
+      <point x="571" y="859"/>
+      <point x="480" y="790"/>
+      <point x="436" y="656"/>
+      <point x="436" y="561" type="qcurve"/>
+      <point x="436" y="523" type="line"/>
+      <point x="436" y="430"/>
+      <point x="481" y="296"/>
+      <point x="573" y="223"/>
+      <point x="641" y="223" type="qcurve"/>
+      <point x="736" y="223"/>
+      <point x="844" y="383"/>
+    </contour>
+    <contour>
+      <point x="600" y="1456" type="line"/>
+      <point x="785" y="1164" type="line"/>
+      <point x="531" y="1164" type="line"/>
+      <point x="268" y="1456" type="line"/>
+    </contour>
+  </outline>
+</glyph>
