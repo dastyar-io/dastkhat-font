@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="100" maximum="900" default="400">
+      <map input="100" output="100" />
+      <map input="200" output="250" />
+      <map input="300" output="325" />
+      <map input="400" output="400" />
+      <map input="500" output="583.69" />
+      <map input="600" output="661.23" />
+      <map input="700" output="738.78" />
+      <map input="800" output="819.37" />
+      <map input="900" output="900" />
+    </axis>
+  </axes>
+  <sources>
+    <source filename="DastkhatRound-Thin.ufo" name="Thin" familyname="Dastkhat Round" stylename="Thin">
+      <location>
+        <dimension name="Weight" xvalue="100" />
+      </location>
+    </source>
+    <source filename="DastkhatRound-Regular.ufo" name="Regular" familyname="Dastkhat Round" stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="400" />
+      </location>
+    </source>
+    <source filename="DastkhatRound-Black.ufo" name="Black" familyname="Dastkhat Round" stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="900" />
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance name="Dastkhat Round Thin" familyname="Dastkhat Round" stylename="Thin">
+      <location>
+        <dimension name="Weight" uservalue="100" />
+      </location>
+    </instance>
+    <instance name="Dastkhat Round ExtraLight" familyname="Dastkhat Round" stylename="ExtraLight">
+      <location>
+        <dimension name="Weight" uservalue="200" />
+      </location>
+    </instance>
+    <instance name="Dastkhat Round Light" familyname="Dastkhat Round" stylename="Light">
+      <location>
+        <dimension name="Weight" uservalue="300" />
+      </location>
+    </instance>
+    <instance name="Dastkhat Round Regular" familyname="Dastkhat Round" stylename="Regular">
+      <location>
+        <dimension name="Weight" uservalue="400" />
+      </location>
+    </instance>
+    <instance name="Dastkhat Round Medium" familyname="Dastkhat Round" stylename="Medium">
+      <location>
+        <dimension name="Weight" uservalue="500" />
+      </location>
+    </instance>
+    <instance name="Dastkhat Round SemiBold" familyname="Dastkhat Round" stylename="SemiBold">
+      <location>
+        <dimension name="Weight" uservalue="600" />
+      </location>
+    </instance>
+    <instance name="Dastkhat Round Bold" familyname="Dastkhat Round" stylename="Bold">
+      <location>
+        <dimension name="Weight" uservalue="700" />
+      </location>
+    </instance>
+    <instance name="Dastkhat Round ExtraBold" familyname="Dastkhat Round" stylename="ExtraBold">
+      <location>
+        <dimension name="Weight" uservalue="800" />
+      </location>
+    </instance>
+    <instance name="Dastkhat Round Black" familyname="Dastkhat Round" stylename="Black">
+      <location>
+        <dimension name="Weight" uservalue="900" />
+      </location>
+    </instance>
+  </instances>
+</designspace>

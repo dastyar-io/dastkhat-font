@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Lslash.smcp" format="2">
+  <advance width="848" />
+  <anchor x="217" y="1228" name="Anchor-0" />
+  <anchor x="490" y="7" name="Anchor-1" />
+  <outline>
+    <contour>
+      <point x="780" y="50" type="line" smooth="yes" />
+      <point x="793" y="50" />
+      <point x="804" y="39" />
+      <point x="804" y="26" type="curve" smooth="yes" />
+      <point x="804" y="24" type="line" smooth="yes" />
+      <point x="804" y="11" />
+      <point x="793" y="0" />
+      <point x="780" y="0" type="curve" smooth="yes" />
+      <point x="180" y="0" type="line" />
+      <point x="180" y="50" type="line" />
+    </contour>
+    <contour>
+      <point x="184" y="1083" type="line" smooth="yes" />
+      <point x="197" y="1083" />
+      <point x="208" y="1072" />
+      <point x="208" y="1060" type="curve" smooth="yes" />
+      <point x="208" y="0" type="line" />
+      <point x="183" y="0" type="line" smooth="yes" />
+      <point x="169" y="0" />
+      <point x="158" y="11" />
+      <point x="158" y="25" type="curve" smooth="yes" />
+      <point x="158" y="1060" type="line" smooth="yes" />
+      <point x="158" y="1072" />
+      <point x="169" y="1083" />
+      <point x="182" y="1083" type="curve" smooth="yes" />
+    </contour>
+    <contour>
+      <point x="532" y="645" type="line" smooth="yes" />
+      <point x="544" y="649" />
+      <point x="556" y="640" />
+      <point x="556" y="628" type="curve" smooth="yes" />
+      <point x="556" y="625" type="line" smooth="yes" />
+      <point x="556" y="610" />
+      <point x="546" y="597" />
+      <point x="532" y="592" type="curve" smooth="yes" />
+      <point x="7" y="426" type="line" />
+      <point x="7" y="479" type="line" />
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dagger" format="2">
+  <advance width="1012" />
+  <unicode hex="2020" />
+  <outline>
+    <contour>
+      <point x="514" y="1354" type="line" smooth="yes" />
+      <point x="595" y="1354" />
+      <point x="661" y="1288" />
+      <point x="661" y="1207" type="curve" smooth="yes" />
+      <point x="661" y="147" type="line" smooth="yes" />
+      <point x="661" y="66" />
+      <point x="595" y="0" />
+      <point x="514" y="0" type="curve" smooth="yes" />
+      <point x="495" y="0" type="line" smooth="yes" />
+      <point x="414" y="0" />
+      <point x="348" y="66" />
+      <point x="348" y="147" type="curve" smooth="yes" />
+      <point x="348" y="1207" type="line" smooth="yes" />
+      <point x="348" y="1288" />
+      <point x="414" y="1354" />
+      <point x="495" y="1354" type="curve" smooth="yes" />
+    </contour>
+    <contour>
+      <point x="849" y="1006" type="line" smooth="yes" />
+      <point x="914" y="1006" />
+      <point x="967" y="953" />
+      <point x="967" y="888" type="curve" smooth="yes" />
+      <point x="967" y="873" type="line" smooth="yes" />
+      <point x="967" y="808" />
+      <point x="914" y="755" />
+      <point x="849" y="755" type="curve" smooth="yes" />
+      <point x="165" y="755" type="line" smooth="yes" />
+      <point x="100" y="755" />
+      <point x="47" y="808" />
+      <point x="47" y="873" type="curve" smooth="yes" />
+      <point x="47" y="888" type="line" smooth="yes" />
+      <point x="47" y="953" />
+      <point x="100" y="1006" />
+      <point x="165" y="1006" type="curve" smooth="yes" />
+    </contour>
+  </outline>
+</glyph>

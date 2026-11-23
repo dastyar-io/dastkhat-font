@@ -14,7 +14,7 @@ e-commerce pages and dense Persian text on screens.
 
 - Scripts: Arabic script (Persian, Arabic, Urdu basic coverage), Latin
 - Weights: 9 (Thin 100 to Black 900) plus a variable font (wght 100-900)
-- Dot styles: five families
+- Families: five dot styles, plus a rounded and a monospaced family
     Dastkhat          square dots (default)
     Dastkhat Diamond  square dots rotated 45 degrees
     Dastkhat Bar      merged dots: two dots become a bar,
@@ -22,6 +22,8 @@ e-commerce pages and dense Persian text on screens.
     Dastkhat Dots     circular dots
     Dastkhat BarDots  merged circular dots: two dots become a capsule,
                       three dots become a capsule and a circle
+    Dastkhat Round    circular dots and rounded letters: stroke ends and
+                      outer corners are round
     Dastkhat Mono     monospaced, square dots (Main build only)
 - Builds per family:
     Main   full Persian + Latin
@@ -46,7 +48,32 @@ be modified and redistributed under the same license, but not sold by itself.
 ChangeLog
 ---------
 
-2026-11-18 (Dastyar) Dastkhat Mono (new family, not yet versioned)
+2026-11-23 (Dastyar) Dastkhat v1.220
+- Three new families since v1.210, each described in its own entry below:
+    Dastkhat Round    circular dots and rounded letters (Main, FaNum, NoEn)
+    Dastkhat Mono     monospaced Latin, digits and symbols (Main only)
+    Dastkhat Arabic   Arabic-only cut of Dastkhat (Main, ArNum, NoEn)
+- Version 1.220 in every font, dastkhat.css, dastkhat-arabic.css, both
+  READMEs, the landing page and the generated pages. Every font URL in the
+  stylesheets carries ?v=1.220, so browsers fetch the new files.
+- All 22 families rebuilt as static TTF, variable TTF and WOFF2.
+
+2026-11-23 (Dastyar) Dastkhat Round
+- Dastkhat Round keeps the circular dots of Dastkhat Dots and rounds the
+  letters too: every outer corner on the visible outline becomes a circular
+  arc, so stroke ends turn into near half circles. Same nine weights,
+  variable axis (wght 100-900), metrics, kerning and features as Dastkhat
+  Dots, with Main, FaNum and NoEn builds.
+- Derived from Dastkhat Dots by sources/round_corners.py. Each corner is cut
+  back by half the master's stem (25, 86 and 157 units in Thin, Regular and
+  Black) and joined by a cubic arc; the same corners are rounded in all three
+  masters so the font still interpolates.
+- Left sharp on purpose: inner corners, corners hidden by or touching an
+  overlapping contour (rounding them would cut a notch), and the vertical
+  ends of joining strokes at the sidebearings, so joined letters meet
+  without a seam.
+
+2026-11-18 (Dastyar) Dastkhat Mono
 - Dastkhat Mono, a monospaced family for code, terminals and tables, with the
   same nine weights and variable axis (wght 100-900) as the others. Main build
   only: a code font keeps its Latin letters and digits, so there is no FaNum or

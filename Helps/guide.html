@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>راهنمای دستخط</title>
 <link rel="icon" type="image/svg+xml" href="../Demos/assets/logo-icon.svg">
-<link rel="stylesheet" href="../Webfonts/dastkhat.css?v=1.210"><link rel="stylesheet" href="../Demos/assets/site.css">
+<link rel="stylesheet" href="../Webfonts/dastkhat.css?v=1.220"><link rel="stylesheet" href="../Demos/assets/site.css">
 <style>
 .doc{max-width:900px;margin:0 auto;padding:50px 40px}
 .doc h1{font-size:46px;font-weight:900}.doc h2{font-size:28px;margin:44px 0 10px;padding-top:20px;border-top:1px solid var(--line)}
@@ -22,8 +22,21 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid var(--line);pad
 <tr><td>طراحی با کنترل دقیق وزن</td><td>fonts/Main ← پوشه Variable</td></tr>
 <tr><td>وب‌سایت و اپلیکیشن وب</td><td>پوشه Webfonts</td></tr>
 <tr><td>عدد فارسی بدون تغییر کد یا تنظیمات</td><td>fonts/FaNum</td></tr>
-<tr><td>ترکیب با فونت لاتین دیگر (مثلاً Inter یا Geist)</td><td>fonts/NoEn</td></tr></table>
+<tr><td>ترکیب با فونت لاتین دیگر (مثلاً Inter یا Geist)</td><td>fonts/NoEn</td></tr>
+<tr><td>کد، ترمینال و جدول</td><td>fonts/Main/DastkhatMono</td></tr>
+<tr><td>محصولی فقط برای خوانندگان عربی‌زبان</td><td>fonts/Main/DastkhatArabic و Webfonts/dastkhat-arabic.css</td></tr></table>
 <p>روی یک سیستم، یا نسخه ثابت (TTF) را نصب کنید یا نسخه متغیر، نه هر دو؛ نام‌های یکسان باعث تداخل در نرم‌افزارها می‌شود.</p>
+
+<h2>کدام خانواده؟</h2>
+<table><tr><th>خانواده</th><th>ظاهر</th><th>کاربرد</th></tr>
+<tr><td>Dastkhat</td><td>نقطه مربع</td><td>پیش‌فرض برای رابط کاربری و متن</td></tr>
+<tr><td>Dastkhat Diamond</td><td>نقطه لوزی</td><td>ظاهر نرم‌تر و کلاسیک</td></tr>
+<tr><td>Dastkhat Bar</td><td>نقطه‌های کنار هم یک خط می‌شوند</td><td>لوگو و تیتر</td></tr>
+<tr><td>Dastkhat Dots</td><td>نقطه دایره</td><td>همان هندسه با بافتی نرم‌تر</td></tr>
+<tr><td>Dastkhat BarDots</td><td>نقطه‌های کنار هم یک کپسول می‌شوند</td><td>لوگو و تیتر با ظاهر گرد</td></tr>
+<tr><td>Dastkhat Round</td><td>نقطه دایره، و حرف‌ها با سر و گوشه‌های گرد</td><td>رابط کاربری و برند با ظاهری نرم و صمیمی</td></tr>
+<tr><td>Dastkhat Mono</td><td>لاتین، عدد و نماد هم‌عرض؛ صفر نقطه‌دار</td><td>کد، ترمینال و جدول (فقط نسخه Main)</td></tr>
+<tr><td>Dastkhat Arabic</td><td>همان دستخط، بدون حرف‌ها و عددهای مخصوص فارسی</td><td>محصولات عربی‌زبان؛ نسخه‌های ArNum و NoEn</td></tr></table>
 
 <h2>ویندوز</h2><ol><li>پوشه fonts/Main/Dastkhat/TTF را باز کنید.</li><li>همه فایل‌ها را انتخاب کنید (Ctrl+A).</li><li>راست‌کلیک کنید و گزینه Install for all users را بزنید.</li><li>نرم‌افزار طراحی را یک بار ببندید و دوباره باز کنید.</li></ol>
 <h2>مک</h2><ol><li>برنامه Font Book را باز کنید.</li><li>فایل‌های TTF را به داخل پنجره بکشید.</li><li>اگر هشدار تکراری بودن دیدید، نسخه قبلی دستخط را حذف کنید.</li></ol>
@@ -37,7 +50,9 @@ fc-cache -f</pre>
 
 body      { font-family: var(--font-dastkhat); }          /* نقطه مربع */
 .price    { font-family: var(--font-dastkhat-fanum); }    /* اعداد فارسی */
-.logo     { font-family: var(--font-dastkhat-bar); font-weight: 900; }</pre>
+.logo     { font-family: var(--font-dastkhat-bar); font-weight: 900; }
+.soft     { font-family: var(--font-dastkhat-round); }    /* حرف‌های گرد */
+code      { font-family: var(--font-dastkhat-mono); }     /* کد */</pre>
 <p>برای Next.js با next/font/local:</p>
 <pre>import localFont from 'next/font/local'
 export const dastkhat = localFont({
@@ -71,6 +86,7 @@ export const dastkhat = localFont({
 <ul><li><b>Desktop:</b> install the TTF files from <code>fonts/Main/&lt;Family&gt;/TTF</code>, or the variable font, not both.</li>
 <li><b>Web:</b> copy <code>Webfonts/</code>, link <code>dastkhat.css</code>, use <code>var(--font-dastkhat)</code>.</li>
 <li><b>FaNum:</b> Latin digits render as Persian digits. <b>NoEn:</b> Persian only, pair it with your own Latin font.</li>
+<li><b>Families:</b> Dastkhat (square dots, the default), Diamond, Bar, Dots, BarDots, <b>Round</b> (circle dots and rounded letters, <code>var(--font-dastkhat-round)</code>), <b>Mono</b> for code (<code>var(--font-dastkhat-mono)</code>) and <b>Arabic</b> for Arabic-only products (<code>dastkhat-arabic.css</code>).</li>
 <li><b>Currency:</b> rial is <code>U+FDFC</code>. Toman has no Unicode code point, so Dastkhat adds <code>U+E000</code> (compact) and <code>U+E002</code> (stacked), plus <code>U+E001</code> for a compact rial. Turn on <code>ss02</code> or <code>ss03</code> and keep writing the words.</li>
 <li><b>License:</b> SIL Open Font License 1.1, free for personal and commercial use. See <code>OFL.txt</code>.</li></ul></div>
 </div><div class="wrap"><div class="foot"><span>© ۱۴۰۵ دستیار · dastyar.io</span><span dir="ltr">Dastkhat · SIL OFL 1.1</span></div></div>

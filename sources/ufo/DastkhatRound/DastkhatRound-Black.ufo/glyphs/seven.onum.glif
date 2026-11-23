@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seven.onum" format="2">
+  <advance width="995" />
+  <outline>
+    <contour>
+      <point x="1031" y="1083" type="line" />
+      <point x="1031" y="915" type="line" />
+      <point x="584" y="-136" type="line" smooth="yes" />
+      <point x="549" y="-219" />
+      <point x="468" y="-272" />
+      <point x="378" y="-272" type="curve" smooth="yes" />
+      <point x="360" y="-272" type="line" smooth="yes" />
+      <point x="290" y="-272" />
+      <point x="243" y="-201" />
+      <point x="271" y="-137" type="curve" smooth="yes" />
+      <point x="700" y="841" type="line" />
+      <point x="163" y="841" type="line" smooth="yes" />
+      <point x="100" y="841" />
+      <point x="49" y="892" />
+      <point x="49" y="955" type="curve" smooth="yes" />
+      <point x="49" y="969" type="line" smooth="yes" />
+      <point x="49" y="1032" />
+      <point x="100" y="1083" />
+      <point x="163" y="1083" type="curve" smooth="yes" />
+    </contour>
+  </outline>
+</glyph>
