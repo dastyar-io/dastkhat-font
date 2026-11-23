@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ldot.smcp" format="2">
+  <advance width="848" />
+  <anchor x="217" y="1228" name="Anchor-0" />
+  <anchor x="490" y="7" name="Anchor-1" />
+  <outline>
+    <contour>
+      <point x="780" y="50" type="line" smooth="yes" />
+      <point x="793" y="50" />
+      <point x="804" y="39" />
+      <point x="804" y="26" type="curve" smooth="yes" />
+      <point x="804" y="24" type="line" smooth="yes" />
+      <point x="804" y="11" />
+      <point x="793" y="0" />
+      <point x="780" y="0" type="curve" smooth="yes" />
+      <point x="180" y="0" type="line" />
+      <point x="180" y="50" type="line" />
+    </contour>
+    <contour>
+      <point x="184" y="1083" type="line" smooth="yes" />
+      <point x="197" y="1083" />
+      <point x="208" y="1072" />
+      <point x="208" y="1060" type="curve" smooth="yes" />
+      <point x="208" y="0" type="line" />
+      <point x="183" y="0" type="line" smooth="yes" />
+      <point x="169" y="0" />
+      <point x="158" y="11" />
+      <point x="158" y="25" type="curve" smooth="yes" />
+      <point x="158" y="1060" type="line" smooth="yes" />
+      <point x="158" y="1072" />
+      <point x="169" y="1083" />
+      <point x="182" y="1083" type="curve" smooth="yes" />
+    </contour>
+    <contour>
+      <point x="485" y="565" type="qcurve" />
+      <point x="485" y="587" />
+      <point x="515" y="618" />
+      <point x="537" y="618" type="qcurve" />
+      <point x="558" y="618" />
+      <point x="589" y="587" />
+      <point x="589" y="565" type="qcurve" />
+      <point x="589" y="544" />
+      <point x="558" y="514" />
+      <point x="537" y="514" type="qcurve" />
+      <point x="515" y="514" />
+      <point x="485" y="544" />
+    </contour>
+  </outline>
+</glyph>

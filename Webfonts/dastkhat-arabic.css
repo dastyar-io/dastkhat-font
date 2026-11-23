@@ -1,5 +1,5 @@
 /*!
- * Dastkhat Arabic v1.210 - the Arabic and Latin cut of Dastkhat, by Dastyar (https://dastyar.io)
+ * Dastkhat Arabic v1.220 - the Arabic and Latin cut of Dastkhat, by Dastyar (https://dastyar.io)
  * SIL Open Font License 1.1, see OFL.txt. Based on Vazirmatn by Saber Rastikerdar.
  *
  * Variable families: 'Dastkhat Arabic', 'Dastkhat Arabic ArNum' (Latin digits show as ٠-٩),
@@ -11,53 +11,53 @@
 /* ---------- Dastkhat Arabic ---------- */
 @font-face {
   font-family: 'Dastkhat Arabic';
-  src: url('fonts/DastkhatArabic-Variable.woff2?v=1.210') format('woff2-variations'),
-       url('fonts/DastkhatArabic-Variable.woff2?v=1.210') format('woff2');
+  src: url('fonts/DastkhatArabic-Variable.woff2?v=1.220') format('woff2-variations'),
+       url('fonts/DastkhatArabic-Variable.woff2?v=1.220') format('woff2');
   font-weight: 100 900; font-style: normal; font-display: swap;
 }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Thin.woff2?v=1.210') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-ExtraLight.woff2?v=1.210') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Light.woff2?v=1.210') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Regular.woff2?v=1.210') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Medium.woff2?v=1.210') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-SemiBold.woff2?v=1.210') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Bold.woff2?v=1.210') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-ExtraBold.woff2?v=1.210') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Black.woff2?v=1.210') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Thin.woff2?v=1.220') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-ExtraLight.woff2?v=1.220') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Light.woff2?v=1.220') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Regular.woff2?v=1.220') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Medium.woff2?v=1.220') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-SemiBold.woff2?v=1.220') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Bold.woff2?v=1.220') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-ExtraBold.woff2?v=1.220') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic Static'; src: url('fonts/DastkhatArabic-Black.woff2?v=1.220') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
 
 /* ---------- Dastkhat Arabic ArNum ---------- */
 @font-face {
   font-family: 'Dastkhat Arabic ArNum';
-  src: url('fonts/DastkhatArabicArNum-Variable.woff2?v=1.210') format('woff2-variations'),
-       url('fonts/DastkhatArabicArNum-Variable.woff2?v=1.210') format('woff2');
+  src: url('fonts/DastkhatArabicArNum-Variable.woff2?v=1.220') format('woff2-variations'),
+       url('fonts/DastkhatArabicArNum-Variable.woff2?v=1.220') format('woff2');
   font-weight: 100 900; font-style: normal; font-display: swap;
 }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Thin.woff2?v=1.210') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-ExtraLight.woff2?v=1.210') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Light.woff2?v=1.210') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Regular.woff2?v=1.210') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Medium.woff2?v=1.210') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-SemiBold.woff2?v=1.210') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Bold.woff2?v=1.210') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-ExtraBold.woff2?v=1.210') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Black.woff2?v=1.210') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Thin.woff2?v=1.220') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-ExtraLight.woff2?v=1.220') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Light.woff2?v=1.220') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Regular.woff2?v=1.220') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Medium.woff2?v=1.220') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-SemiBold.woff2?v=1.220') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Bold.woff2?v=1.220') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-ExtraBold.woff2?v=1.220') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic ArNum Static'; src: url('fonts/DastkhatArabicArNum-Black.woff2?v=1.220') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
 
 /* ---------- Dastkhat Arabic NoEn ---------- */
 @font-face {
   font-family: 'Dastkhat Arabic NoEn';
-  src: url('fonts/DastkhatArabicNoEn-Variable.woff2?v=1.210') format('woff2-variations'),
-       url('fonts/DastkhatArabicNoEn-Variable.woff2?v=1.210') format('woff2');
+  src: url('fonts/DastkhatArabicNoEn-Variable.woff2?v=1.220') format('woff2-variations'),
+       url('fonts/DastkhatArabicNoEn-Variable.woff2?v=1.220') format('woff2');
   font-weight: 100 900; font-style: normal; font-display: swap;
 }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Thin.woff2?v=1.210') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-ExtraLight.woff2?v=1.210') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Light.woff2?v=1.210') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Regular.woff2?v=1.210') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Medium.woff2?v=1.210') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-SemiBold.woff2?v=1.210') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Bold.woff2?v=1.210') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-ExtraBold.woff2?v=1.210') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Black.woff2?v=1.210') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Thin.woff2?v=1.220') format('woff2'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-ExtraLight.woff2?v=1.220') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Light.woff2?v=1.220') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Regular.woff2?v=1.220') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Medium.woff2?v=1.220') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-SemiBold.woff2?v=1.220') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Bold.woff2?v=1.220') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-ExtraBold.woff2?v=1.220') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dastkhat Arabic NoEn Static'; src: url('fonts/DastkhatArabicNoEn-Black.woff2?v=1.220') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
 
 :root {
   --font-dastkhat-arabic: 'Dastkhat Arabic', 'Dastkhat Arabic Static', Tahoma, sans-serif;

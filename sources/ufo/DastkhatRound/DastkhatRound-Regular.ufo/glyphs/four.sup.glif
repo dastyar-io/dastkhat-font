@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="four.sup" format="2">
+  <advance width="698" />
+  <outline>
+    <contour>
+      <point x="594" y="279" type="line" smooth="yes" />
+      <point x="626" y="279" />
+      <point x="651" y="254" />
+      <point x="651" y="222" type="curve" smooth="yes" />
+      <point x="651" y="215" type="line" smooth="yes" />
+      <point x="651" y="183" />
+      <point x="626" y="158" />
+      <point x="594" y="158" type="curve" smooth="yes" />
+      <point x="102" y="158" type="line" smooth="yes" />
+      <point x="77" y="158" />
+      <point x="56" y="177" />
+      <point x="54" y="203" type="curve" smooth="yes" />
+      <point x="53" y="208" type="line" smooth="yes" />
+      <point x="51" y="237" />
+      <point x="59" y="266" />
+      <point x="76" y="289" type="curve" smooth="yes" />
+      <point x="402" y="734" type="line" />
+      <point x="517" y="734" type="line" />
+      <point x="390" y="521" type="line" />
+      <point x="197" y="279" type="line" />
+    </contour>
+    <contour>
+      <point x="464" y="734" type="line" smooth="yes" />
+      <point x="512" y="734" />
+      <point x="551" y="695" />
+      <point x="551" y="648" type="curve" smooth="yes" />
+      <point x="551" y="69" type="line" smooth="yes" />
+      <point x="551" y="31" />
+      <point x="520" y="0" />
+      <point x="482" y="0" type="curve" smooth="yes" />
+      <point x="474" y="0" type="line" smooth="yes" />
+      <point x="436" y="0" />
+      <point x="405" y="31" />
+      <point x="405" y="69" type="curve" smooth="yes" />
+      <point x="405" y="734" type="line" />
+    </contour>
+  </outline>
+</glyph>

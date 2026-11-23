@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFBAF.compact" format="2">
+  <advance width="1309" />
+  <anchor x="869" y="-666" name="Anchor-2" />
+  <anchor x="818" y="620" name="Anchor-3" />
+  <outline>
+    <contour>
+      <point x="1405" y="-269" />
+      <point x="1396" y="-270" type="qcurve" />
+      <point x="1347" y="-282" />
+      <point x="1274" y="-294" type="qcurve" />
+      <point x="1202" y="-305" />
+      <point x="1104" y="-312" type="qcurve" />
+      <point x="1005" y="-320" />
+      <point x="875" y="-320" type="qcurve" />
+      <point x="809" y="-320" />
+      <point x="651" y="-311" />
+      <point x="495" y="-290" />
+      <point x="365" y="-258" />
+      <point x="286" y="-212" />
+      <point x="286" y="-182" type="qcurve" />
+      <point x="286" y="-165" />
+      <point x="357" y="-106" />
+      <point x="478" y="-43" />
+      <point x="629" y="0" />
+      <point x="709" y="0" type="qcurve" />
+      <point x="1330" y="0" type="line" />
+      <point x="1330" y="182" type="line" />
+      <point x="713" y="182" type="line" />
+      <point x="599" y="182" />
+      <point x="381" y="109" />
+      <point x="206" y="-7" />
+      <point x="103" y="-140" />
+      <point x="103" y="-200" type="qcurve" />
+      <point x="103" y="-276" />
+      <point x="197" y="-379" />
+      <point x="356" y="-444" />
+      <point x="555" y="-479" />
+      <point x="773" y="-492" />
+      <point x="877" y="-492" type="qcurve" />
+      <point x="1025" y="-492" />
+      <point x="1140" y="-481" type="qcurve" />
+      <point x="1256" y="-470" />
+      <point x="1348" y="-454" type="qcurve" />
+      <point x="1393" y="-445" />
+      <point x="1434" y="-437" type="qcurve" smooth="yes" />
+      <point x="1478" y="-427" />
+      <point x="1506" y="-383" />
+      <point x="1496" y="-340" type="curve" smooth="yes" />
+      <point x="1490" y="-314" type="line" smooth="yes" />
+      <point x="1483" y="-279" />
+      <point x="1447" y="-258" />
+      <point x="1412" y="-267" type="curve" smooth="yes" />
+    </contour>
+  </outline>
+</glyph>

@@ -27,6 +27,7 @@ Never install static and variable fonts of the same family on one machine. Ident
 | `Dastkhat Bar` | Adjacent dots merge into bars | Logos, headlines, brand marks. Avoid for long text. |
 | `Dastkhat Dots` | Circular | The same geometry, softer texture |
 | `Dastkhat BarDots` | Adjacent circles merge into capsules | Rounded logos and headlines. Avoid for long text. |
+| `Dastkhat Round` | Circular, and the letters have rounded stroke ends and corners | Soft, friendly interfaces and brands |
 | `Dastkhat Mono` | Square, dotted zero | Code, terminals, tables. Latin, digits and symbols are fixed-width; Persian letters stay proportional because they join. Main build only (no FaNum or NoEn). |
 
 ### Arabic readers only
@@ -52,11 +53,11 @@ Never install static and variable fonts of the same family on one machine. Ident
 </style>
 ```
 
-CSS variables: `--font-dastkhat`, `--font-dastkhat-diamond`, `--font-dastkhat-bar`, `--font-dastkhat-dots`, `--font-dastkhat-bardots`, `--font-dastkhat-fanum`. Read `Webfonts/dastkhat.css` for the full list before inventing a name.
+CSS variables: `--font-dastkhat`, `--font-dastkhat-diamond`, `--font-dastkhat-bar`, `--font-dastkhat-dots`, `--font-dastkhat-bardots`, `--font-dastkhat-round`, `--font-dastkhat-round-fanum`, `--font-dastkhat-fanum`. Read `Webfonts/dastkhat.css` for the full list before inventing a name.
 
-- Variable families are named exactly `Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots` (+ ` FaNum` / ` NoEn`) and `Dastkhat Mono`. Static families use the same names plus ` Static`.
+- Variable families are named exactly `Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots`, `Dastkhat Round` (+ ` FaNum` / ` NoEn`) and `Dastkhat Mono`. Static families use the same names plus ` Static`.
 - Variable fonts accept any `font-weight` from 100 to 900.
-- Preload the main file for first paint: `<link rel="preload" href="/Webfonts/fonts/Dastkhat-Variable.woff2" as="font" type="font/woff2" crossorigin>`.
+- Preload the main file for first paint: `<link rel="preload" href="/Webfonts/fonts/Dastkhat-Variable.woff2?v=1.220" as="font" type="font/woff2" crossorigin>`. Keep the `?v=` identical to the one in `dastkhat.css`, or the browser downloads the font twice.
 - Keep `font-display: swap` (already set in the stylesheet).
 - Always declare a fallback stack, for example `var(--font-dastkhat), system-ui, sans-serif`.
 
@@ -106,12 +107,13 @@ Neither is on by default. Don't hand-substitute the PUA characters into data, ID
 
 ```
 sources/      Build scripts and UFO sources (the source of truth)
-  ufo/         Dastkhat, DastkhatDiamond, DastkhatBar, DastkhatDots, DastkhatBarDots, DastkhatMono (.designspace + UFOs)
+  ufo/         Dastkhat, DastkhatDiamond, DastkhatBar, DastkhatDots, DastkhatBarDots, DastkhatRound, DastkhatMono (.designspace + UFOs)
   build_all.sh     Full rebuild from UFO to release set
   release_fonts.py Produces Main / FaNum / NoEn as TTF + WOFF2
   gen_pages.py     Generates the HTML demo pages
   round_dots.py    Derives the DastkhatDots and DastkhatBarDots UFOs from the square and bar ones
   make_mono.py     Derives the DastkhatMono UFOs from the Dastkhat ones (fixed cell, dotted zero)
+  round_corners.py Derives the DastkhatRound UFOs from the DastkhatDots ones (rounded corners); run after round_dots.py
   patch_ufo_gf.py, extract_ufo.py, render_all.js   Maintenance helpers
 fonts/       Built output: Main/, FaNum/, NoEn/ per family
 Webfonts/    dastkhat.css, WOFF2 files, webfont-test.html
@@ -151,10 +153,10 @@ python3 -m http.server 8765
 
 1. **Binaries are off limits unless asked.** Do not regenerate or overwrite `fonts/`, `Webfonts/fonts/`, `Specimen/*.pdf` or `Demos/images/*.png` as a side effect of other work. They are large and produce noisy diffs.
 2. **UFO sources are the truth.** Fix glyph problems in `sources/ufo/`, then rebuild. Never hand-edit built TTF/WOFF2 files.
-3. **Version bumps touch several places.** Version `1.210` appears in `release_fonts.py` (`VERSION`, `VSTR`), `dastkhat.css`, `FONTLOG.txt`, both READMEs, the landing page and generated pages. Search for the old string before and after.
+3. **Version bumps touch several places.** Version `1.220` appears in `release_fonts.py` (`VERSION`, `VSTR`), `dastkhat.css`, `FONTLOG.txt`, both READMEs, the landing page and generated pages. Search for the old string before and after.
 4. **Update `FONTLOG.txt`** for any visible font change and add contributors to the acknowledgements.
 5. **Respect licensing.** Do not copy outlines from fonts with an incompatible license. Keep the Vazirmatn and Dastkhat copyright notices in `release_fonts.py` and `OFL.txt` intact. Latin glyphs derive from Roboto; keep `License/THIRD-PARTY-NOTICES.txt` accurate.
-6. **Do not rename families** (`Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots`, `Dastkhat Mono`, ` FaNum`, ` NoEn`) or CSS variables. Users depend on them.
+6. **Do not rename families** (`Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots`, `Dastkhat Round`, `Dastkhat Mono`, ` FaNum`, ` NoEn`) or CSS variables. Users depend on them.
 7. **Docs stay bilingual.** A change in `README.md` needs the matching change in `README.en.md`.
 8. **One logical change per commit or PR**, with a clear explanation. See [CONTRIBUTING.md](CONTRIBUTING.md).
 

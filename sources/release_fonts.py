@@ -1,5 +1,5 @@
 """Produce the release font set for Dastkhat (publisher: Dastyar).
-Input: variable fonts for the 5 dot styles, compiled from sources/ufo by build_all.sh.
+Input: variable fonts for the 5 dot styles, Dastkhat Round and Dastkhat Mono, compiled from sources/ufo by build_all.sh.
 Output: base / FaNum / NoEn x (variable + 9 statics) as TTF + WOFF2.
 Usage: python3 -I release_fonts.py <out_dir> <dir_with_compiled_variable_fonts>
 """
@@ -10,8 +10,8 @@ from fontTools import subset
 from fontTools.ttLib import woff2
 
 OUT = sys.argv[1]
-VERSION = 1.210
-VSTR = '1.210'
+VERSION = 1.220
+VSTR = '1.220'
 VENDOR = 'DSTY'
 VFDIR = sys.argv[2]
 SRC = {
@@ -20,6 +20,7 @@ SRC = {
     'Dastkhat Bar': os.path.join(VFDIR, 'DastkhatBar-VF.ttf'),
     'Dastkhat Dots': os.path.join(VFDIR, 'DastkhatDots-VF.ttf'),
     'Dastkhat BarDots': os.path.join(VFDIR, 'DastkhatBarDots-VF.ttf'),
+    'Dastkhat Round': os.path.join(VFDIR, 'DastkhatRound-VF.ttf'),
     'Dastkhat Mono': os.path.join(VFDIR, 'DastkhatMono-VF.ttf'),
 }
 MAIN_ONLY = {'Dastkhat Mono'}      # no FaNum or NoEn build: a code font keeps Latin digits and Latin letters
@@ -30,7 +31,8 @@ COPYRIGHT = ('Copyright 2015 The Vazirmatn Project Authors (https://github.com/r
              'Copyright 2026 The Dastkhat Project Authors (https://github.com/dastyar-io/dastkhat-font).')
 DESC = ('Dastkhat is a Persian and Latin UI typeface published by Dastyar, derived from Vazirmatn by Saber Rastikerdar. '
         'It has a taller letter body, wider Persian letters and digits, a smaller Latin, and five dot styles: '
-        'square, diamond, bar, circle and circle bar, plus a monospaced family, Dastkhat Mono. '
+        'square, diamond, bar, circle and circle bar, plus Dastkhat Round, with circle dots and rounded letters, '
+        'and a monospaced family, Dastkhat Mono. '
         'Latin glyphs derive from Roboto (Apache License 2.0).')
 LICENSE = ('This Font Software is licensed under the SIL Open Font License, Version 1.1. '
            'This license is available with a FAQ at: https://openfontlicense.org')

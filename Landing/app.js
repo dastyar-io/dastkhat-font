@@ -73,7 +73,7 @@
           cx.beginPath();
           cx.roundRect(x - s * 1.15, y - s * 0.27, s * 2.3, s * 0.54, s * 0.27);
           cx.fill();
-        } else if (mode === 'dots') {
+        } else if (mode === 'dots' || mode === 'round') {
           cx.beginPath();
           cx.arc(x, y, s / 2, 0, Math.PI * 2);
           cx.fill();

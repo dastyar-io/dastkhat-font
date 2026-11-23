@@ -10,7 +10,7 @@
 
 **فونت فارسی و لاتین برای رابط کاربری، با نقطه‌های هندسی.**
 
-[![Version](https://img.shields.io/badge/version-1.210-blue)](FONTLOG.txt)
+[![Version](https://img.shields.io/badge/version-1.220-blue)](FONTLOG.txt)
 [![License: OFL 1.1](https://img.shields.io/badge/license-SIL%20OFL%201.1-green)](OFL.txt)
 [![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#محتویات-بسته)
 
@@ -20,7 +20,7 @@
 
 ---
 
-دستخط برای رابط کاربری محصولات، فروشگاه‌های اینترنتی و متن‌های فارسی پرحجم روی صفحه طراحی شده است. این فونت در ۹ وزن (از Thin با وزن ۱۰۰ تا Black با وزن ۹۰۰) و یک نسخه متغیر منتشر می‌شود، در سه سبک نقطه، و برای نیازهای رایج، نسخه‌های FaNum و NoEn هم دارد.
+دستخط برای رابط کاربری محصولات، فروشگاه‌های اینترنتی و متن‌های فارسی پرحجم روی صفحه طراحی شده است. این فونت در ۹ وزن (از Thin با وزن ۱۰۰ تا Black با وزن ۹۰۰) و یک نسخه متغیر منتشر می‌شود، در پنج سبک نقطه به‌علاوه Dastkhat Round (نقطه دایره و حرف‌های گرد)، و برای نیازهای رایج، نسخه‌های FaNum و NoEn هم دارد. Dastkhat Mono برای کد و جدول است و Dastkhat Arabic برای محصولات عربی‌زبان.
 
 دستخط را [دستیار](https://dastyar.io) منتشر کرده و بر پایه [وزیرمتن](https://github.com/rastikerdar/vazirmatn) ساخته شده است.
 
@@ -50,7 +50,7 @@
 
 ## کدام نسخه را انتخاب کنم؟
 
-### سبک‌های نقطه
+### خانواده‌ها
 
 | خانواده | نقطه‌ها | کاربرد پیشنهادی |
 |---|---|---|
@@ -59,6 +59,7 @@
 | **Dastkhat Bar** | دو نقطه یک خط می‌شود، سه نقطه یک خط و یک مربع | لوگو، تیتر و هویت بصری |
 | **Dastkhat Dots** | دایره | همان هندسه با بافتی نرم‌تر و گردتر |
 | **Dastkhat BarDots** | دو نقطه یک کپسول می‌شود، سه نقطه یک کپسول و یک دایره | لوگو و تیتر با ظاهر گرد |
+| **Dastkhat Round** | دایره، و حرف‌ها با سر و گوشه‌های گرد | رابط کاربری و برند با ظاهری نرم و صمیمی |
 | **Dastkhat Mono** | مربع | کد، ترمینال و جدول. حرف‌های لاتین، عددها و نمادها عرض یکسان دارند و صفر یک نقطه دارد. حرف‌های فارسی چون به هم می‌چسبند هم‌عرض نیستند. فقط نسخهٔ Main. |
 
 <img src="Demos/images/dastkhat-dot-styles.png" alt="مقایسه سبک‌های نقطه" width="100%">
@@ -88,14 +89,15 @@
 ## محتویات بسته
 
 ```
-Dastkhat-v1.210/
+Dastkhat-v1.220/
 ├── fonts/
 │   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar,
-│   │              DastkhatDots, DastkhatBarDots,
-│   │              DastkhatMono                            (۹ وزن TTF + Variable)
+│   │              DastkhatDots, DastkhatBarDots, DastkhatRound,
+│   │              DastkhatMono, DastkhatArabic            (۹ وزن TTF + Variable)
 │   ├── FaNum/     همان خانواده‌ها، با عددهای فارسی
-│   └── NoEn/      همان خانواده‌ها، فقط فارسی
-├── Webfonts/      dastkhat.css, fonts/*.woff2, webfont-test.html
+│   ├── ArNum/     DastkhatArabicArNum، با عددهای عربی
+│   └── NoEn/      همان خانواده‌ها، فقط فارسی (یا عربی)
+├── Webfonts/      dastkhat.css, dastkhat-arabic.css, fonts/*.woff2, صفحه‌های تست
 ├── Specimen/      Dastkhat-Specimen.pdf
 ├── Demos/         صفحه معرفی، تست‌کننده متن، نقشه حروف، نمونه رابط کاربری، تصاویر
 ├── Helps/         راهنمای نصب و استفاده (فارسی و انگلیسی)
@@ -151,10 +153,11 @@ body    { font-family: var(--font-dastkhat); }                         /* نقط
 | `--font-dastkhat-bar` | Dastkhat Bar |
 | `--font-dastkhat-dots` | Dastkhat Dots |
 | `--font-dastkhat-bardots` | Dastkhat BarDots |
+| `--font-dastkhat-round` | Dastkhat Round |
 | `--font-dastkhat-mono` | Dastkhat Mono |
 | `--font-dastkhat-fanum` | Dastkhat FaNum |
 
-نام خانواده‌های متغیر `Dastkhat`، `Dastkhat Diamond`، `Dastkhat Bar`، `Dastkhat Dots`، `Dastkhat BarDots` و `Dastkhat Mono` است (برای نسخه‌های دیگر، `FaNum` یا `NoEn` را به انتهای نام اضافه کنید). نسخه‌های ثابت همین نام‌ها را با پسوند `Static` دارند. همه قانون‌های `@font-face` از `font-display: swap` استفاده می‌کنند.
+نام خانواده‌های متغیر `Dastkhat`، `Dastkhat Diamond`، `Dastkhat Bar`، `Dastkhat Dots`، `Dastkhat BarDots`، `Dastkhat Round` و `Dastkhat Mono` است (برای نسخه‌های دیگر، `FaNum` یا `NoEn` را به انتهای نام اضافه کنید). نسخه‌های ثابت همین نام‌ها را با پسوند `Static` دارند. همه قانون‌های `@font-face` از `font-display: swap` استفاده می‌کنند.
 
 ### ترکیب با فونت لاتین دیگر (NoEn)
 
@@ -194,8 +197,9 @@ export const dastkhat = localFont({
 - اگر از سه وزن یا بیشتر استفاده می‌کنید، WOFF2 متغیر را انتخاب کنید.
 - فقط فایلی را پیش‌بارگذاری (preload) کنید که در بخش اول صفحه لازم است:
   ```html
-  <link rel="preload" href="/Webfonts/fonts/Dastkhat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Webfonts/fonts/Dastkhat-Variable.woff2?v=1.220" as="font" type="font/woff2" crossorigin>
   ```
+  آدرس باید با آدرس داخل `dastkhat.css`، همراه `?v=`، یکی باشد؛ وگرنه فونت دو بار دانلود می‌شود.
 - فایل‌ها را روی سرور خودتان قرار دهید و برای فونت به CDN شخص ثالث تکیه نکنید.
 
 برای اطمینان از بارگذاری درست، فایل `Webfonts/webfont-test.html` را در مرورگر باز کنید.

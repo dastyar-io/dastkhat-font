@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="one.smcp" format="2">
+  <advance width="967" />
+  <outline>
+    <contour>
+      <point x="604" y="1086" type="line" smooth="yes" />
+      <point x="614" y="1086" />
+      <point x="623" y="1077" />
+      <point x="623" y="1067" type="curve" smooth="yes" />
+      <point x="623" y="81" type="line" smooth="yes" />
+      <point x="623" y="36" />
+      <point x="587" y="0" />
+      <point x="542" y="0" type="curve" smooth="yes" />
+      <point x="531" y="0" type="line" smooth="yes" />
+      <point x="486" y="0" />
+      <point x="450" y="36" />
+      <point x="450" y="81" type="curve" smooth="yes" />
+      <point x="450" y="877" type="line" />
+      <point x="208" y="806" type="line" smooth="yes" />
+      <point x="175" y="796" />
+      <point x="142" y="821" />
+      <point x="142" y="855" type="curve" smooth="yes" />
+      <point x="142" y="864" type="line" smooth="yes" />
+      <point x="142" y="905" />
+      <point x="168" y="942" />
+      <point x="208" y="955" type="curve" smooth="yes" />
+      <point x="599" y="1086" type="line" />
+    </contour>
+  </outline>
+</glyph>

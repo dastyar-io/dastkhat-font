@@ -8,7 +8,7 @@
 
 **A Persian and Latin UI typeface with geometric dots.**
 
-[![Version](https://img.shields.io/badge/version-1.210-blue)](FONTLOG.txt)
+[![Version](https://img.shields.io/badge/version-1.220-blue)](FONTLOG.txt)
 [![License: OFL 1.1](https://img.shields.io/badge/license-SIL%20OFL%201.1-green)](OFL.txt)
 [![Formats](https://img.shields.io/badge/formats-TTF%20%7C%20Variable%20%7C%20WOFF2-lightgrey)](#whats-in-the-package)
 
@@ -18,7 +18,7 @@
 
 ---
 
-Dastkhat is built for product interfaces, e-commerce pages and dense Persian text on screens. It comes in 9 weights (Thin 100 to Black 900) plus a variable font, in three dot styles, with FaNum and NoEn builds for common real-world setups.
+Dastkhat is built for product interfaces, e-commerce pages and dense Persian text on screens. It comes in 9 weights (Thin 100 to Black 900) plus a variable font, in five dot styles and Dastkhat Round (circle dots and rounded letters), with FaNum and NoEn builds for common real-world setups. Dastkhat Mono covers code and tables, and Dastkhat Arabic covers Arabic-only products.
 
 It is published by [Dastyar](https://dastyar.io) and is a derivative of [Vazirmatn](https://github.com/rastikerdar/vazirmatn).
 
@@ -48,7 +48,7 @@ For a design tool such as Figma, Photoshop or Illustrator, install the TTF files
 
 ## Which one should I use?
 
-### Dot styles
+### Families
 
 | Family | Dots | Best for |
 |---|---|---|
@@ -57,6 +57,7 @@ For a design tool such as Figma, Photoshop or Illustrator, install the TTF files
 | **Dastkhat Bar** | Two dots merge into a bar, three into a bar and a square | Logos, headlines and brand marks |
 | **Dastkhat Dots** | Circle | The same geometry with a softer, rounder texture |
 | **Dastkhat BarDots** | Two dots merge into a capsule, three into a capsule and a circle | Rounded logos and headlines |
+| **Dastkhat Round** | Circle, and every letter has rounded stroke ends and corners | Soft, friendly interfaces and brands |
 | **Dastkhat Mono** | Square | Code, terminals and tables. Latin, digits and symbols share one width; the zero carries a dot. Persian letters stay proportional because they join. Main build only. |
 
 <img src="Demos/images/dastkhat-dot-styles.png" alt="The dot styles side by side" width="100%">
@@ -86,14 +87,15 @@ Every family is available in three builds.
 ## What's in the package
 
 ```
-Dastkhat-v1.210/
+Dastkhat-v1.220/
 ├── fonts/
 │   ├── Main/      Dastkhat, DastkhatDiamond, DastkhatBar,
-│   │              DastkhatDots, DastkhatBarDots,
-│   │              DastkhatMono                            (TTF ×9 + Variable)
+│   │              DastkhatDots, DastkhatBarDots, DastkhatRound,
+│   │              DastkhatMono, DastkhatArabic            (TTF ×9 + Variable)
 │   ├── FaNum/     Same families, Latin digits shown as Persian digits
-│   └── NoEn/      Same families, Persian only
-├── Webfonts/      dastkhat.css, fonts/*.woff2, webfont-test.html
+│   ├── ArNum/     DastkhatArabicArNum, Latin digits shown as Arabic-Indic digits
+│   └── NoEn/      Same families, Persian (or Arabic) only
+├── Webfonts/      dastkhat.css, dastkhat-arabic.css, fonts/*.woff2, test pages
 ├── Specimen/      Dastkhat-Specimen.pdf
 ├── Demos/         Font page, type tester, glyph map, UI demos, images
 ├── Helps/         Installation and usage guide (Persian and English)
@@ -151,10 +153,11 @@ body    { font-family: var(--font-dastkhat); }                         /* square
 | `--font-dastkhat-bar` | Dastkhat Bar |
 | `--font-dastkhat-dots` | Dastkhat Dots |
 | `--font-dastkhat-bardots` | Dastkhat BarDots |
+| `--font-dastkhat-round` | Dastkhat Round |
 | `--font-dastkhat-mono` | Dastkhat Mono |
 | `--font-dastkhat-fanum` | Dastkhat FaNum |
 
-The variable families are named `Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots` and `Dastkhat Mono` (add ` FaNum` or ` NoEn` for the other builds). The static fallbacks use the same names with ` Static` added. All `@font-face` rules use `font-display: swap`.
+The variable families are named `Dastkhat`, `Dastkhat Diamond`, `Dastkhat Bar`, `Dastkhat Dots`, `Dastkhat BarDots`, `Dastkhat Round` and `Dastkhat Mono` (add ` FaNum` or ` NoEn` for the other builds). The static fallbacks use the same names with ` Static` added. All `@font-face` rules use `font-display: swap`.
 
 ### With a separate Latin font (NoEn)
 
@@ -194,8 +197,9 @@ Set the direction and language on the document so punctuation and numbers behave
 - Prefer the variable WOFF2 when you use three or more weights.
 - Preload only the file used above the fold:
   ```html
-  <link rel="preload" href="/Webfonts/fonts/Dastkhat-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/Webfonts/fonts/Dastkhat-Variable.woff2?v=1.220" as="font" type="font/woff2" crossorigin>
   ```
+  The URL must match the one in `dastkhat.css`, `?v=` included, or the font downloads twice.
 - Self-host the files. Do not rely on a third-party CDN for fonts.
 
 Open `Webfonts/webfont-test.html` in a browser to confirm everything loads.
